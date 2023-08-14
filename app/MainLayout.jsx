@@ -1,9 +1,16 @@
-import React from 'react'
+'use client'
 
-const MainLayout = ({children}) => {
+import React from "react";
+import { Providers } from "./providers";
+
+const MainLayout = ({ children }) => {
   return (
-    <div>{children}</div>
-  )
-}
+    <html lang="en">
+      <body>
+        <Providers>{children}</Providers>
+      </body>
+    </html>
+  );
+};
 
-export default MainLayout
+export default MainLayout;
