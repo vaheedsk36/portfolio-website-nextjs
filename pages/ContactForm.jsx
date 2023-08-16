@@ -10,6 +10,7 @@ import {
   FormControl,
   FormLabel,
   FormErrorMessage,
+  Button
 } from "@chakra-ui/react";
 
 const ContactForm = () => {
@@ -104,6 +105,8 @@ const ContactForm = () => {
         />
         <ErrorMsgComponent data="message" />
       </FormControl>
+
+      <Button colorScheme='pink'>Submit</Button>
     </>
   );
 };

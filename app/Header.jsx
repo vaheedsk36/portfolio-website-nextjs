@@ -1,8 +1,14 @@
-import React from 'react'
+"use client";
+import React from 'react';
+import { Link } from "@chakra-ui/next-js";
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <>
+          <Link href="/contact" color="blue.400" _hover={{ color: "blue.500" }}>
+        About
+      </Link>
+    </>
   )
 }
 

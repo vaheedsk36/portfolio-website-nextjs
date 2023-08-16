@@ -1,14 +1,14 @@
 
 import { useState } from 'react';
 import Articles from './Articles';
-import ContactForm from '../app/ContactForm';
+import MainLayout from "../app/MainLayout"
 
 export default function HomePage() {
 
   return (
 <>
+{/* <MainLayout></MainLayout> */}
 <Articles/>
-    <ContactForm/>
     </>
   );
 }
