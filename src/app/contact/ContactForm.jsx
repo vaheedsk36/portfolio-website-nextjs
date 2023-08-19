@@ -108,7 +108,7 @@ const ContactForm = () => {
         <ErrorMsgComponent data="message" />
       </FormControl>
 
-      <Button colorScheme='pink'>Submit</Button>
+      <Button colorScheme='gray'>Submit</Button>
     </>
   );
 };
