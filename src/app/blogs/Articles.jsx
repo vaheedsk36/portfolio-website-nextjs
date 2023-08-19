@@ -1,6 +1,6 @@
 import React from 'react'
-import MainLayout from "../app/MainLayout";
-import ArticlesCard from '../app/ArticlesCard';
+import MainLayout from "../layout";
+import ArticlesCard from './ArticlesCard';
 
 const Articles = () => {
     const title = "title";

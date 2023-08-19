@@ -1,10 +1,7 @@
-"use client";
-
-import React from "react";
 import { Providers } from "./providers";
 import Header from "./Header";
 
-const MainLayout = ({ children }) => {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
@@ -15,6 +12,4 @@ const MainLayout = ({ children }) => {
       </body>
     </html>
   );
-};
-
-export default MainLayout;
+}
