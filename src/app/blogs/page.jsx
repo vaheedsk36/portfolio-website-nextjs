@@ -48,7 +48,7 @@ const Blogs = () => {
 
   return (
     <>
-      <div mt={3} textAlign="center">
+      <div mt={3}>
         {isLoading ? (
           <div className="blog-spinner">
             <Spinner
