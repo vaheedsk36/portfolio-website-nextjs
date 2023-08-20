@@ -9,20 +9,20 @@ const Work = () => {
       company: "1Digitalstack.ai",
       designation: "Software Engineer 1",
       companyImg: "1ds.jpg",
-      description:""
+      description: "",
     },
   ];
   return (
     <>
-      <div my={3}>
-        <Heading size="lg" textAlign="center" my={3} color="white">
-          Professional Experience
-        </Heading>
-      </div>
+      <Heading size="lg" textAlign="center" my={3} color="white">
+        Professional Experience
+      </Heading>
 
-      {workData.map((data, index) => {
-        return <WorkCard {...{ data }} key={index} />;
-      })}
+      <div className="work-card-container">
+        {workData.map((data, index) => {
+          return <WorkCard {...{ data }} key={index} />;
+        })}
+      </div>
     </>
   );
 };
