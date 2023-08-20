@@ -14,7 +14,10 @@ const Header = () => {
           <Link href="/skills" color="blue.400" _hover={{ color: "blue.500" }}>
             Skills
           </Link>
-          <Link href="/work-experience" color="blue.400" _hover={{ color: "blue.500" }}>
+          <Link href="/projects" color="blue.400" _hover={{ color: "blue.500" }}>
+            Projects
+          </Link>
+          <Link href="/experience" color="blue.400" _hover={{ color: "blue.500" }}>
             Experience
           </Link>
           <Link href="/blogs" color="blue.400" _hover={{ color: "blue.500" }}>
