@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Manrope&family=Righteous&family=Roboto&display=swap');
+
 * {
     margin: 0;
+    font-family: Manrope;
 }
 
 $background-color: #02001E;
@@ -46,7 +49,9 @@ $nav-container-color: #06005369;
     right: 0;
     left: 0;
     top: 180px
-};
+}
+
+;
 
 .work-card-container {
     display: flex;

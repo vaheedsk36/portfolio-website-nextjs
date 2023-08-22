@@ -5,14 +5,24 @@ import { Heading } from "@chakra-ui/react";
 import { Icon } from "@chakra-ui/react";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import NET from "vanta/dist/vanta.net.min";
-
+import Typed from "typed.js";
 import * as THREE from "three";
 
 export default function Home() {
   const [vantaEffect, setVantaEffect] = useState(0);
   const vantaRef = useRef(null);
+  const typedTextRef = useRef(null);
 
   useEffect(() => {
+    const options = {
+      strings: ["Developer", "Coder", "Tech Blogger"],
+      typeSpeed: 50,
+      backSpeed: 35,
+      loop: true,
+    };
+
+    const typed = new Typed(typedTextRef.current, options);
+
     if (!vantaEffect) {
       setVantaEffect(
         NET({
@@ -21,15 +31,16 @@ export default function Home() {
           mouseControls: true,
           touchControls: true,
           gyroControls: false,
-          minHeight: 200.00,
-          minWidth: 200.00,
-          scale: 1.00,
-          scaleMobile: 1.00
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
         })
       );
     }
     return () => {
       if (vantaEffect) vantaEffect.destroy();
+      typed.destroy();
     };
   }, [vantaEffect]);
 
@@ -43,9 +54,9 @@ export default function Home() {
             left: "10rem",
           }}
         >
-          <Heading color="white">Masood Akhtar Vaheed</Heading>
+          <Heading color="white" fontFamily="Black Ops One">Masood Akhtar Vaheed</Heading>
           <Heading my={3} size="lg" color="white">
-            I m Software Developer
+            I &apos;m <span ref={typedTextRef}></span>
           </Heading>
           <HeaderTab />
           <div
