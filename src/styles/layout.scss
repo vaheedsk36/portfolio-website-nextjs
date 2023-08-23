@@ -39,8 +39,11 @@ $blue-500: #3182CE;
 
 .nav-link-span {
     a {
-        margin: 10px;
+        margin-top: 2rem;
+        margin-right: 20px;
         color: $blue-400;
+        font-size: 1.2rem;
+        font-weight: 900;
 
         &:hover {
             color: $blue-500;
