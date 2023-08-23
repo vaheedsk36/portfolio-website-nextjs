@@ -9,6 +9,15 @@ $background-color: #02001E;
 $nav-container-color: #06005369;
 $blue-400: #4299E1;
 $blue-500: #3182CE;
+$sub-header-color: #dee2e6;
+
+.container {
+    position: fixed;
+    bottom: 0;
+    top: 4rem;
+    left: 8.5rem;
+    right: 8.5rem;
+}
 
 .home-container {
     position: fixed;
@@ -61,7 +70,9 @@ $blue-500: #3182CE;
     right: 0;
     left: 0;
     top: 180px
-};
+}
+
+;
 
 .work-card-container {
     display: flex;
@@ -80,11 +91,38 @@ $blue-500: #3182CE;
     display: grid;
     grid-template-columns: 30% 70%;
     align-items: center;
-    width:17rem;
-    height:5rem;
-    border-radius:0;
+    width: 17.5rem;
+    height: 5rem;
+    border-radius: 0;
     background-color: #213363;
     color: white;
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 16px;
+}
+
+.sub-heading {
+    font-size: 1rem;
+    color: $sub-header-color;
+    
+    &::after {
+        content: "";
+        width: 120px;
+        height: 2px;
+        display: inline-block;
+        background: $sub-header-color;
+        margin: 4px 10px;
+    }
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 4rem;
+}
+
+.profile-image {
+    width: 20rem;
+    height: 20rem;
 }
