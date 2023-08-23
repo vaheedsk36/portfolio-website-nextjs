@@ -7,6 +7,8 @@
 
 $background-color: #02001E;
 $nav-container-color: #06005369;
+$blue-400: #4299E1;
+$blue-500: #3182CE;
 
 .home-container {
     position: fixed;
@@ -38,6 +40,13 @@ $nav-container-color: #06005369;
 .nav-link-span {
     a {
         margin: 10px;
+        color: $blue-400;
+
+        &:hover {
+            color: $blue-500;
+            text-decoration: none;
+
+        }
     }
 }
 
@@ -49,9 +58,7 @@ $nav-container-color: #06005369;
     right: 0;
     left: 0;
     top: 180px
-}
-
-;
+};
 
 .work-card-container {
     display: flex;

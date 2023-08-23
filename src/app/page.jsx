@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from "react";
 import HeaderTab from "../components/HeaderTab";
 import { Heading } from "@chakra-ui/react";
 import { Icon } from "@chakra-ui/react";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import NET from "vanta/dist/vanta.net.min";
 import Typed from "typed.js";
 import * as THREE from "three";
@@ -54,7 +54,9 @@ export default function Home() {
             left: "10rem",
           }}
         >
-          <Heading color="white" fontFamily="Black Ops One">Masood Akhtar Vaheed</Heading>
+          <Heading color="white" fontFamily="Black Ops One" fontSize="6xl">
+            Masood Akhtar Vaheed
+          </Heading>
           <Heading my={3} size="lg" color="white">
             I &apos;m <span ref={typedTextRef}></span>
           </Heading>
@@ -68,6 +70,7 @@ export default function Home() {
             <Icon as={FaGithub} color="white" />
             <Icon as={FaInstagram} mx={2} color="white" />
             <Icon as={FaLinkedin} color="white" />
+            <Icon as={FaTwitter} mx={2} color="white" />
           </div>
         </div>
       </div>

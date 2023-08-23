@@ -10,10 +10,8 @@ const theme = extendTheme({
     white: '#fff',
     gray: {
       50: '#f7fafc',
-      // ...
       900: '#171923',
     },
-    // ...
   },
 })
 
