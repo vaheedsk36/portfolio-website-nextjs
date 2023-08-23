@@ -68,9 +68,9 @@ export default function Home() {
             }}
           >
             <Icon as={FaGithub} color="white" />
-            <Icon as={FaInstagram} mx={2} color="white" />
+            <Icon as={FaInstagram} mx={3} color="white" />
             <Icon as={FaLinkedin} color="white" />
-            <Icon as={FaTwitter} mx={2} color="white" />
+            <Icon as={FaTwitter} mx={3} color="white" />
           </div>
         </div>
       </div>

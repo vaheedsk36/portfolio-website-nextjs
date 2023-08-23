@@ -75,3 +75,16 @@ $blue-500: #3182CE;
     grid-template-columns: 30% 70%;
     justify-content: center;
 }
+
+.interests-card {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+    width:17rem;
+    height:5rem;
+    border-radius:0;
+    background-color: #213363;
+    color: white;
+    font-size: 3rem;
+    padding: 16px;
+}
