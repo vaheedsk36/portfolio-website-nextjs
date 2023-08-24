@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
 import {
@@ -12,10 +12,28 @@ import {
   FormControl,
   FormLabel,
   FormErrorMessage,
-  Button
+  Button,
+  Card,
+  CardBody,
+  useRadioGroup,
+  HStack,
+  Heading,
+  Icon
 } from "@chakra-ui/react";
+import { BsFillSendFill } from "react-icons/bs";
+import RadioCard from "../../components/RadioCards";
 
 const ContactForm = () => {
+  const options = ["Web Development", "Hiring", "Freelance", "Other"];
+
+  const { getRootProps, getRadioProps } = useRadioGroup({
+    name: "interested",
+    defaultValue: "Web Development",
+    onChange: console.log,
+  });
+
+  const group = getRootProps();
+
   const [formData, setFormData] = useState({
     name: {
       label: "",
@@ -56,59 +74,77 @@ const ContactForm = () => {
 
   return (
     <>
-      <FormControl isRequired isInvalid={formData.name.isError}>
-        <FormLabel htmlFor="name">Enter Name</FormLabel>
-        <Input
-          id="name"
-          placeholder="Your Name"
-          value={formData.name.label}
-          onChange={(e) => handleInputChange(e, "name")}
-        />
-        <ErrorMsgComponent data="name" />
-      </FormControl>
+      <Card className="contact-form-card">
+        <CardBody>
+        <Heading size="md" color="black" my={3}>I&apos;m interested in...</Heading>
+          <HStack {...group}>
+            {options.map((value) => {
+              const radio = getRadioProps({ value });
+              return (
+                <RadioCard key={value} {...radio}>
+                  {value}
+                </RadioCard>
+              );
+            })}
+          </HStack>
+          <FormControl isRequired isInvalid={formData.name.isError} my={2}>
+            <FormLabel htmlFor="name">Enter Name</FormLabel>
+            <Input
+              id="name"
+              placeholder="Your Name"
+              value={formData.name.label}
+              onChange={(e) => handleInputChange(e, "name")}
+            />
+            <ErrorMsgComponent data="name" />
+          </FormControl>
 
-      <FormControl isRequired isInvalid={formData.email.isError}>
-        <FormLabel htmlFor="email">Enter Email</FormLabel>
-        <Input
-          id="email"
-          type="email"
-          placeholder="Your Email"
-          value={formData.email.label}
-          onChange={(e) => handleInputChange(e, "email")}
-        />
-        <ErrorMsgComponent data="email" />
-      </FormControl>
+          <FormControl isRequired isInvalid={formData.email.isError}>
+            <FormLabel htmlFor="email">Enter Email</FormLabel>
+            <Input
+              id="email"
+              type="email"
+              placeholder="Your Email"
+              value={formData.email.label}
+              onChange={(e) => handleInputChange(e, "email")}
+            />
+            <ErrorMsgComponent data="email" />
+          </FormControl>
 
-      <FormControl>
-        <FormLabel htmlFor="number">Enter Phone No.</FormLabel>
-        <NumberInput
-          id="number"
-          min={0}
-          value={formData.number.label}
-          onChange={(valueString) =>
-            handleInputChange({ target: { value: valueString } }, "number")
-          }
-        >
-          <NumberInputField />
-          <NumberInputStepper>
-            <NumberIncrementStepper />
-            <NumberDecrementStepper />
-          </NumberInputStepper>
-        </NumberInput>
-      </FormControl>
+          <FormControl my={2}>
+            <FormLabel htmlFor="number">Enter Phone No.</FormLabel>
+            <NumberInput
+              id="number"
+              min={0}
+              value={formData.number.label}
+              onChange={(valueString) =>
+                handleInputChange({ target: { value: valueString } }, "number")
+              }
+            >
+              <NumberInputField />
+              <NumberInputStepper>
+                <NumberIncrementStepper />
+                <NumberDecrementStepper />
+              </NumberInputStepper>
+            </NumberInput>
+          </FormControl>
 
-      <FormControl isRequired isInvalid={formData.message.isError}>
-        <FormLabel htmlFor="message">Enter Message</FormLabel>
-        <Textarea
-          id="message"
-          placeholder="Your Message"
-          value={formData.message.label}
-          onChange={(e) => handleInputChange(e, "message")}
-        />
-        <ErrorMsgComponent data="message" />
-      </FormControl>
+          <FormControl isRequired isInvalid={formData.message.isError}>
+            <FormLabel htmlFor="message">Enter Message</FormLabel>
+            <Textarea
+              id="message"
+              placeholder="Your Message"
+              value={formData.message.label}
+              onChange={(e) => handleInputChange(e, "message")}
+            />
+            <ErrorMsgComponent data="message" />
+          </FormControl>
 
-      <Button colorScheme='gray'>Submit</Button>
+          <Button colorScheme="pink" my={3}>
+          <Icon mr={1} as={BsFillSendFill}/>
+            Send Message
+          </Button>
+        </CardBody>
+      </Card>
     </>
   );
 };

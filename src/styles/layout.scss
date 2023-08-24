@@ -16,7 +16,6 @@ $default-card-hover-color: #213d8d;
 $mustard-yellow: #FFC436;
 $mustard-hover-yellow: #e1ae37;
 
-
 .container {
     position: fixed;
     bottom: 0;
@@ -177,6 +176,21 @@ $mustard-hover-yellow: #e1ae37;
 
     &:hover {
         background-color: $mustard-hover-yellow;
+
+    }
+}
+
+.contact-container{
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.contact-form-card{
+    background-color: white;
+    label{
+        color: #900C3F;
+        font-weight: 900;
 
     }
 }
