@@ -21,7 +21,7 @@ const Work = () => {
   return (
     <>
       <div className="container">
-        <Heading className="sub-heading" size="md" my={3} color="white">
+        <Heading className="sub-heading" size="md" my={3} >
           EXPERIENCE
         </Heading>
 

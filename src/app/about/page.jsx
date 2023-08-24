@@ -47,7 +47,7 @@ const Page = () => {
     <>
       <div className="container">
         <section id="about">
-          <Heading className="sub-heading" size="md" my={3} color="white">
+          <Heading className="sub-heading" size="md" my={3} >
             ABOUT
           </Heading>
           <div className="about-container">
@@ -59,7 +59,7 @@ const Page = () => {
             />
 
             <div>
-              <Heading size="xl" mb={3} color="white">
+              <Heading size="xl" mb={3} >
                 👋 Hey there
               </Heading>
               <br />
@@ -87,7 +87,7 @@ const Page = () => {
         </section>
 
         <section id="interests">
-          <Heading className="sub-heading" size="md" my={3} color="white">
+          <Heading className="sub-heading" size="md" my={3} >
             INTERESTS
           </Heading>
           <SimpleGrid

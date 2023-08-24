@@ -25,7 +25,7 @@ const Projects = () => {
   return (
     <>
       <div my={3}>
-        <Heading size="lg" textAlign="center" my={3} color="white">
+        <Heading size="lg" textAlign="center" my={3} >
           My Projects
         </Heading>
 

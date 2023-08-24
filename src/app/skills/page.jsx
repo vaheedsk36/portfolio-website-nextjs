@@ -127,7 +127,7 @@ const Skills = () => {
 
   return (
     <div className="container">
-      <Heading className="sub-heading" size="md" my={3} color="white">
+      <Heading className="sub-heading" size="md" my={3} >
         SKILLS
       </Heading>
       <SimpleGrid
@@ -143,7 +143,7 @@ const Skills = () => {
               _hover={{ cursor: "pointer" }}
             >
               <CardBody display="flow" alignItems="center" textAlign="center">
-                <Icon as={data.icon} width={55} height={55} />
+                <Icon as={data.icon} width={55} height={55}/>
                 <Heading size="md" my={1} textAlign="center">
                   {data.name}
                 </Heading>

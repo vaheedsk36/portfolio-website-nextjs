@@ -57,26 +57,27 @@ const Blogs = () => {
               emptyColor="gray.200"
               color="blue.500"
               size="xl"
-              height={150}
-              width={150}
+              height={100}
+              width={100}
               mb={3}
             />
-            <Heading color="white">Loading...</Heading>
+            <Heading>Loading...</Heading>
           </div>
         ) : (
           <>
-            <Heading size="lg" textAlign="center" mt={3} color="white">
-              My Articles
-            </Heading>
-            <SimpleGrid
-              p={4}
-              spacing={4}
-              templateColumns="repeat(auto-fill, minmax(350px, 1fr))"
-            >
-              {articlesData.map((data, index) => (
-                <ArticlesCard data={data} key={index} />
-              ))}
-            </SimpleGrid>
+            <div className="blogs-container">
+              <Heading className="sub-heading" size="md" my={3}>
+                Blogs
+              </Heading>
+              <SimpleGrid
+                spacing={4}
+                templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
+              >
+                {articlesData.map((data, index) => (
+                  <ArticlesCard data={data} key={index} />
+                ))}
+              </SimpleGrid>
+            </div>
           </>
         )}
       </div>

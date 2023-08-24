@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <>
       <div className="nav-container">
-        <Text fontFamily="manlope" color="white">VaheedSk36</Text>
+        <Text fontFamily="manlope" >VaheedSk36</Text>
         <HeaderTab />
         <span className="nav-link-span"></span>
       </div>

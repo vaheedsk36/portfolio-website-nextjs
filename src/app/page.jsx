@@ -54,10 +54,10 @@ export default function Home() {
             left: "10rem",
           }}
         >
-          <Heading color="white" fontFamily="Black Ops One" fontSize="6xl">
+          <Heading fontFamily="Black Ops One" fontSize="6xl">
             Masood Akhtar Vaheed
           </Heading>
-          <Heading my={3} size="lg" color="white">
+          <Heading my={3} size="lg" >
             I &apos;m <span ref={typedTextRef}></span>
           </Heading>
           <HeaderTab />
@@ -67,10 +67,10 @@ export default function Home() {
               marginTop: "1.5rem",
             }}
           >
-            <Icon as={FaGithub} color="white" />
-            <Icon as={FaInstagram} mx={3} color="white" />
-            <Icon as={FaLinkedin} color="white" />
-            <Icon as={FaTwitter} mx={3} color="white" />
+            <Icon as={FaGithub}  />
+            <Icon as={FaInstagram} mx={3}  />
+            <Icon as={FaLinkedin}  />
+            <Icon as={FaTwitter} mx={3}  />
           </div>
         </div>
       </div>

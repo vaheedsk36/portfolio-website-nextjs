@@ -2,7 +2,6 @@
 import React from "react";
 import {
   Card,
-  CardBody,
   Heading,
   Icon
 } from "@chakra-ui/react";
