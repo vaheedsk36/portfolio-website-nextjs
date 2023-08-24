@@ -129,11 +129,9 @@ const Skills = () => {
         {skillsData.map((data, index) => {
           return (
             <Card
-              width={145}
-              height={130}
+            className="skills-card"
               key={index}
               _hover={{ cursor: "pointer" }}
-              borderRadius={0}
             >
               <CardBody display="flow" alignItems="center" textAlign="center">
                 <Icon as={data.icon} width={55} height={55} />

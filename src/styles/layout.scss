@@ -10,6 +10,7 @@ $nav-container-color: #06005369;
 $blue-400: #4299E1;
 $blue-500: #3182CE;
 $sub-header-color: #dee2e6;
+$default-card-color:#213363;
 
 .container {
     position: fixed;
@@ -70,9 +71,7 @@ $sub-header-color: #dee2e6;
     right: 0;
     left: 0;
     top: 180px
-}
-
-;
+};
 
 .work-card-container {
     display: flex;
@@ -94,10 +93,18 @@ $sub-header-color: #dee2e6;
     width: 17.5rem;
     height: 5rem;
     border-radius: 0;
-    background-color: #213363;
+    background-color: $default-card-color;
     color: white;
     font-size: 2.5rem;
     padding: 16px;
+}
+
+.skills-card{
+    background-color: $default-card-color;
+    width: 145px;
+    height: 130px;
+    border-radius: 0;
+    color: white;
 }
 
 .sub-heading {
