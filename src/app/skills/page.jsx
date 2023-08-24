@@ -3,7 +3,6 @@ import React from "react";
 import {
   Card,
   CardBody,
-  Image,
   Heading,
   SimpleGrid,
   Icon,
@@ -26,8 +25,9 @@ import {
   TbBrandBootstrap,
 } from "react-icons/tb";
 import { BiLogoJquery, BiLogoPostgresql } from "react-icons/bi";
-import { SiPug, SiExpress, SiPostman } from "react-icons/si";
+import { SiPug, SiExpress, SiPostman,SiGnubash,SiNextdotjs } from "react-icons/si";
 import { BsGit, BsMarkdown } from "react-icons/bs";
+import { GiArtificialIntelligence } from "react-icons/gi";
 
 const Skills = () => {
   const skillsData = [
@@ -72,6 +72,10 @@ const Skills = () => {
       icon: FaReact,
     },
     {
+      name: "NextJS",
+      icon: SiNextdotjs,
+    },
+    {
       name: "Redux",
       icon: TbBrandRedux,
     },
@@ -108,8 +112,12 @@ const Skills = () => {
       icon: FaGithub,
     },
     {
-      name: "Chatgpt",
-      icon: FaGithub,
+      name: "ChatGPT",
+      icon: GiArtificialIntelligence,
+    },
+    {
+      name: "Bash",
+      icon: SiGnubash,
     },
     {
       name: "Markdown",
@@ -118,13 +126,14 @@ const Skills = () => {
   ];
 
   return (
-    <div my={3} className="container">
-      <Heading size="lg" textAlign="center" my={3} color="white">
-        My Tech Stack
-      </Heading>
+    <div className="container">
+          <Heading className="sub-heading" size="md" my={3} color="white">
+            SKILLS
+          </Heading>
       <SimpleGrid
+        marginTop="4rem"
         spacing={4}
-        templateColumns="repeat(auto-fill, minmax(150px, 1fr))"
+        templateColumns="repeat(auto-fill, minmax(135px, 1fr))"
       >
         {skillsData.map((data, index) => {
           return (
@@ -143,6 +152,7 @@ const Skills = () => {
           );
         })}
       </SimpleGrid>
+
     </div>
   );
 };

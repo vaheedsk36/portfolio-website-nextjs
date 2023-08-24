@@ -10,7 +10,8 @@ $nav-container-color: #06005369;
 $blue-400: #4299E1;
 $blue-500: #3182CE;
 $sub-header-color: #dee2e6;
-$default-card-color:#213363;
+$default-card-color: #213363;
+$default-card-hover-color: #213d8d;
 
 .container {
     position: fixed;
@@ -71,7 +72,9 @@ $default-card-color:#213363;
     right: 0;
     left: 0;
     top: 180px
-};
+}
+
+;
 
 .work-card-container {
     display: flex;
@@ -99,18 +102,23 @@ $default-card-color:#213363;
     padding: 16px;
 }
 
-.skills-card{
+.skills-card {
     background-color: $default-card-color;
     width: 145px;
     height: 130px;
-    border-radius: 0;
     color: white;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        background-color: $default-card-hover-color;
+        transform: scale(1.1);
+    }
 }
 
 .sub-heading {
     font-size: 1rem;
     color: $sub-header-color;
-    
+
     &::after {
         content: "";
         width: 120px;
