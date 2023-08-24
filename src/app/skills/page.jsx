@@ -1,12 +1,6 @@
 "use client";
 import React from "react";
-import {
-  Card,
-  CardBody,
-  Heading,
-  SimpleGrid,
-  Icon,
-} from "@chakra-ui/react";
+import { Card, CardBody, Heading, SimpleGrid, Icon } from "@chakra-ui/react";
 import {
   FaHtml5,
   FaCss3,
@@ -25,7 +19,13 @@ import {
   TbBrandBootstrap,
 } from "react-icons/tb";
 import { BiLogoJquery, BiLogoPostgresql } from "react-icons/bi";
-import { SiPug, SiExpress, SiPostman,SiGnubash,SiNextdotjs } from "react-icons/si";
+import {
+  SiPug,
+  SiExpress,
+  SiPostman,
+  SiGnubash,
+  SiNextdotjs,
+} from "react-icons/si";
 import { BsGit, BsMarkdown } from "react-icons/bs";
 import { GiArtificialIntelligence } from "react-icons/gi";
 
@@ -121,15 +121,15 @@ const Skills = () => {
     },
     {
       name: "Markdown",
-      icon: BsMarkdown
+      icon: BsMarkdown,
     },
   ];
 
   return (
     <div className="container">
-          <Heading className="sub-heading" size="md" my={3} color="white">
-            SKILLS
-          </Heading>
+      <Heading className="sub-heading" size="md" my={3} color="white">
+        SKILLS
+      </Heading>
       <SimpleGrid
         marginTop="4rem"
         spacing={4}
@@ -138,7 +138,7 @@ const Skills = () => {
         {skillsData.map((data, index) => {
           return (
             <Card
-            className="skills-card"
+              className="skills-card"
               key={index}
               _hover={{ cursor: "pointer" }}
             >
@@ -152,7 +152,6 @@ const Skills = () => {
           );
         })}
       </SimpleGrid>
-
     </div>
   );
 };

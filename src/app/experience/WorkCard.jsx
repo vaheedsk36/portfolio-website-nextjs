@@ -6,7 +6,7 @@ const WorkCard = (props) => {
   const { company, designation, companyImg, description } = props.data;
   return (
     <>
-      <Card width="60%">
+      <Card width="65rem" my={3}>
         <CardBody className="work-card-body">
           <Image
             objectFit="cover"

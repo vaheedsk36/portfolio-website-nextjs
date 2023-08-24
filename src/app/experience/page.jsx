@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import WorkCard from "./WorkCard";
-import { Heading } from "@chakra-ui/react";
+import { Heading, SimpleGrid } from "@chakra-ui/react";
 
 const Work = () => {
   const workData = [
@@ -11,17 +11,25 @@ const Work = () => {
       companyImg: "1ds.jpg",
       description: "",
     },
+    {
+      company: "Fact.MR",
+      designation: "Associate Consultant Level 01",
+      companyImg: "1ds.jpg",
+      description: "",
+    },
   ];
   return (
     <>
-      <Heading size="lg" textAlign="center" my={3} color="white">
-        Professional Experience
-      </Heading>
+      <div className="container">
+        <Heading className="sub-heading" size="md" my={3} color="white">
+          EXPERIENCE
+        </Heading>
 
-      <div className="work-card-container">
-        {workData.map((data, index) => {
-          return <WorkCard {...{ data }} key={index} />;
-        })}
+        <SimpleGrid>
+          {workData.map((data, index) => {
+            return <WorkCard {...{ data }} key={index} />;
+          })}
+        </SimpleGrid>
       </div>
     </>
   );
