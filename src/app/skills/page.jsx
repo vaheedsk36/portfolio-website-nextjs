@@ -1,115 +1,142 @@
 "use client";
 import React from "react";
-import { Card, CardBody, Image, Heading, SimpleGrid } from "@chakra-ui/react";
+import {
+  Card,
+  CardBody,
+  Image,
+  Heading,
+  SimpleGrid,
+  Icon,
+} from "@chakra-ui/react";
+import {
+  FaHtml5,
+  FaCss3,
+  FaReact,
+  FaSass,
+  FaPython,
+  FaNodeJs,
+  FaDocker,
+  FaGithub,
+} from "react-icons/fa";
+import {
+  TbBrandTypescript,
+  TbBrandJavascript,
+  TbBrandCpp,
+  TbBrandRedux,
+  TbBrandBootstrap,
+} from "react-icons/tb";
+import { BiLogoJquery, BiLogoPostgresql } from "react-icons/bi";
+import { SiPug, SiExpress, SiPostman } from "react-icons/si";
+import { BsGit, BsMarkdown } from "react-icons/bs";
 
 const Skills = () => {
   const skillsData = [
     {
-      filename: "html5",
       name: "HTML5",
+      icon: FaHtml5,
     },
     {
-      filename: "css3",
       name: "CSS3",
+      icon: FaCss3,
     },
     {
-      filename: "javascript",
       name: "Javascript",
+      icon: TbBrandJavascript,
     },
     {
-      filename: "jquery",
       name: "Jquery",
+      icon: BiLogoJquery,
     },
     {
-      filename: "typescript",
       name: "Typescript",
+      icon: TbBrandTypescript,
     },
     {
-      filename: "sass",
       name: "SASS",
+      icon: FaSass,
     },
     {
-      filename: "bootstrap",
       name: "Bootstrap",
+      icon: TbBrandBootstrap,
     },
     {
-      filename: "cpp",
       name: "C/C++",
+      icon: TbBrandCpp,
     },
     {
-      filename: "python",
       name: "Python",
+      icon: FaPython,
     },
     {
-      filename: "react",
       name: "ReactJS",
+      icon: FaReact,
     },
     {
-      filename: "redux",
       name: "Redux",
+      icon: TbBrandRedux,
     },
     {
-      filename: "nodejs",
       name: "NodeJs",
+      icon: FaNodeJs,
     },
     {
-      filename: "pug",
       name: "PugJs",
+      icon: SiPug,
     },
     {
-      filename: "express",
       name: "Express",
+      icon: SiExpress,
     },
     {
-      filename: "docker",
       name: "Docker",
+      icon: FaDocker,
     },
     {
-      filename: "postgres",
       name: "Postgres",
+      icon: BiLogoPostgresql,
     },
     {
-      filename: "postman",
       name: "Postman",
+      icon: SiPostman,
     },
     {
-      filename: "github",
-      name: "Git/Github",
+      name: "Git",
+      icon: BsGit,
     },
     {
-      filename: "chatgpt",
+      name: "Github",
+      icon: FaGithub,
+    },
+    {
       name: "Chatgpt",
+      icon: FaGithub,
+    },
+    {
+      name: "Markdown",
+      icon: BsMarkdown
     },
   ];
 
   return (
-    <div my={3}>
+    <div my={3} className="container">
       <Heading size="lg" textAlign="center" my={3} color="white">
         My Tech Stack
       </Heading>
       <SimpleGrid
-        p={4}
         spacing={4}
         templateColumns="repeat(auto-fill, minmax(150px, 1fr))"
       >
         {skillsData.map((data, index) => {
           return (
             <Card
-              width={150}
-              height={150}
+              width={145}
+              height={130}
               key={index}
-              display="flex"
-              alignItems="center"
-              _hover={{cursor:'pointer'}}
+              _hover={{ cursor: "pointer" }}
+              borderRadius={0}
             >
-              <CardBody>
-                <Image
-                  objectFit="shrink"
-                  src={`/images/${data.filename}.svg`}
-                  alt={data.name}
-                  width={100}
-                  height={100}
-                />
+              <CardBody display="flow" alignItems="center" textAlign="center">
+                <Icon as={data.icon} width={55} height={55} />
                 <Heading size="md" my={1} textAlign="center">
                   {data.name}
                 </Heading>
