@@ -76,9 +76,7 @@ $mustard-hover-yellow: #e1ae37;
     right: 0;
     left: 0;
     top: 180px
-}
-
-;
+};
 
 .work-card-container {
     display: flex;
@@ -105,6 +103,12 @@ $mustard-hover-yellow: #e1ae37;
     background-color: $default-card-color;
     font-size: 2.5rem;
     padding: 16px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: $default-card-hover-color;
+    }
 }
 
 .skills-card {
@@ -144,13 +148,17 @@ $mustard-hover-yellow: #e1ae37;
     grid-template-columns: 30% 70%;
     font-size: 1.1rem;
     margin-bottom: 4rem;
-};
+}
+
+;
 
 .blogs-container {
     width: 85rem;
     padding: 1.3rem 0;
     margin: auto 3rem;
-};
+}
+
+;
 
 .profile-image {
     width: 20rem;
