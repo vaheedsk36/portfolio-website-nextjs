@@ -12,6 +12,7 @@ const theme = extendTheme({
       50: '#f7fafc',
       900: '#171923',
     },
+    instagramPink:"#D53F8C"
   },
 })
 

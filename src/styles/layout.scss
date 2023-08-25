@@ -15,6 +15,10 @@ $default-card-color: #213363;
 $default-card-hover-color: #213d8d;
 $mustard-yellow: #FFC436;
 $mustard-hover-yellow: #e1ae37;
+$instagram-pink:#D53F8C;
+$linkedin-blue-color:#0072b1;
+$twitter-blue-color: #00acee;
+$form-label-gray:#6A6A6A;
 
 .container {
     position: fixed;
@@ -183,14 +187,39 @@ $mustard-hover-yellow: #e1ae37;
 .contact-container{
     margin-top: 5rem;
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 40% 55%;
 }
 
 .contact-form-card{
+    border-radius: 2rem;
+    padding: 10px 15px;
     background-color: white;
     label{
-        color: #900C3F;
+        color: $form-label-gray;
         font-weight: 900;
 
     }
 }
+
+.social-container {
+    font-size: 3rem;
+    margin-top: 7rem;
+    svg{
+        padding: 10px;
+        border-radius: 1.1rem;
+        cursor:pointer;
+    }
+    .instagram{
+        background-color: $instagram-pink;
+    }
+
+    .linkedin{
+        background-color: $linkedin-blue-color;
+    }
+
+    .twitter{
+        background-color: $twitter-blue-color;
+    }
+
+};
+    

@@ -18,7 +18,7 @@ import {
   useRadioGroup,
   HStack,
   Heading,
-  Icon
+  Icon,
 } from "@chakra-ui/react";
 import { BsFillSendFill } from "react-icons/bs";
 import RadioCard from "../../components/RadioCards";
@@ -76,7 +76,9 @@ const ContactForm = () => {
     <>
       <Card className="contact-form-card">
         <CardBody>
-        <Heading size="md" color="black" my={3}>I&apos;m interested in...</Heading>
+          <Heading size="md" color="black" my={3}>
+            I&apos;m interested in...
+          </Heading>
           <HStack {...group}>
             {options.map((value) => {
               const radio = getRadioProps({ value });
@@ -87,11 +89,12 @@ const ContactForm = () => {
               );
             })}
           </HStack>
-          <FormControl isRequired isInvalid={formData.name.isError} my={2}>
+          <FormControl isRequired isInvalid={formData.name.isError} my={4}>
             <FormLabel htmlFor="name">Enter Name</FormLabel>
             <Input
               id="name"
               placeholder="Your Name"
+              color="black"
               value={formData.name.label}
               onChange={(e) => handleInputChange(e, "name")}
             />
@@ -104,27 +107,24 @@ const ContactForm = () => {
               id="email"
               type="email"
               placeholder="Your Email"
+              color="black"
               value={formData.email.label}
               onChange={(e) => handleInputChange(e, "email")}
             />
             <ErrorMsgComponent data="email" />
           </FormControl>
 
-          <FormControl my={2}>
+          <FormControl my={4}>
             <FormLabel htmlFor="number">Enter Phone No.</FormLabel>
             <NumberInput
               id="number"
-              min={0}
               value={formData.number.label}
               onChange={(valueString) =>
                 handleInputChange({ target: { value: valueString } }, "number")
               }
+              
             >
-              <NumberInputField />
-              <NumberInputStepper>
-                <NumberIncrementStepper />
-                <NumberDecrementStepper />
-              </NumberInputStepper>
+              <NumberInputField color="black" placeholder="Your Phone No." />
             </NumberInput>
           </FormControl>
 
@@ -134,13 +134,14 @@ const ContactForm = () => {
               id="message"
               placeholder="Your Message"
               value={formData.message.label}
+              color="black"
               onChange={(e) => handleInputChange(e, "message")}
             />
             <ErrorMsgComponent data="message" />
           </FormControl>
 
           <Button colorScheme="pink" my={3}>
-          <Icon mr={1} as={BsFillSendFill}/>
+            <Icon mr={1} as={BsFillSendFill} />
             Send Message
           </Button>
         </CardBody>

@@ -11,15 +11,15 @@ const RadioCard = (props) => {
       <input {...input} />
       <Box
         {...checkbox}
-        color="black"
-        borderColor="#1D5D9B"
+        color="#9E9FA5"
+        borderColor="#9E9FA5"
         cursor="pointer"
         borderWidth="1px"
         borderRadius="md"
         boxShadow="md"
         _checked={{
-          color: "red",
-          borderColor: "red",
+          color:"#D53F8C",
+          borderColor: "#D53F8C"
         }}
         px={3}
         py={1}

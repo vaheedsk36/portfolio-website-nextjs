@@ -2,11 +2,7 @@
 import React from "react";
 import ContactForm from "./ContactForm";
 import { Heading, Icon, Stack, HStack, Text } from "@chakra-ui/react";
-import {
-  FaInstagram,
-  FaLinkedin,
-  FaTwitter
-} from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { ImLocation } from "react-icons/im";
 
@@ -27,7 +23,7 @@ const Contact = () => {
             together
           </Heading>
 
-          <Stack  marginTop="4rem">
+          <Stack marginTop="4rem">
             <Text fontSize="1.4rem" display="flex" alignItems="center" my={3}>
               <Icon as={IoIosMail} mx={2} />
               <span>vaheedsk36@gmail.com</span>
@@ -37,10 +33,10 @@ const Contact = () => {
               <span>Hyderabad, India</span>
             </Text>
           </Stack>
-          <HStack fontSize="2rem" mx={3} marginTop="7rem">
-            <Icon as={FaInstagram} />
-            <Icon as={FaLinkedin} mx={3} />
-            <Icon as={FaTwitter} />
+          <HStack mx={3} className="social-container">
+            <Icon as={FaInstagram} className="instagram" />
+            <Icon as={FaLinkedin} mx={5} className="linkedin" />
+            <Icon as={FaTwitter} className="twitter" />
           </HStack>
         </div>
 
