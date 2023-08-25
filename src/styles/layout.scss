@@ -125,6 +125,13 @@ $form-label-gray:#6A6A6A;
     }
 }
 
+.projects-card{
+    text-align: center;
+    border-radius: 0;
+    width: 22rem;
+    margin: 1rem;
+}
+
 .articles-card {
     background-color: $default-card-color;
     width: 20rem;

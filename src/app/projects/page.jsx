@@ -1,37 +1,35 @@
 "use client";
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import { Heading, SimpleGrid } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 
 const Projects = () => {
   const projectsData = [
     {
+      type: "web-app",
       title: "Weather App",
       image: "weather-app",
-      techstack: "HTML,CSS,JS",
-      desc: `This website empowers users to effortlessly search for weather conditions in any location and instantly access current weather details based on their geographical location.`,
       link: "https://vaheedsk36.github.io/weather-app/",
       source: "https://github.com/vaheedsk36/weather-app",
     },
     {
+      type: "web-app",
       title: "Landing Page",
       image: "landing-page",
-      techstack: "HTML,CSS,JS,Bootstrap",
-      desc: `Made using the vanilla js and bootstrap. This project is a demo landing page for a frontend bootcamp.`,
       link: "https://vaheedsk36.github.io/demo-frontend-bootcamp",
       source: "https://github.com/vaheedsk36/demo-frontend-bootcamp",
     },
   ];
   return (
     <>
-      <div my={3}>
-        <Heading size="lg" textAlign="center" my={3} >
-          My Projects
+      <div my={3} className="container">
+        <Heading className="sub-heading" size="md" my={3}>
+          PROJECTS
         </Heading>
 
         <div
           style={{
-            display: "flex",
+            display: "grid",
           }}
         >
           {projectsData.map((data, index) => {
