@@ -66,11 +66,11 @@ const Projects = () => {
 
   const [selectedData, setSelectedData] = useState(projectsData);
   const valSelectFn = (value) =>
-  setSelectedData(() => {
-    return value === "ALL"
-      ? projectsData
-      : projectsData.filter((data) => data.type === value);
-  });
+    setSelectedData(() => {
+      return value === "ALL"
+        ? projectsData
+        : projectsData.filter((data) => data.type === value);
+    });
   const options = ["ALL", "WEB-APP", "PROJECT"];
   const { getRootProps, getRadioProps } = useRadioGroup({
     name: "project",
@@ -86,7 +86,12 @@ const Projects = () => {
           PROJECTS
         </Heading>
 
-        <HStack {...group}>
+        <HStack
+          {...group}
+          style={{
+            margin: "1rem 26rem",
+          }}
+        >
           {options.map((value) => {
             const radio = getRadioProps({ value });
             return (
