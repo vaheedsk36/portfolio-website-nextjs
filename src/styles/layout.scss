@@ -90,10 +90,9 @@ $form-label-gray:#6A6A6A;
 
 .work-card-body {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 25% 75%;
     justify-content: center;
     background-color: $default-card-color;
-
 }
 
 .interests-card {

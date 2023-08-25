@@ -3,24 +3,38 @@ import React from "react";
 import { Card, CardBody, Image, Heading, Text } from "@chakra-ui/react";
 
 const WorkCard = (props) => {
-  const { company, designation, companyImg, description } = props.data;
+  const { company, duration, designation, companyImg, description } = props.data;
   return (
     <>
-      <Card width="65rem" my={3}>
+      <Card width="58rem" my={3}>
         <CardBody className="work-card-body">
+          <div style={{
+              marginRight:'1rem',
+              height:'12rem',
+              width:'12rem',
+              display:'flex',
+              alignItems:'center',
+              backgroundColor:'white',
+              padding:'10px'
+            }}>
           <Image
             objectFit="cover"
             src={`/images/${companyImg}`}
             alt="Company Logo"
           />
+
+          </div>
           <div>
-            <Heading size="md" my={3}>
+            <Heading fontSize="1.5rem">
               {company}
             </Heading>
-            <Text size="md" my={3}>
+            <Heading size="sm" my={2}>
+              {duration}
+            </Heading>
+            <Text size="sm" my={2} fontStyle="italic">
               {designation}
             </Text>
-            <Text size="md" my={3}>
+            <Text size="md" >
               {description}
             </Text>
           </div>
