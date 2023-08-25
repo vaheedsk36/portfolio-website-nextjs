@@ -15,10 +15,10 @@ $default-card-color: #213363;
 $default-card-hover-color: #213d8d;
 $mustard-yellow: #FFC436;
 $mustard-hover-yellow: #e1ae37;
-$instagram-pink:#D53F8C;
-$linkedin-blue-color:#0072b1;
+$instagram-pink: #D53F8C;
+$linkedin-blue-color: #0072b1;
 $twitter-blue-color: #00acee;
-$form-label-gray:#6A6A6A;
+$form-label-gray: #6A6A6A;
 
 .container {
     position: fixed;
@@ -86,7 +86,7 @@ $form-label-gray:#6A6A6A;
     justify-content: center;
     margin-top: 4rem;
     text-align: center;
-}
+};
 
 .work-card-body {
     display: grid;
@@ -125,11 +125,15 @@ $form-label-gray:#6A6A6A;
     }
 }
 
-.projects-card{
+.projects-card {
     text-align: center;
     border-radius: 0;
     width: 22rem;
-    margin: 1rem;
+    margin: 12px;
+
+    img {
+        height: 13rem;
+    }
 }
 
 .articles-card {
@@ -157,22 +161,18 @@ $form-label-gray:#6A6A6A;
     grid-template-columns: 30% 70%;
     font-size: 1.1rem;
     margin-bottom: 4rem;
-}
-
-;
+};
 
 .blogs-container {
     width: 85rem;
     padding: 1.3rem 0;
     margin: auto 3rem;
-}
-
-;
+};
 
 .profile-image {
     width: 20rem;
     height: 20rem;
-}
+};
 
 .article-btn {
     background-color: $mustard-yellow;
@@ -188,19 +188,20 @@ $form-label-gray:#6A6A6A;
         background-color: $mustard-hover-yellow;
 
     }
-}
+};
 
-.contact-container{
+.contact-container {
     margin-top: 5rem;
     display: grid;
     grid-template-columns: 40% 55%;
 }
 
-.contact-form-card{
+.contact-form-card {
     border-radius: 2rem;
     padding: 10px 15px;
     background-color: white;
-    label{
+
+    label {
         color: $form-label-gray;
         font-weight: 900;
 
@@ -210,22 +211,27 @@ $form-label-gray:#6A6A6A;
 .social-container {
     font-size: 3rem;
     margin-top: 7rem;
-    svg{
+
+    svg {
         padding: 10px;
         border-radius: 1.1rem;
-        cursor:pointer;
+        cursor: pointer;
     }
-    .instagram{
+
+    .instagram {
         background-color: $instagram-pink;
     }
 
-    .linkedin{
+    .linkedin {
         background-color: $linkedin-blue-color;
     }
 
-    .twitter{
+    .twitter {
         background-color: $twitter-blue-color;
     }
 
 };
-    
+
+.projects-container{
+    margin: 2rem 10rem
+}
