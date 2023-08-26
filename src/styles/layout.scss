@@ -57,6 +57,7 @@ $neon-green-color: #16FF00;
 }
 
 .nav-link-span {
+    display: flex;
     a {
         margin-top: 2rem;
         margin-right: 20px;
@@ -161,6 +162,10 @@ $neon-green-color: #16FF00;
     }
 }
 
+.radio-btn-container{
+    margin: 1rem 26rem;
+}
+
 .articles-card {
     background-color: $default-card-color;
     width: 20rem;
@@ -260,3 +265,26 @@ $neon-green-color: #16FF00;
 .projects-container{
     margin: 2rem 10rem
 }
+
+
+// iphone 12pro screen
+
+@media screen and (min-width: 390px) {
+    .projects-card {
+        width: 15rem;
+        margin: 3px;
+    
+        img {
+            height: 8rem;
+        }
+    }
+
+    .projects-container{
+        margin: 1rem 4rem;
+    }
+
+    .radio-btn-container{
+        margin: 1rem 0;
+    }
+
+  }

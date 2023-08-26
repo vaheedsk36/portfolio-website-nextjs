@@ -86,11 +86,8 @@ const Projects = () => {
           PROJECTS
         </Heading>
 
-        <HStack
+        <HStack className="radio-btn-container"
           {...group}
-          style={{
-            margin: "1rem 26rem",
-          }}
         >
           {options.map((value) => {
             const radio = getRadioProps({ value });

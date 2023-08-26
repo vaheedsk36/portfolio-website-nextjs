@@ -7,7 +7,7 @@ const Header = () => {
     <>
       <div className="nav-container">
         <Text fontFamily="manlope" >VaheedSk36</Text>
-        <HeaderTab />
+        {/* <HeaderTab /> */}
         <span className="nav-link-span"></span>
       </div>
     </>
