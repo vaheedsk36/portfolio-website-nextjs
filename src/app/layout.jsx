@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import { usePathname } from "next/navigation";
 import "../styles/main.scss";
 // import { Metadata } from "next";
-import Favicon from "/public/images/favicon.png";
+// import Favicon from "/public/images/favicon.png";
 
 //TODO: Its use client so we can't use metadata in this part have to fix it
 // export const metadata = {

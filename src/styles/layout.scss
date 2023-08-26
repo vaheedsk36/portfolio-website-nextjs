@@ -19,6 +19,7 @@ $instagram-pink: #D53F8C;
 $linkedin-blue-color: #0072b1;
 $twitter-blue-color: #00acee;
 $form-label-gray: #6A6A6A;
+$neon-green-color: #16FF00;
 
 .container {
     position: fixed;
@@ -59,16 +60,36 @@ $form-label-gray: #6A6A6A;
     a {
         margin-top: 2rem;
         margin-right: 20px;
-        color: $blue-400;
+
+        
         font-size: 1.2rem;
         font-weight: 900;
 
         &:hover {
-            color: $blue-500;
+            color: $neon-green-color;
             text-decoration: none;
-
         }
     }
+}
+
+.active-link {
+    color: $neon-green-color;
+    position: relative;
+}
+
+.active-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 17px;
+    transform: translateX(-50%);
+    width: 2rem;
+    height: 2.5px;
+    background-color: $neon-green-color;
+}
+
+.typed-text{
+    color: $neon-green-color;
 }
 
 .blog-spinner {

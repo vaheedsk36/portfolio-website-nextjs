@@ -58,7 +58,7 @@ export default function Home() {
             Masood Akhtar Vaheed
           </Heading>
           <Heading my={3} size="lg" >
-            I &apos;m <span ref={typedTextRef}></span>
+            I &apos;m <span className="typed-text" ref={typedTextRef}></span>
           </Heading>
           <HeaderTab />
           <div
