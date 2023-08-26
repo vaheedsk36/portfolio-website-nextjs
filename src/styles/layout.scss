@@ -72,6 +72,10 @@ $neon-green-color: #16FF00;
     }
 }
 
+.typed-cursor {
+    color: $neon-green-color; /* Change the cursor color */
+}
+
 .active-link {
     color: $neon-green-color;
     position: relative;
