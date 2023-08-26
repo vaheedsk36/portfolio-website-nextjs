@@ -126,7 +126,7 @@ const Skills = () => {
   ];
 
   return (
-    <div className="container">
+    <div className="skills-container">
       <Heading className="sub-heading" size="md" my={3} >
         SKILLS
       </Heading>
@@ -143,8 +143,8 @@ const Skills = () => {
               _hover={{ cursor: "pointer" }}
             >
               <CardBody display="flow" alignItems="center" textAlign="center">
-                <Icon as={data.icon} width={55} height={55}/>
-                <Heading size="md" my={1} textAlign="center">
+                <Icon as={data.icon} className="skills-icon"/>
+                <Heading my={1} textAlign="center" className="skill-heading">
                   {data.name}
                 </Heading>
               </CardBody>

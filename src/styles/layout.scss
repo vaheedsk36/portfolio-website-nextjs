@@ -22,12 +22,12 @@ $form-label-gray: #6A6A6A;
 $neon-green-color: #16FF00;
 
 .container {
-    position: fixed;
-    bottom: 0;
-    top: 4rem;
-    left: 8.5rem;
-    right: 8.5rem;
+margin: 2rem 7rem;
 }
+
+.skills-container {
+    margin: 2rem 8rem;
+    }
 
 .home-container {
     position: fixed;
@@ -151,6 +151,15 @@ $neon-green-color: #16FF00;
     }
 }
 
+.skills-icon{
+    width: 55px;
+    height: 55px;
+}
+
+.skill-heading{
+    font-size: 1.2rem;
+}
+
 .projects-card {
     text-align: center;
     border-radius: 0;
@@ -267,9 +276,11 @@ $neon-green-color: #16FF00;
 }
 
 
-// iphone 12pro screen
+// ******** iphone 12pro screen ********
 
-@media screen and (min-width: 390px) {
+@media screen and (max-width: 390px) {
+
+
     .projects-card {
         width: 15rem;
         margin: 3px;
@@ -285,6 +296,24 @@ $neon-green-color: #16FF00;
 
     .radio-btn-container{
         margin: 1rem 0;
+    }
+
+    .skills-container {
+        margin: 1rem 2.6rem;
+        }
+
+    .skills-card {
+        width: 120px;
+        height: 110px;
+    }
+
+    .skills-icon{
+        width: 40px;
+        height: 40px;
+    }
+
+    .skill-heading{
+        font-size: 0.95rem;
     }
 
   }
