@@ -28,6 +28,10 @@ $neon-green-color: #16FF00;
     margin: 2rem 7rem;
 }
 
+.scroll-lock{
+    overflow-y: hidden;
+}
+
 .sub-heading {
     font-size: 1rem;
     color: $sub-header-color;
@@ -62,10 +66,7 @@ $neon-green-color: #16FF00;
     display: flex;
 
     a {
-        margin-top: 2rem;
         margin-right: 20px;
-
-
         font-size: 1.2rem;
         font-weight: 900;
 
@@ -78,7 +79,6 @@ $neon-green-color: #16FF00;
 
 .typed-cursor {
     color: $neon-green-color;
-    /* Change the cursor color */
 }
 
 .active-link {
@@ -332,9 +332,38 @@ $neon-green-color: #16FF00;
 };
 
 
-// ******** iphone 12pro screen ********
+//! ******** iphone 12pro screen ********
 
 @media screen and (max-width: 390px) {
+
+    // ******** NAVBAR COMPONENT ********
+
+.nav-container {
+    display: block;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    z-index: 100;
+
+}
+
+.nav-link-span {
+    background-color: rgba(0, 0, 0, 0.748);
+    display: block;
+    padding: 0.5rem;
+    height: 100vh;
+
+    a {
+    display: block;
+
+        margin: 1rem;
+
+        font-size: 1rem;
+    }
+}
 
 
 // ******** ABOUT SECTION ********
