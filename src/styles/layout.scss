@@ -237,11 +237,14 @@ $neon-green-color: #16FF00;
     margin: 1rem 26rem;
 }
 
-.articles-card {
-    background-color: $default-card-color;
+
+.profile-image {
     width: 20rem;
-    height: 30rem;
-}
+    height: 20rem;
+};
+
+// ******** BLOGS SECTION ********
+
 
 .blogs-container {
     width: 85rem;
@@ -249,10 +252,17 @@ $neon-green-color: #16FF00;
     margin: auto 3rem;
 };
 
-.profile-image {
+.blogs-grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.articles-card {
+    background-color: $default-card-color;
     width: 20rem;
-    height: 20rem;
-};
+    height: 30rem;
+    margin: 0.5rem;
+}
 
 .article-btn {
     background-color: $mustard-yellow;
@@ -394,6 +404,20 @@ $neon-green-color: #16FF00;
         height: 15rem;
         width: 15rem;
         margin: 2rem auto;
+    }
+
+    // ******** BLOGS SECTION ********
+
+    .blogs-container {
+        margin: auto 1.6rem;
+    };
+
+    .articles-card {
+        margin: 2rem 0.5rem;
+    }
+
+    .blogs-grid-container{
+        display: block;
     }
 
 }

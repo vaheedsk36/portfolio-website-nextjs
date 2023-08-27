@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import ArticlesCard from "./ArticlesCard";
-import { SimpleGrid, Heading, Spinner } from "@chakra-ui/react";
+import { Heading, Spinner } from "@chakra-ui/react";
 
 const Blogs = () => {
   const [articlesData, setArticlesData] = useState([]);
@@ -69,14 +69,11 @@ const Blogs = () => {
               <Heading className="sub-heading" size="md" my={3}>
                 Blogs
               </Heading>
-              <SimpleGrid
-                spacing={4}
-                templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
-              >
+              <div className="blogs-grid-container">
                 {articlesData.map((data, index) => (
                   <ArticlesCard data={data} key={index} />
                 ))}
-              </SimpleGrid>
+              </div>
             </div>
           </>
         )}
