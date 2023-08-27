@@ -21,48 +21,28 @@ $twitter-blue-color: #00acee;
 $form-label-gray: #6A6A6A;
 $neon-green-color: #16FF00;
 
+
+// ******** COMMON CLASSES ********
+
 .container {
     margin: 2rem 7rem;
 }
 
-.about-container {
-    margin: 2rem 8rem;
+.sub-heading {
+    font-size: 1rem;
+    color: $sub-header-color;
+
+    &::after {
+        content: "";
+        width: 120px;
+        height: 2px;
+        display: inline-block;
+        background: $sub-header-color;
+        margin: 4px 10px;
+    }
 }
 
-.skills-container {
-    margin: 2rem 8rem;
-}
-
-.work-container {
-    margin: auto 15rem;
-}
-
-.work-card-container {
-    width: 58rem;
-}
-
-.work-img-container {
-    margin-right: 1rem;
-    height: 12rem;
-    width: 12rem;
-    display: flex;
-    align-items: center;
-    background-color: white;
-    padding: 10px;
-}
-
-.home-container {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-}
-
-.body-theme {
-    background-color: $background-color;
-}
+// ******** NAVBAR COMPONENT ********
 
 .nav-container {
     position: sticky;
@@ -117,28 +97,40 @@ $neon-green-color: #16FF00;
     background-color: $neon-green-color;
 }
 
+// ******** HOMEPAGE COMPONENT ********
+
+.home-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.body-theme {
+    background-color: $background-color;
+}
+
 .typed-text {
     color: $neon-green-color;
 }
 
-.blog-spinner {
-    display: grid;
-    justify-content: center;
-    position: relative;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    top: 180px
+// ******** ABOUT SECTION ********
+
+.about-container {
+    margin: 2rem 8rem;
 }
 
-;
-
-.work-card-body {
+.about-layout-container {
     display: grid;
-    grid-template-columns: 25% 75%;
-    justify-content: center;
-    background-color: $default-card-color;
-}
+    grid-template-columns: 30% 70%;
+    font-size: 1.1rem;
+    margin-bottom: 4rem;
+    p{
+        text-align: justify;
+    }
+};
 
 .interests-card {
     display: grid;
@@ -156,6 +148,40 @@ $neon-green-color: #16FF00;
     &:hover {
         background-color: $default-card-hover-color;
     }
+}
+
+// ******** EXPERIENCE SECTION ********
+
+
+.work-container {
+    margin: auto 15rem;
+}
+
+.work-card-container {
+    width: 58rem;
+}
+
+.work-img-container {
+    margin-right: 1rem;
+    height: 12rem;
+    width: 12rem;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+}
+
+.work-card-body {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    justify-content: center;
+    background-color: $default-card-color;
+}
+
+// ******** SKILLS SECTION ********
+
+.skills-container {
+    margin: 2rem 8rem;
 }
 
 .skills-card {
@@ -179,6 +205,23 @@ $neon-green-color: #16FF00;
     font-size: 1.2rem;
 }
 
+.blog-spinner {
+    display: grid;
+    justify-content: center;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 180px
+};
+
+
+// ******** PROJECTS SECTION ********
+
+.projects-container {
+    margin: 2rem 10rem
+}
+
 .projects-card {
     text-align: center;
     border-radius: 0;
@@ -199,30 +242,6 @@ $neon-green-color: #16FF00;
     width: 20rem;
     height: 30rem;
 }
-
-.sub-heading {
-    font-size: 1rem;
-    color: $sub-header-color;
-
-    &::after {
-        content: "";
-        width: 120px;
-        height: 2px;
-        display: inline-block;
-        background: $sub-header-color;
-        margin: 4px 10px;
-    }
-}
-
-.about-layout-container {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    font-size: 1.1rem;
-    margin-bottom: 4rem;
-    p{
-        text-align: justify;
-    }
-};
 
 .blogs-container {
     width: 85rem;
@@ -249,9 +268,10 @@ $neon-green-color: #16FF00;
         background-color: $mustard-hover-yellow;
 
     }
-}
+};
 
-;
+// ******** CONTACT SECTION ********
+
 
 .contact-container {
     margin-top: 5rem;
@@ -293,13 +313,7 @@ $neon-green-color: #16FF00;
         background-color: $twitter-blue-color;
     }
 
-}
-
-;
-
-.projects-container {
-    margin: 2rem 10rem
-}
+};
 
 
 // ******** iphone 12pro screen ********
@@ -307,7 +321,7 @@ $neon-green-color: #16FF00;
 @media screen and (max-width: 390px) {
 
 
-    // ******** PROJECTS SECTION ********
+// ******** ABOUT SECTION ********
 
     .profile-image {
         width: 20rem;
@@ -323,26 +337,7 @@ $neon-green-color: #16FF00;
         display: block;
     };
 
-    // ******** PROJECTS SECTION ********
-
-    .projects-card {
-        width: 15rem;
-        margin: 3px;
-
-        img {
-            height: 8rem;
-        }
-    }
-
-    .projects-container {
-        margin: 1rem 4rem;
-    }
-
-    .radio-btn-container {
-        margin: 1rem 0;
-    }
-
-    // ******** SKILLS SECTION ********
+// ******** SKILLS SECTION ********
 
     .skills-container {
         margin: 1rem 2.6rem;
@@ -362,14 +357,33 @@ $neon-green-color: #16FF00;
         font-size: 0.95rem;
     }
 
-    // ******** EXPERIENCE SECTION ********
+// ******** PROJECTS SECTION ********
+
+    .projects-card {
+        width: 15rem;
+        margin: 3px;
+
+        img {
+            height: 8rem;
+        }
+    }
+
+    .projects-container {
+        margin: 1rem 4rem;
+    }
+
+    .radio-btn-container {
+        margin: 1rem 0;
+    }
+
+// ******** EXPERIENCE SECTION ********
 
     .work-container {
         margin: 1.7rem;
     };
 
     .work-card-container {
-        width: 21rem;
+        width: 19rem;
     };
 
     .work-card-body {
@@ -380,7 +394,6 @@ $neon-green-color: #16FF00;
         height: 15rem;
         width: 15rem;
         margin: 2rem auto;
-        padding: 0;
     }
 
 }
