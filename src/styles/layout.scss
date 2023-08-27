@@ -25,6 +25,10 @@ $neon-green-color: #16FF00;
     margin: 2rem 7rem;
 }
 
+.about-container {
+    margin: 2rem 8rem;
+}
+
 .skills-container {
     margin: 2rem 8rem;
 }
@@ -210,29 +214,26 @@ $neon-green-color: #16FF00;
     }
 }
 
-.about-container {
+.about-layout-container {
     display: grid;
     grid-template-columns: 30% 70%;
     font-size: 1.1rem;
     margin-bottom: 4rem;
-}
-
-;
+    p{
+        text-align: justify;
+    }
+};
 
 .blogs-container {
     width: 85rem;
     padding: 1.3rem 0;
     margin: auto 3rem;
-}
-
-;
+};
 
 .profile-image {
     width: 20rem;
     height: 20rem;
-}
-
-;
+};
 
 .article-btn {
     background-color: $mustard-yellow;
@@ -304,6 +305,23 @@ $neon-green-color: #16FF00;
 // ******** iphone 12pro screen ********
 
 @media screen and (max-width: 390px) {
+
+
+    // ******** PROJECTS SECTION ********
+
+    .profile-image {
+        width: 20rem;
+        height: 17rem;
+        margin-bottom: 1rem;
+    };
+
+    .about-container {
+        margin: 3.5rem;
+    }
+
+    .about-layout-container {
+        display: block;
+    };
 
     // ******** PROJECTS SECTION ********
 

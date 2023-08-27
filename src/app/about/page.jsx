@@ -45,12 +45,12 @@ const Page = () => {
   ];
   return (
     <>
-      <div className="container">
+      <div className="about-container">
         <section id="about">
           <Heading className="sub-heading" size="md" my={3} >
             ABOUT
           </Heading>
-          <div className="about-container">
+          <div className="about-layout-container">
             <Image
               className="profile-image"
               objectFit="shrink"
