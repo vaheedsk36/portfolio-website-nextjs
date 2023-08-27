@@ -289,6 +289,12 @@ $neon-green-color: #16FF00;
     grid-template-columns: 40% 55%;
 }
 
+.contact-text-span{
+    font-size:1.4rem;
+    display:flex;
+    align-items:center;
+}
+
 .contact-form-card {
     border-radius: 2rem;
     padding: 10px 15px;
@@ -419,5 +425,52 @@ $neon-green-color: #16FF00;
     .blogs-grid-container{
         display: block;
     }
+
+    // ******** CONTACT SECTION ********
+
+    .container {
+        margin: 1.2rem;
+    }
+
+.contact-container {
+    margin-top: 1.5rem;
+    display: block;
+
+    .chakra-heading{
+        font-size: 2.1rem;
+    }
+
+    .chakra-stack{
+        margin-top: 1rem;
+    }
+}
+
+.contact-text-span{
+    font-size:1.2rem;
+    display:flex;
+    align-items:center;
+}
+
+.contact-form-card {
+    padding: 0;
+    margin-bottom: 3rem;
+
+    .chakra-heading{
+        font-size: 1.2rem;
+    }
+
+    label{
+        font-size: 1rem;
+    }
+
+    .radio-btn-stack{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.social-container {
+    margin-bottom: 2.5rem;
+};
 
 }

@@ -24,11 +24,11 @@ const Contact = () => {
           </Heading>
 
           <Stack marginTop="4rem">
-            <Text fontSize="1.4rem" display="flex" alignItems="center" my={3}>
+            <Text className="contact-text-span" my={3}>
               <Icon as={IoIosMail} mx={2} />
               <span>vaheedsk36@gmail.com</span>
             </Text>
-            <Text fontSize="1.4rem" display="flex" alignItems="center" my={3}>
+            <Text className="contact-text-span" my={3}>
               <Icon as={ImLocation} mx={2} />
               <span>Hyderabad, India</span>
             </Text>

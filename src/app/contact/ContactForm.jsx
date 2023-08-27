@@ -76,7 +76,7 @@ const ContactForm = () => {
           <Heading size="md" color="black" my={3}>
             I&apos;m interested in...
           </Heading>
-          <HStack {...group}>
+          <HStack {...group} className="radio-btn-stack">
             {options.map((value) => {
               const radio = getRadioProps({ value });
               return (
