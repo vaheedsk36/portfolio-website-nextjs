@@ -22,12 +22,30 @@ $form-label-gray: #6A6A6A;
 $neon-green-color: #16FF00;
 
 .container {
-margin: 2rem 7rem;
+    margin: 2rem 7rem;
 }
 
 .skills-container {
     margin: 2rem 8rem;
-    }
+}
+
+.work-container {
+    margin: auto 15rem;
+}
+
+.work-card-container {
+    width: 58rem;
+}
+
+.work-img-container {
+    margin-right: 1rem;
+    height: 12rem;
+    width: 12rem;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+}
 
 .home-container {
     position: fixed;
@@ -58,11 +76,12 @@ margin: 2rem 7rem;
 
 .nav-link-span {
     display: flex;
+
     a {
         margin-top: 2rem;
         margin-right: 20px;
 
-        
+
         font-size: 1.2rem;
         font-weight: 900;
 
@@ -74,7 +93,8 @@ margin: 2rem 7rem;
 }
 
 .typed-cursor {
-    color: $neon-green-color; /* Change the cursor color */
+    color: $neon-green-color;
+    /* Change the cursor color */
 }
 
 .active-link {
@@ -93,7 +113,7 @@ margin: 2rem 7rem;
     background-color: $neon-green-color;
 }
 
-.typed-text{
+.typed-text {
     color: $neon-green-color;
 }
 
@@ -105,14 +125,9 @@ margin: 2rem 7rem;
     right: 0;
     left: 0;
     top: 180px
-};
+}
 
-.work-card-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 4rem;
-    text-align: center;
-};
+;
 
 .work-card-body {
     display: grid;
@@ -151,12 +166,12 @@ margin: 2rem 7rem;
     }
 }
 
-.skills-icon{
+.skills-icon {
     width: 55px;
     height: 55px;
 }
 
-.skill-heading{
+.skill-heading {
     font-size: 1.2rem;
 }
 
@@ -171,7 +186,7 @@ margin: 2rem 7rem;
     }
 }
 
-.radio-btn-container{
+.radio-btn-container {
     margin: 1rem 26rem;
 }
 
@@ -200,18 +215,24 @@ margin: 2rem 7rem;
     grid-template-columns: 30% 70%;
     font-size: 1.1rem;
     margin-bottom: 4rem;
-};
+}
+
+;
 
 .blogs-container {
     width: 85rem;
     padding: 1.3rem 0;
     margin: auto 3rem;
-};
+}
+
+;
 
 .profile-image {
     width: 20rem;
     height: 20rem;
-};
+}
+
+;
 
 .article-btn {
     background-color: $mustard-yellow;
@@ -227,7 +248,9 @@ margin: 2rem 7rem;
         background-color: $mustard-hover-yellow;
 
     }
-};
+}
+
+;
 
 .contact-container {
     margin-top: 5rem;
@@ -269,9 +292,11 @@ margin: 2rem 7rem;
         background-color: $twitter-blue-color;
     }
 
-};
+}
 
-.projects-container{
+;
+
+.projects-container {
     margin: 2rem 10rem
 }
 
@@ -280,40 +305,64 @@ margin: 2rem 7rem;
 
 @media screen and (max-width: 390px) {
 
+    // ******** PROJECTS SECTION ********
 
     .projects-card {
         width: 15rem;
         margin: 3px;
-    
+
         img {
             height: 8rem;
         }
     }
 
-    .projects-container{
+    .projects-container {
         margin: 1rem 4rem;
     }
 
-    .radio-btn-container{
+    .radio-btn-container {
         margin: 1rem 0;
     }
 
+    // ******** SKILLS SECTION ********
+
     .skills-container {
         margin: 1rem 2.6rem;
-        }
+    }
 
     .skills-card {
         width: 120px;
         height: 110px;
     }
 
-    .skills-icon{
+    .skills-icon {
         width: 40px;
         height: 40px;
     }
 
-    .skill-heading{
+    .skill-heading {
         font-size: 0.95rem;
     }
 
-  }
+    // ******** EXPERIENCE SECTION ********
+
+    .work-container {
+        margin: 1.7rem;
+    };
+
+    .work-card-container {
+        width: 21rem;
+    };
+
+    .work-card-body {
+        display: block;
+    };
+
+    .work-img-container {
+        height: 15rem;
+        width: 15rem;
+        margin: 2rem auto;
+        padding: 0;
+    }
+
+}

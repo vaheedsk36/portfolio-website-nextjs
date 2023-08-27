@@ -55,10 +55,7 @@ const Work = () => {
   return (
     <>
       <div
-        className="container"
-        style={{
-          margin: "auto 7.2rem",
-        }}
+        className="work-container"
       >
         <Heading className="sub-heading" size="md" my={3}>
           EXPERIENCE

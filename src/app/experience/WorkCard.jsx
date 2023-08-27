@@ -7,19 +7,9 @@ const WorkCard = (props) => {
     props.data;
   return (
     <>
-      <Card width="58rem" my={3}>
+      <Card className="work-card-container" my={3}>
         <CardBody className="work-card-body">
-          <div
-            style={{
-              marginRight: "1rem",
-              height: "12rem",
-              width: "12rem",
-              display: "flex",
-              alignItems: "center",
-              backgroundColor: "white",
-              padding: "10px",
-            }}
-          >
+          <div className="work-img-container">
             <Image
               objectFit="cover"
               src={`/images/${companyImg}`}
