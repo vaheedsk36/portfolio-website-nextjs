@@ -24,6 +24,7 @@ const HeaderTab = () => {
             key={index}
             href={link.path}
             className={pathname === link.path ? "active-link" : ""}
+
           >
             {link.text}
           </Link>

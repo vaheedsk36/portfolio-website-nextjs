@@ -1,44 +1,51 @@
-"use client";
-import React, { useState } from "react";
-import HeaderTab from "./HeaderTab";
+import React, { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Text, Icon } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
+import HeaderTab from "./HeaderTab";
+
 const Header = () => {
-  const headerClickhandler = () => {
-    document.body.classList.toggle("scroll-lock");
+  const [doScrollLockExists, setDoScrollLockExists] = useState(false);
+  const pathname = usePathname();
+
+  const toggleScrollLock = () => {
+    const newScrollLockExists = !doScrollLockExists;
+    document.body.classList.toggle("scroll-lock", newScrollLockExists);
 
     const navLinkSpans = document.querySelectorAll(".nav-link-span");
     navLinkSpans.forEach((span) => {
-      if (document.body.classList.contains("scroll-lock")) {
-        span.style.display = "block";
-      } else {
-        span.style.display = "none";
-      }
+      span.style.display = newScrollLockExists ? "block" : "none";
     });
 
-    setDoScrollLockExists(
-      document.getElementsByClassName("scroll-lock").length
-    );
+    setDoScrollLockExists(newScrollLockExists);
   };
 
-  const [doScrollLockExists, setDoScrollLockExists] = useState();
-  return (
-    <>
-      <div className="nav-container">
-        <div className="nav-name-container">
-          <Text fontFamily="righteous">VAHEED SHAIK </Text>
-          <Icon
-            className="hamburger-icon"
-            as={doScrollLockExists ? AiOutlineClose : GiHamburgerMenu}
-            onClick={headerClickhandler}
-          />
-        </div>
+  useEffect(() => {
+    const navLinkSpans = document.querySelectorAll(".nav-link-span");
+    if (document.body.classList.contains("scroll-lock")) {
+      navLinkSpans.forEach((span) => {
+        span.style.display = "none";
+      });
+      setDoScrollLockExists(false);
+      document.body.classList.remove("scroll-lock");
+    }
+  }, [pathname]);
 
-        <HeaderTab />
-        <span className="nav-link-span"></span>
+  return (
+    <div className="nav-container">
+      <div className="nav-name-container">
+        <Text fontFamily="righteous">VAHEED SHAIK </Text>
+        <Icon
+          className="hamburger-icon"
+          as={doScrollLockExists ? AiOutlineClose : GiHamburgerMenu}
+          onClick={toggleScrollLock}
+        />
       </div>
-    </>
+
+      <HeaderTab />
+      <span className="nav-link-span"></span>
+    </div>
   );
 };
 
