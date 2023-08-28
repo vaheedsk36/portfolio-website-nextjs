@@ -28,7 +28,7 @@ $neon-green-color: #16FF00;
     margin: 2rem 7rem;
 }
 
-.scroll-lock{
+.scroll-lock {
     overflow-y: hidden;
 }
 
@@ -68,7 +68,7 @@ $neon-green-color: #16FF00;
 //     }
 // };
 
-.hamburger-icon{
+.hamburger-icon {
     display: none;
 }
 
@@ -137,10 +137,13 @@ $neon-green-color: #16FF00;
     grid-template-columns: 30% 70%;
     font-size: 1.1rem;
     margin-bottom: 4rem;
-    p{
+
+    p {
         text-align: justify;
     }
-};
+}
+
+;
 
 .interests-card {
     display: grid;
@@ -223,7 +226,9 @@ $neon-green-color: #16FF00;
     right: 0;
     left: 0;
     top: 180px
-};
+}
+
+;
 
 
 // ******** PROJECTS SECTION ********
@@ -251,7 +256,9 @@ $neon-green-color: #16FF00;
 .profile-image {
     width: 20rem;
     height: 20rem;
-};
+}
+
+;
 
 // ******** BLOGS SECTION ********
 
@@ -260,9 +267,11 @@ $neon-green-color: #16FF00;
     width: 85rem;
     padding: 1.3rem 0;
     margin: auto 3rem;
-};
+}
 
-.blogs-grid-container{
+;
+
+.blogs-grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
@@ -288,7 +297,9 @@ $neon-green-color: #16FF00;
         background-color: $mustard-hover-yellow;
 
     }
-};
+}
+
+;
 
 // ******** CONTACT SECTION ********
 
@@ -299,10 +310,10 @@ $neon-green-color: #16FF00;
     grid-template-columns: 40% 55%;
 }
 
-.contact-text-span{
-    font-size:1.4rem;
-    display:flex;
-    align-items:center;
+.contact-text-span {
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
 }
 
 .contact-form-card {
@@ -339,7 +350,9 @@ $neon-green-color: #16FF00;
         background-color: $twitter-blue-color;
     }
 
-};
+}
+
+;
 
 
 //! ******** iphone 12pro screen ********
@@ -348,53 +361,61 @@ $neon-green-color: #16FF00;
 
     // ******** NAVBAR COMPONENT ********
 
-.nav-container {
-    display: block;
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0;
-    z-index: 100;
+    .nav-container {
+        display: block;
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0;
+        z-index: 100;
 
-}
-
-.nav-name-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.3rem;
-    padding: 15px 28px
-};
-
-.nav-link-span {
-    background-color: rgba(0, 0, 0, 0.748);
-    display: none;
-    padding: 0.5rem;
-    height: 100vh;
-
-    a {
-    display: block;
-
-        margin: 1rem;
-
-        font-size: 1rem;
     }
-}
 
-.hamburger-icon{
-    display: unset;
-}
+    .nav-name-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.3rem;
+        padding: 15px 28px
+    }
+
+    ;
+
+    .nav-link-span {
+        background-color: rgba(0, 0, 0, 0.748);
+        display: none;
+        padding: 0.5rem;
+        height: 100vh;
+
+        a {
+            display: block;
+
+            margin: 1rem;
+
+            font-size: 1rem;
+        }
+    }
+
+    .hamburger-icon {
+        display: unset;
+    }
+
+    .active-link::after {
+        background-color: transparent;
+    }
 
 
-// ******** ABOUT SECTION ********
+    // ******** ABOUT SECTION ********
 
     .profile-image {
         width: 20rem;
         height: 17rem;
         margin-bottom: 1rem;
-    };
+    }
+
+    ;
 
     .about-container {
         margin: 3.5rem;
@@ -402,9 +423,11 @@ $neon-green-color: #16FF00;
 
     .about-layout-container {
         display: block;
-    };
+    }
 
-// ******** SKILLS SECTION ********
+    ;
+
+    // ******** SKILLS SECTION ********
 
     .skills-container {
         margin: 1rem 2.6rem;
@@ -424,7 +447,7 @@ $neon-green-color: #16FF00;
         font-size: 0.95rem;
     }
 
-// ******** PROJECTS SECTION ********
+    // ******** PROJECTS SECTION ********
 
     .projects-card {
         width: 15rem;
@@ -443,19 +466,25 @@ $neon-green-color: #16FF00;
         margin: 1rem 0;
     }
 
-// ******** EXPERIENCE SECTION ********
+    // ******** EXPERIENCE SECTION ********
 
     .work-container {
         margin: 1.7rem;
-    };
+    }
+
+    ;
 
     .work-card-container {
         width: 19rem;
-    };
+    }
+
+    ;
 
     .work-card-body {
         display: block;
-    };
+    }
+
+    ;
 
     .work-img-container {
         height: 15rem;
@@ -467,13 +496,15 @@ $neon-green-color: #16FF00;
 
     .blogs-container {
         margin: auto 1.6rem;
-    };
+    }
+
+    ;
 
     .articles-card {
         margin: 2rem 0.5rem;
     }
 
-    .blogs-grid-container{
+    .blogs-grid-container {
         display: block;
     }
 
@@ -483,45 +514,47 @@ $neon-green-color: #16FF00;
         margin: 1.2rem;
     }
 
-.contact-container {
-    margin-top: 1.5rem;
-    display: block;
+    .contact-container {
+        margin-top: 1.5rem;
+        display: block;
 
-    .chakra-heading{
-        font-size: 2.1rem;
+        .chakra-heading {
+            font-size: 2.1rem;
+        }
+
+        .chakra-stack {
+            margin-top: 1rem;
+        }
     }
 
-    .chakra-stack{
-        margin-top: 1rem;
-    }
-}
-
-.contact-text-span{
-    font-size:1.2rem;
-    display:flex;
-    align-items:center;
-}
-
-.contact-form-card {
-    padding: 0;
-    margin-bottom: 3rem;
-
-    .chakra-heading{
+    .contact-text-span {
         font-size: 1.2rem;
-    }
-
-    label{
-        font-size: 1rem;
-    }
-
-    .radio-btn-stack{
         display: flex;
-        flex-wrap: wrap;
+        align-items: center;
     }
-}
 
-.social-container {
-    margin-bottom: 2.5rem;
-};
+    .contact-form-card {
+        padding: 0;
+        margin-bottom: 3rem;
+
+        .chakra-heading {
+            font-size: 1.2rem;
+        }
+
+        label {
+            font-size: 1rem;
+        }
+
+        .radio-btn-stack {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    .social-container {
+        margin-bottom: 2.5rem;
+    }
+
+    ;
 
 }
