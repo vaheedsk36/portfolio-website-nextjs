@@ -62,6 +62,16 @@ $neon-green-color: #16FF00;
     z-index: 10;
 }
 
+// .nav-name-container {
+//     a{
+
+//     }
+// };
+
+.hamburger-icon{
+    display: none;
+}
+
 .nav-link-span {
     display: flex;
 
@@ -350,9 +360,17 @@ $neon-green-color: #16FF00;
 
 }
 
+.nav-name-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    padding: 15px 28px
+};
+
 .nav-link-span {
     background-color: rgba(0, 0, 0, 0.748);
-    display: block;
+    display: none;
     padding: 0.5rem;
     height: 100vh;
 
@@ -363,6 +381,10 @@ $neon-green-color: #16FF00;
 
         font-size: 1rem;
     }
+}
+
+.hamburger-icon{
+    display: unset;
 }
 
 

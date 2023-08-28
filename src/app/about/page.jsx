@@ -64,9 +64,9 @@ const Page = () => {
               </Heading>
               <br />
               <p>
-                I&apos;m <span class="name">Vaheed</span>, a passionate software
+                I&apos;m <span className="name">Vaheed</span>, a passionate software
                 developer. I specialize in{" "}
-                <span class="tech">Web Development</span>, crafting seamless
+                <span className="tech">Web Development</span>, crafting seamless
                 user experiences and robust backend solutions. With a knack for
                 problem-solving, I thrive on creating elegant code that makes an
                 impact. I&apos;m always exploring new tools and techniques to
