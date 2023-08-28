@@ -16,20 +16,23 @@ import {
   HStack,
   Heading,
   Icon,
+  useToast
 } from "@chakra-ui/react";
 import { BsFillSendFill } from "react-icons/bs";
 import RadioCard from "../../components/RadioCards";
 
 const ContactForm = () => {
   const options = ["Web Development", "Hiring", "Freelance", "Other"];
-
+  const [interestedIn,setInterestedIn] = useState();
   const { getRootProps, getRadioProps } = useRadioGroup({
     name: "interested",
     defaultValue: "Web Development",
-    onChange: console.log,
+    onChange: (value)=>setInterestedIn(value),
   });
 
   const group = getRootProps();
+
+  const toast = useToast()
 
   const [formData, setFormData] = useState({
     name: {
@@ -76,11 +79,12 @@ const ContactForm = () => {
   
       const data = {
         name: formData.name.label,
+        interest:interestedIn,
         email: formData.email.label,
         number: formData.number.label,
         message: formData.message.label,
       };
-  
+
       try {
         const response = await fetch(formSubmitURL, {
           method: "POST",
@@ -91,12 +95,22 @@ const ContactForm = () => {
         });
   
         if (response.ok) {
-          // Handle success, e.g., show a success message
-        } else {
-          // Handle error, e.g., show an error message
+          toast({
+            title: "Message sent successfully",
+            position: "top",
+            isClosable: true,
+            variant:"subtle"
+          });
+        }else{
+          throw new Error("Unable to send message ")
         }
       } catch (error) {
-        // Handle error, e.g., show an error message
+        toast({
+          title: error.message,
+          position: "top",
+          isClosable: true,
+          variant:"subtle"
+        });
       }
     };
 
