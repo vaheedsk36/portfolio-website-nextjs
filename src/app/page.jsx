@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
-import HeaderTab from "../components/HeaderTab";
 import { Heading } from "@chakra-ui/react";
 import { Icon } from "@chakra-ui/react";
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
@@ -47,20 +46,13 @@ export default function Home() {
   return (
     <>
       <div className="home-container body-theme" ref={vantaRef}>
-        <div
-          style={{
-            position: "absolute",
-            top: "18rem",
-            left: "10rem",
-          }}
-        >
-          <Heading fontFamily="Black Ops One" fontSize="6xl">
+        <div className="about-main-container">
+          <Heading fontFamily="Black Ops One" className="name-heading">
             Masood Akhtar Vaheed
           </Heading>
           <Heading my={3} size="lg" >
             I &apos;m <span className="typed-text" ref={typedTextRef}></span>
           </Heading>
-          <HeaderTab />
           <div
             style={{
               fontSize: "2rem",

@@ -27,7 +27,8 @@ export default function RootLayout({ children }) {
         }}
       >
         <Providers>
-          {pathname !== "/" && <Header />}
+          {/* {pathname !== "/" && <Header />} */}
+          <Header />
           {children}
         </Providers>
       </body>

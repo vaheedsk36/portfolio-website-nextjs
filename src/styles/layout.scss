@@ -7,7 +7,8 @@
 }
 
 $background-color: #02001E;
-$nav-container-color: #06005369;
+$nav-container-color: #200b8b4a;
+$nav-link-container-color: #150639d5;
 $blue-400: #4299E1;
 $blue-500: #3182CE;
 $sub-header-color: #dee2e6;
@@ -121,6 +122,16 @@ $neon-green-color: #16FF00;
 }
 
 // ******** ABOUT SECTION ********
+
+.about-main-container{
+    position: absolute;
+    top: 18rem;
+    left: 10rem;
+  }
+
+.name-heading{
+    font-size: 3.7rem;
+}
 
 .about-container {
     margin: 2rem 8rem;
@@ -378,7 +389,7 @@ $neon-green-color: #16FF00;
     ;
 
     .nav-link-span {
-        background-color: rgba(0, 0, 0, 0.889);
+        background-color: $nav-link-container-color;
         display: none;
         padding: 0.5rem;
         height: 100vh;
@@ -402,6 +413,17 @@ $neon-green-color: #16FF00;
 
 
     // ******** ABOUT SECTION ********
+
+    .about-main-container{
+        top: 15rem;
+        left: 1.22rem;
+        text-align: center;
+      }
+
+    .name-heading{
+        font-size: 1.8rem;
+        margin-bottom: 3rem;
+    }
 
     .profile-image {
         width: 20rem;

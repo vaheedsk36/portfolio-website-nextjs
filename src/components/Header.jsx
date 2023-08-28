@@ -35,7 +35,7 @@ const Header = () => {
   return (
     <div className="nav-container">
       <div className="nav-name-container">
-        <Text fontFamily="righteous">VAHEED SHAIK </Text>
+        <Text fontFamily="Righteous">VAHEED SHAIK </Text>
         <Icon
           className="hamburger-icon"
           as={doScrollLockExists ? AiOutlineClose : GiHamburgerMenu}
