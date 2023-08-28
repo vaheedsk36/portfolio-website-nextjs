@@ -69,6 +69,37 @@ const ContactForm = () => {
       <FormErrorMessage>{formData[data].errorMsg}</FormErrorMessage>
     );
 
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+  
+      const formSubmitURL = "https://formsubmit.co/vaheedsk36@gmail.com"; // Replace with your actual FormSubmit.co form URL
+  
+      const data = {
+        name: formData.name.label,
+        email: formData.email.label,
+        number: formData.number.label,
+        message: formData.message.label,
+      };
+  
+      try {
+        const response = await fetch(formSubmitURL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        });
+  
+        if (response.ok) {
+          // Handle success, e.g., show a success message
+        } else {
+          // Handle error, e.g., show an error message
+        }
+      } catch (error) {
+        // Handle error, e.g., show an error message
+      }
+    };
+
   return (
     <>
       <Card className="contact-form-card">
@@ -137,7 +168,7 @@ const ContactForm = () => {
             <ErrorMsgComponent data="message" />
           </FormControl>
 
-          <Button colorScheme="pink" my={3}>
+          <Button colorScheme="pink" my={3} onClick={handleSubmit}>
             <Icon mr={1} as={BsFillSendFill} />
             Send Message
           </Button>
