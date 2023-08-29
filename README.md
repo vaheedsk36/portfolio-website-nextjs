@@ -22,7 +22,7 @@
 - Run `npm install`
 - Make modifications in `app` folder files
 - Keep you images assets in `public > images`
-- Follow this [instruction](https://nextjs.org/learn/basics/deploying-nextjs-app/deploy)
+- Follow these [instructions](https://nextjs.org/learn/basics/deploying-nextjs-app/deploy)
 
 ## Sections
 
@@ -33,3 +33,24 @@
 - Experience
 - Blogs
 - Contact
+
+## Contributing 💡
+
+To contribute, follow these steps:
+
+### Step 1
+
+Fork or clone this repo to your local machine.
+
+### Step 2
+
+Build your code. Implement your changes, add features, or fix issues.
+
+### Step 3
+
+When you're ready, create a new pull request to merge your changes:
+
+- 🔃 Push your changes to your forked repo.
+- 👀 Await review and address any feedback.
+
+Thank you for contributing to this repo! Together, we can make it even better. 😄🚀
