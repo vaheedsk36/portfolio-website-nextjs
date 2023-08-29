@@ -37,7 +37,7 @@ const Skills = () => {
                 }}
               >
                 <CardBody display="flow" alignItems="center" textAlign="center">
-                  <Icon as={data.icon} className="skills-icon" />
+                  <Icon as={data.icon} width="55px" height="55px" />
                   <Heading my={1} textAlign="center" className="skill-heading">
                     {data.name}
                   </Heading>
