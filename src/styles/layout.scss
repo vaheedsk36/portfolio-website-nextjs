@@ -156,33 +156,6 @@ $neon-green-color: #16FF00;
     background-color: $default-card-color;
 }
 
-// ******** SKILLS SECTION ********
-
-.skills-container {
-    margin: 2rem 8rem;
-}
-
-.skills-card {
-    background-color: $default-card-color;
-    width: 145px;
-    height: 130px;
-    transition: all .2s ease-in-out;
-
-    &:hover {
-        background-color: $default-card-hover-color;
-        transform: scale(1.1);
-    }
-}
-
-.skills-icon {
-    width: 55px;
-    height: 55px;
-}
-
-.skill-heading {
-    font-size: 1.2rem;
-}
-
 .blog-spinner {
     display: grid;
     justify-content: center;
@@ -351,29 +324,7 @@ $neon-green-color: #16FF00;
 
     .about-layout-container {
         display: block;
-    }
-
-    ;
-
-    // ******** SKILLS SECTION ********
-
-    .skills-container {
-        margin: 1rem 2.6rem;
-    }
-
-    .skills-card {
-        width: 120px;
-        height: 110px;
-    }
-
-    .skills-icon {
-        width: 40px;
-        height: 40px;
-    }
-
-    .skill-heading {
-        font-size: 0.95rem;
-    }
+    };
 
     // ******** PROJECTS SECTION ********
 
