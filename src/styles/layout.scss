@@ -29,10 +29,6 @@ $neon-green-color: #16FF00;
     margin: 2rem 7rem;
 }
 
-.scroll-lock {
-    overflow-y: hidden;
-}
-
 .sub-heading {
     font-size: 1rem;
     color: $sub-header-color;
@@ -44,41 +40,6 @@ $neon-green-color: #16FF00;
         display: inline-block;
         background: $sub-header-color;
         margin: 4px 10px;
-    }
-}
-
-// ******** NAVBAR COMPONENT ********
-
-.nav-container {
-    position: sticky;
-    background-color: $nav-container-color;
-    height: 4rem;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 30px;
-    z-index: 10;
-}
-
-.hamburger-icon {
-    display: none;
-}
-
-.nav-link-span {
-    display: flex;
-
-    a {
-        margin-right: 20px;
-        font-size: 1.2rem;
-        font-weight: 900;
-
-        &:hover {
-            color: $neon-green-color;
-            text-decoration: none;
-        }
     }
 }
 
@@ -363,54 +324,6 @@ $neon-green-color: #16FF00;
 //! ******** iphone 12pro screen ********
 
 @media screen and (max-width: 390px) {
-
-    // ******** NAVBAR COMPONENT ********
-
-    .nav-container {
-        display: block;
-        position: sticky;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        padding: 0;
-        z-index: 100;
-
-    }
-
-    .nav-name-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 1.3rem;
-        padding: 15px 28px
-    }
-
-    ;
-
-    .nav-link-span {
-        background-color: $nav-link-container-color;
-        display: none;
-        padding: 0.5rem;
-        height: 100vh;
-
-        a {
-            display: block;
-
-            margin: 1.5rem;
-
-            font-size: 1rem;
-        }
-    }
-
-    .hamburger-icon {
-        display: unset;
-    }
-
-    .active-link::after {
-        background-color: transparent;
-    }
-
 
     // ******** ABOUT SECTION ********
 
