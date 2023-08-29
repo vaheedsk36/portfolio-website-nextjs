@@ -6,7 +6,7 @@
 
 [![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/vaheedsk36/portfolio-website-nextjs/commits/main)
 [![Website](https://img.shields.io/badge/website-up-yellow)](https://vaheedshaik.vercel.app/)
-[![Message](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white](https://www.linkedin.com/in/sk36)
+[![Message](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sk36)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 Build using:
