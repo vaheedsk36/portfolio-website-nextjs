@@ -1,6 +1,6 @@
 # ⭐ Personal Portfolio Website ⭐
 
-> [Portfolio Website Link](https://vaheedshaik.vercel.app/)
+> [Deployed here](https://vaheedshaik.vercel.app/)
 
 ⭐ Star me on GitHub ⭐
 
