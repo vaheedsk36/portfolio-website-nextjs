@@ -23,8 +23,18 @@ import {
   SiGnubash,
   SiNextdotjs,
 } from "react-icons/si";
-import { BsGit, BsMarkdown } from "react-icons/bs";
-import { GiArtificialIntelligence } from "react-icons/gi";
+import { AiFillCode } from "react-icons/ai";
+import { FaHashnode } from "react-icons/fa6";
+import {
+  BsGlobe,
+  BsCodeSlash,
+  BsRobot,
+  BsFileBarGraph,
+  BsGit,
+  BsMarkdown,
+} from "react-icons/bs";
+import { GiArchiveResearch, GiArtificialIntelligence } from "react-icons/gi";
+import { FcElectronics } from "react-icons/fc";
 
 export const links = [
   { text: "Home", path: "/" },
@@ -34,6 +44,41 @@ export const links = [
   { text: "Experience", path: "/experience" },
   { text: "Blogs", path: "/blogs" },
   { text: "Contact", path: "/contact" },
+];
+
+export const interestsData = [
+  {
+    interest: "Software Engineering",
+    icon: BsCodeSlash,
+  },
+  {
+    interest: "Tech Blog",
+    icon: FaHashnode,
+  },
+  {
+    interest: "Internet of Things",
+    icon: FcElectronics,
+  },
+  {
+    interest: "Market Research",
+    icon: GiArchiveResearch,
+  },
+  {
+    interest: "Visualization",
+    icon: BsFileBarGraph,
+  },
+  {
+    interest: "Software Development",
+    icon: AiFillCode,
+  },
+  {
+    interest: "Robotics",
+    icon: BsRobot,
+  },
+  {
+    interest: "Web Scraping",
+    icon: BsGlobe,
+  },
 ];
 
 export const skillsData = [
@@ -128,5 +173,53 @@ export const skillsData = [
   {
     name: "Markdown",
     icon: BsMarkdown,
+  },
+];
+
+export const workData = [
+  {
+    company: "1Digitalstack.ai",
+    designation: "Software Engineer 1",
+    duration: "March 2022 - Present",
+    companyImg: "1ds.jpg",
+    description: (
+      <>
+        <ul>
+          <li>
+            I work on Reviniti, an analytics product designed for e-commerce
+            players in the bid management domain. Solely migrated the old
+            codebase from a templating engine (PugJS) to React with TypeScript.
+          </li>
+          <li>
+            Engaged in developing new features, refactoring code, enhancing
+            product performance, bug fixes and contributing towards achieving
+            high scalability for the product.
+          </li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    company: "Fact.MR",
+    designation: "Associate Consultant Level 01",
+    duration: "Dec 2020 - July 2021",
+    companyImg: "fmr.svg",
+    description: (
+      <>
+        <ul>
+          <li>
+            Engaged in creating comprehensive client-specific and syndicated
+            research reports, along with SEO-focused articles and collateral
+            materials within the domains of chemicals, materials, consumer
+            goods, and industrial goods.
+          </li>
+          <li>
+            Expertly estimated market valuations and conducted primary research
+            in collaboration with industry experts to validate data, extract
+            valuable market insights.
+          </li>
+        </ul>
+      </>
+    ),
   },
 ];

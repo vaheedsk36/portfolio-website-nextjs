@@ -1,48 +1,11 @@
 "use client";
 import React from "react";
 import { Heading, SimpleGrid, Image, Text } from "@chakra-ui/react";
-import { AiFillCode } from "react-icons/ai";
-import { FaHashnode } from "react-icons/fa6";
-import { BsGlobe, BsCodeSlash, BsRobot, BsFileBarGraph } from "react-icons/bs";
-import { GiArchiveResearch } from "react-icons/gi";
-import { FcElectronics } from "react-icons/fc";
 import InterestsCard from "./InterestsCard";
+import { interestsData } from "../../utils/constants";
 
 const Page = () => {
-  const interestsData = [
-    {
-      interest: "Software Engineering",
-      icon: BsCodeSlash,
-    },
-    {
-      interest: "Tech Blog",
-      icon: FaHashnode,
-    },
-    {
-      interest: "Internet of Things",
-      icon: FcElectronics,
-    },
-    {
-      interest: "Market Research",
-      icon: GiArchiveResearch,
-    },
-    {
-      interest: "Visualization",
-      icon: BsFileBarGraph,
-    },
-    {
-      interest: "Software Development",
-      icon: AiFillCode,
-    },
-    {
-      interest: "Robotics",
-      icon: BsRobot,
-    },
-    {
-      interest: "Web Scraping",
-      icon: BsGlobe,
-    },
-  ];
+
   return (
     <>
       <div className="about-container">
