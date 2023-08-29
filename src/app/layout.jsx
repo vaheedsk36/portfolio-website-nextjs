@@ -1,4 +1,6 @@
 "use client";
+import ReactGA from 'react-ga';
+import { useEffect } from "react"
 import { Providers } from "./providers";
 import Header from "../components/Header";
 import { usePathname } from "next/navigation";
@@ -17,7 +19,26 @@ import "../styles/main.scss";
 // };
 
 export default function RootLayout({ children }) {
+
   const pathname = usePathname();
+  
+  const initGA = () => {
+    ReactGA.initialize("G-GD32MHWBE6");
+  };
+  
+  const logPageView = () => {
+    ReactGA.set({ page: window.location.pathname });
+    ReactGA.pageview(window.location.pathname);
+  };
+
+  useEffect(() => {
+    if (!window.GA_INITIALIZED) {
+      initGA();
+      window.GA_INITIALIZED = true;
+    }
+    logPageView();
+  }, []);
+
 
   return (
     <html lang="en">

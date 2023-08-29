@@ -25,9 +25,10 @@
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-ga": "^3.3.1",
     "react-icons": "^4.10.1",
-    "typed.js": "^2.0.16",
     "three": "0.124.0",
+    "typed.js": "^2.0.16",
     "vanta": "0.5.21"
   },
   "devDependencies": {
