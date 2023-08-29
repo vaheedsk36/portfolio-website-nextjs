@@ -1,9 +1,7 @@
 "use client";
-import ReactGA from 'react-ga';
-import { useEffect } from "react"
 import { Providers } from "./providers";
 import Header from "../components/Header";
-import { usePathname } from "next/navigation";
+import Script from "next/script";
 import "../styles/main.scss";
 // import { Metadata } from "next";
 // import Favicon from "/public/images/favicon.png";
@@ -19,26 +17,7 @@ import "../styles/main.scss";
 // };
 
 export default function RootLayout({ children }) {
-
-  const pathname = usePathname();
-  
-  const initGA = () => {
-    ReactGA.initialize("G-GD32MHWBE6");
-  };
-  
-  const logPageView = () => {
-    ReactGA.set({ page: window.location.pathname });
-    ReactGA.pageview(window.location.pathname);
-  };
-
-  useEffect(() => {
-    if (!window.GA_INITIALIZED) {
-      initGA();
-      window.GA_INITIALIZED = true;
-    }
-    logPageView();
-  }, []);
-
+  const NEXT_PUBLIC_GOOGLE_ANALYTICS = "G-GD32MHWBE6";
 
   return (
     <html lang="en">
@@ -47,6 +26,21 @@ export default function RootLayout({ children }) {
           backgroundColor: "#02001E",
         }}
       >
+        <Script
+          strategy="lazyOnload"
+          src={`https://www.googletagmanager.com/gtag/js?id=${NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        />
+
+        <Script strategy="lazyOnload" id="">
+          {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+                    page_path: window.location.pathname,
+                    });
+                `}
+        </Script>
         <Providers>
           {/* {pathname !== "/" && <Header />} */}
           <Header />
