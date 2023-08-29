@@ -26,13 +26,13 @@
 
 ## Sections
 
-- Home
-- About
-- Skills
-- Projects
-- Experience
-- Blogs
-- Contact
+- **🏠 Home**
+- **🙋‍♂️ About**
+- **🛠️ Skills**
+- **💼 Projects**
+- **🔍 Experience**
+- **📝 Blogs**
+- **📬 Contact**
 
 ## Contributing 💡
 
