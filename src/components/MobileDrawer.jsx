@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useDisclosure, Flex, Button, VStack } from "@chakra-ui/react";
 import DrawerComponent from "./DrawerComponent";
 import { IoMdMenu } from "react-icons/io";
@@ -5,9 +6,13 @@ import { Link } from "@chakra-ui/next-js";
 import React from "react";
 import { links } from "../utils/constants";
 
-export default function MobileDrawer() {
+export default function MobileDrawer({ pathname }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+
+  useEffect(() => {
+    onClose();
+  }, [pathname]);
 
   return (
     <Flex display={{ base: "flex", md: "none" }}>
@@ -22,7 +27,7 @@ export default function MobileDrawer() {
               key={index}
               href={link.path}
               fontWeight="extrabold"
-              _hover={{ textDecoration: "none"}}
+              _hover={{ textDecoration: "none" }}
               fontSize="md"
               my={2}
               textAlign="center"

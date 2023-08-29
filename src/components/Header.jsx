@@ -36,7 +36,7 @@ export default function Header() {
         </HStack>
 
         <HStack>
-          <MobileDrawer />
+          <MobileDrawer {...{ pathname }} />
         </HStack>
       </Flex>
     </chakra.header>
