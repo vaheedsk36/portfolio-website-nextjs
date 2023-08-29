@@ -1,158 +1,53 @@
 "use client";
 import React from "react";
-import { Card, CardBody, Heading, SimpleGrid, Icon } from "@chakra-ui/react";
 import {
-  FaHtml5,
-  FaCss3,
-  FaReact,
-  FaSass,
-  FaPython,
-  FaNodeJs,
-  FaDocker,
-  FaGithub,
-} from "react-icons/fa";
-import {
-  TbBrandTypescript,
-  TbBrandJavascript,
-  TbBrandCpp,
-  TbBrandRedux,
-  TbBrandBootstrap,
-} from "react-icons/tb";
-import { BiLogoJquery, BiLogoPostgresql } from "react-icons/bi";
-import {
-  SiPug,
-  SiExpress,
-  SiPostman,
-  SiGnubash,
-  SiNextdotjs,
-} from "react-icons/si";
-import { BsGit, BsMarkdown } from "react-icons/bs";
-import { GiArtificialIntelligence } from "react-icons/gi";
+  Card,
+  CardBody,
+  Heading,
+  SimpleGrid,
+  Icon,
+  Box,
+  Center,
+} from "@chakra-ui/react";
+
+import { skillsData } from "../../utils/constants";
 
 const Skills = () => {
-  const skillsData = [
-    {
-      name: "HTML5",
-      icon: FaHtml5,
-    },
-    {
-      name: "CSS3",
-      icon: FaCss3,
-    },
-    {
-      name: "Javascript",
-      icon: TbBrandJavascript,
-    },
-    {
-      name: "Jquery",
-      icon: BiLogoJquery,
-    },
-    {
-      name: "Typescript",
-      icon: TbBrandTypescript,
-    },
-    {
-      name: "SASS",
-      icon: FaSass,
-    },
-    {
-      name: "Bootstrap",
-      icon: TbBrandBootstrap,
-    },
-    {
-      name: "C/C++",
-      icon: TbBrandCpp,
-    },
-    {
-      name: "Python",
-      icon: FaPython,
-    },
-    {
-      name: "ReactJS",
-      icon: FaReact,
-    },
-    {
-      name: "NextJS",
-      icon: SiNextdotjs,
-    },
-    {
-      name: "Redux",
-      icon: TbBrandRedux,
-    },
-    {
-      name: "NodeJs",
-      icon: FaNodeJs,
-    },
-    {
-      name: "PugJs",
-      icon: SiPug,
-    },
-    {
-      name: "Express",
-      icon: SiExpress,
-    },
-    {
-      name: "Docker",
-      icon: FaDocker,
-    },
-    {
-      name: "Postgres",
-      icon: BiLogoPostgresql,
-    },
-    {
-      name: "Postman",
-      icon: SiPostman,
-    },
-    {
-      name: "Git",
-      icon: BsGit,
-    },
-    {
-      name: "Github",
-      icon: FaGithub,
-    },
-    {
-      name: "ChatGPT",
-      icon: GiArtificialIntelligence,
-    },
-    {
-      name: "Bash",
-      icon: SiGnubash,
-    },
-    {
-      name: "Markdown",
-      icon: BsMarkdown,
-    },
-  ];
-
   return (
-    <div className="skills-container">
-      <Heading className="sub-heading" size="md" my={3} >
-        SKILLS
-      </Heading>
-      <SimpleGrid
-        marginTop="4rem"
-        spacing={4}
-        templateColumns="repeat(auto-fill, minmax(135px, 1fr))"
-      >
-        {skillsData.map((data, index) => {
-          return (
-            <Card
-              className="skills-card"
-              key={index}
-              _hover={{ cursor: "pointer" }}
-            >
-              <CardBody display="flow" alignItems="center" textAlign="center">
-                <Icon as={data.icon} className="skills-icon"/>
-                <Heading my={1} textAlign="center" className="skill-heading">
-                  {data.name}
-                </Heading>
-              </CardBody>
-            </Card>
-          );
-        })}
-      </SimpleGrid>
-    </div>
+    <Center height="70vh" width="100vw">
+      <Box width="80vw" height="100%">
+        <Heading className="sub-heading" size="md" my={3}>
+          SKILLS
+        </Heading>
+        <SimpleGrid
+          marginTop="4rem"
+          spacing={5}
+          templateColumns="repeat(auto-fill, minmax(135px, 1fr))"
+        >
+          {skillsData.map((data, index) => {
+            return (
+              <Card
+                key={index}
+                backgroundColor="#213363"
+                transition="all .2s ease-in-out"
+                _hover={{
+                  cursor: "pointer",
+                  backgroundColor: "#213d8d",
+                  transform: "scale(1.1)",
+                }}
+              >
+                <CardBody display="flow" alignItems="center" textAlign="center">
+                  <Icon as={data.icon} className="skills-icon" />
+                  <Heading my={1} textAlign="center" className="skill-heading">
+                    {data.name}
+                  </Heading>
+                </CardBody>
+              </Card>
+            );
+          })}
+        </SimpleGrid>
+      </Box>
+    </Center>
   );
 };
 
