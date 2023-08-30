@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import ArticlesCard from "./ArticlesCard";
-import { Heading, Spinner } from "@chakra-ui/react";
+import { Heading, Spinner, Box, Center } from "@chakra-ui/react";
 import NewsLetterComponent from "./NewsLetterComponent";
 import { getArticlesData } from "../../utils/utils";
 
@@ -35,18 +35,21 @@ const Blogs = () => {
           </div>
         ) : (
           <>
-            <div className="blogs-container">
-              <Heading className="sub-heading" size="md" my={3}>
-                Blogs
-              </Heading>
-              <NewsLetterComponent />
+            <Center m={5}>
+              <Box width="95%" height="100%">
+                <Heading className="sub-heading" size="md">
+                  Blogs
+                </Heading>
 
-              <div className="blogs-grid-container">
-                {articlesData.map((data, index) => (
-                  <ArticlesCard data={data} key={index} />
-                ))}
-              </div>
-            </div>
+                <NewsLetterComponent />
+
+                <div className="blogs-grid-container">
+                  {articlesData.map((data, index) => (
+                    <ArticlesCard data={data} key={index} />
+                  ))}
+                </div>
+              </Box>
+            </Center>
           </>
         )}
       </div>

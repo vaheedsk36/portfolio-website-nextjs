@@ -21,7 +21,7 @@ export default function NewsLetterComponent() {
 
   return (
     <Flex>
-      <Container maxW={"md"} rounded={"lg"} p={6}>
+      <Container maxW={["sm","md","lg"]} rounded={"lg"} p={6}>
         <Heading
           as={"h2"}
           fontSize={{ base: "lg", sm: "xl" }}
