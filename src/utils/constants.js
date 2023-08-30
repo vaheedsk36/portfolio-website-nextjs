@@ -223,3 +223,62 @@ export const workData = [
     ),
   },
 ];
+
+export const projectsData = [
+  {
+    type: "WEB-APP",
+    title: "Weather App",
+    image: "weather-app",
+    link: "https://vaheedsk36.github.io/weather-app/",
+    source: "https://github.com/vaheedsk36/weather-app",
+  },
+  {
+    type: "WEB-APP",
+    title: "Landing Page",
+    image: "landing-page",
+    link: "https://vaheedsk36.github.io/demo-frontend-bootcamp",
+    source: "https://github.com/vaheedsk36/demo-frontend-bootcamp",
+  },
+  {
+    type: "WEB-APP",
+    title: "Guess Game",
+    image: "guess-game",
+    link: "https://vaheedsk36.github.io/guess-game",
+    source: "https://github.com/vaheedsk36/guess-game",
+  },
+  {
+    type: "WEB-APP",
+    title: "Notes App",
+    image: "react-notes-app",
+    link: "https://vaheedsk36.github.io/react-notes-app/",
+    source: "https://github.com/vaheedsk36/react-notes-app",
+  },
+  {
+    type: "WEB-APP",
+    title: "Dice Multiplayer",
+    image: "dice-multiplayer",
+    link: "https://vaheedsk36.github.io/dice-multiplayer",
+    source: "https://github.com/vaheedsk36/dice-multiplayer",
+  },
+  {
+    type: "PROJECT",
+    title: "Snake Game",
+    image: "snake-game",
+    link: "https://vaheedsk36.github.io/Snake-game",
+    source: "",
+  },
+  {
+    type: "PROJECT",
+    title: "Delta Assistant",
+    image: "delta-assistant",
+    link: "https://vaheedsk36.github.io/delta-assistant",
+    source: "https://github.com/vaheedsk36/delta-assistant",
+  },
+  {
+    type: "WEB-APP",
+    title: "Text Utility App",
+    image: "text-utility-app",
+    link: "https://vaheedsk36.github.io/text-utility-app/",
+    source: "https://github.com/vaheedsk36/text-utility-app",
+  },
+];
