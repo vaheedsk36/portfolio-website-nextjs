@@ -164,39 +164,14 @@ $neon-green-color: #16FF00;
     right: 0;
     left: 0;
     top: 180px
-}
+};
 
-;
-
-
-// ******** PROJECTS SECTION ********
-
-.projects-container {
-    margin: 2rem 10rem
-}
-
-.projects-card {
-    text-align: center;
-    border-radius: 0;
-    width: 22rem;
-    margin: 12px;
-
-    img {
-        height: 13rem;
-    }
-}
-
-.radio-btn-container {
-    margin: 1rem 26rem;
-}
 
 
 .profile-image {
     width: 20rem;
     height: 20rem;
-}
-
-;
+};
 
 // ******** BLOGS SECTION ********
 
@@ -325,25 +300,6 @@ $neon-green-color: #16FF00;
     .about-layout-container {
         display: block;
     };
-
-    // ******** PROJECTS SECTION ********
-
-    .projects-card {
-        width: 15rem;
-        margin: 3px;
-
-        img {
-            height: 8rem;
-        }
-    }
-
-    .projects-container {
-        margin: 1rem 4rem;
-    }
-
-    .radio-btn-container {
-        margin: 1rem 0;
-    }
 
     // ******** EXPERIENCE SECTION ********
 
