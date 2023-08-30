@@ -9,7 +9,13 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <chakra.header id="header" backgroundColor="#200b8b3c">
+    <chakra.header
+      id="header"
+      backgroundColor="#200b8b3c"
+      pos="sticky"
+      top={0}
+      zIndex="100"
+    >
       <Flex w="100%" px="6" py="5" align="center" justify="space-between">
         <Link
           href="/"
