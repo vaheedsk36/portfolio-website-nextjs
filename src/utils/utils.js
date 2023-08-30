@@ -32,7 +32,7 @@ export const getArticlesData = async () => {
 
 export const subscribeToNewsletter = async (email) => {
   const publicationId = "64ce5fd6058075dab96ec972";
-  const url = "https://codersk36.hashnode.dev/api/newsletter/subscribe";
+  const url = "/newsletter";
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
 
