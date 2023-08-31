@@ -16,46 +16,26 @@ import {
   HStack,
   Heading,
   Icon,
-  useToast
+  useToast,
 } from "@chakra-ui/react";
 import { BsFillSendFill } from "react-icons/bs";
 import RadioCard from "../../components/RadioCards";
+import { initialFormData } from "../../utils/constants";
 
 const ContactForm = () => {
   const options = ["Web Development", "Hiring", "Freelance", "Other"];
-  const [interestedIn,setInterestedIn] = useState();
+  const [interestedIn, setInterestedIn] = useState();
   const { getRootProps, getRadioProps } = useRadioGroup({
     name: "interested",
     defaultValue: "Web Development",
-    onChange: (value)=>setInterestedIn(value),
+    onChange: (value) => setInterestedIn(value),
   });
 
   const group = getRootProps();
 
-  const toast = useToast()
+  const toast = useToast();
 
-  const [formData, setFormData] = useState({
-    name: {
-      label: "",
-      isError: false,
-      errorMsg: "Name is required",
-    },
-    email: {
-      label: "",
-      isError: false,
-      errorMsg: "Email is required",
-    },
-    number: {
-      label: "",
-      isError: false,
-      errorMsg: "Number is required",
-    },
-    message: {
-      label: "",
-      isError: false,
-      errorMsg: "Message is required",
-    },
-  });
+  const [formData, setFormData] = useState(initialFormData);
 
   const handleInputChange = (e, data) => {
     const updatedFormData = { ...formData };
@@ -72,47 +52,47 @@ const ContactForm = () => {
       <FormErrorMessage>{formData[data].errorMsg}</FormErrorMessage>
     );
 
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-  
-      const formSubmitURL = "https://formsubmit.co/vaheedsk36@gmail.com"; // Replace with your actual FormSubmit.co form URL
-  
-      const data = {
-        name: formData.name.label,
-        interest:interestedIn,
-        email: formData.email.label,
-        number: formData.number.label,
-        message: formData.message.label,
-      };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-      try {
-        const response = await fetch(formSubmitURL, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        });
-  
-        if (response.ok) {
-          toast({
-            title: "Message sent successfully",
-            position: "top",
-            isClosable: true,
-            variant:"subtle"
-          });
-        }else{
-          throw new Error("Unable to send message ")
-        }
-      } catch (error) {
+    const formSubmitURL = "https://formsubmit.co/vaheedsk36@gmail.com"; // Replace with your actual FormSubmit.co form URL
+
+    const data = {
+      name: formData.name.label,
+      interest: interestedIn,
+      email: formData.email.label,
+      number: formData.number.label,
+      message: formData.message.label,
+    };
+
+    try {
+      const response = await fetch(formSubmitURL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
         toast({
-          title: error.message,
+          title: "Message sent successfully",
           position: "top",
           isClosable: true,
-          variant:"subtle"
+          variant: "subtle",
         });
+      } else {
+        throw new Error("Unable to send message ");
       }
-    };
+    } catch (error) {
+      toast({
+        title: error.message,
+        position: "top",
+        isClosable: true,
+        variant: "subtle",
+      });
+    }
+  };
 
   return (
     <>
@@ -164,7 +144,6 @@ const ContactForm = () => {
               onChange={(valueString) =>
                 handleInputChange({ target: { value: valueString } }, "number")
               }
-              
             >
               <NumberInputField color="black" placeholder="Your Phone No." />
             </NumberInput>
