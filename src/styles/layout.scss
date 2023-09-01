@@ -106,27 +106,7 @@ $neon-green-color: #16FF00;
     p {
         text-align: justify;
     }
-}
-
-;
-
-.interests-card {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    align-items: center;
-    width: 17.5rem;
-    height: 5rem;
-    border-radius: 0;
-    background-color: $default-card-color;
-    font-size: 2.5rem;
-    padding: 16px;
-    cursor: pointer;
-    transition: all .3s ease-in-out;
-
-    &:hover {
-        background-color: $default-card-hover-color;
-    }
-}
+};
 
 // ******** EXPERIENCE SECTION ********
 
