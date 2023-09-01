@@ -3,7 +3,6 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
   ModalCloseButton,
   ModalBody,
   Box,
@@ -23,8 +22,9 @@ const MapBox = ({ isOpen, onClose }) => {
           container: mapContainer.current,
           style: "mapbox://styles/mapbox/streets-v11",
           center: [78.474, 17.385],
-          zoom: 8,
+          zoom: 10,
         });
+
       }
     });
 
@@ -37,12 +37,16 @@ const MapBox = ({ isOpen, onClose }) => {
   }, [isOpen]);
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose}>
+    <Modal
+      isOpen={isOpen}
+      onClose={onClose}
+      isCentered
+      size={["xs", "md", "lg"]}
+    >
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>Location</ModalHeader>
-        <ModalCloseButton />
-        <ModalBody>
+        <ModalCloseButton color="red" />
+        <ModalBody padding="0">
           <Box ref={mapContainer} className="map-container" height="400px" />
         </ModalBody>
       </ModalContent>
