@@ -16,7 +16,7 @@ query GetUserArticles($page: Int = 0) {
 const variables = { page: 0 };
 
 export const getArticlesData = async () => {
-  const response = await fetch("https://api.hashnode.com/", {
+  const response = await fetch(process.env.NEXT_PUBLIC_HASHNODE_API, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -31,7 +31,7 @@ export const getArticlesData = async () => {
 };
 
 export const subscribeToNewsletter = async (email) => {
-  const publicationId = "64ce5fd6058075dab96ec972";
+  const publicationId = process.env.NEXT_PUBLIC_HASHNODE_PUBLICATION_ID;
   const url = "/newsletter";
   const headers = new Headers();
   headers.append("Content-Type", "application/json");
