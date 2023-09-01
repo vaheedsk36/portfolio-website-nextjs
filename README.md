@@ -27,7 +27,8 @@ Follow these steps to set up and deploy your own portfolio:
 2. Run `npm install`
 3. Make modifications in `app` folder files
 4. Store your image assets in `public > images`
-5. For deployment, follow these [instructions](https://nextjs.org/learn/basics/deploying-nextjs-app/deploy)
+5. Store you sercret keys by in a `.env` file for ref see `.env.sample`
+6. For deployment, follow these [instructions](https://nextjs.org/learn/basics/deploying-nextjs-app/deploy)
 
 ## Sections 📚
 
