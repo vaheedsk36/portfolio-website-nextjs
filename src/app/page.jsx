@@ -1,11 +1,12 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
-import { Heading } from "@chakra-ui/react";
+import { Flex, Heading } from "@chakra-ui/react";
 import { Icon } from "@chakra-ui/react";
-import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { Link } from "@chakra-ui/next-js";
 import NET from "vanta/dist/vanta.net.min";
 import Typed from "typed.js";
 import * as THREE from "three";
+import { socialMediaLinks } from "../utils/constants";
 
 export default function Home() {
   const [vantaEffect, setVantaEffect] = useState(0);
@@ -50,20 +51,31 @@ export default function Home() {
           <Heading fontFamily="Black Ops One" className="name-heading">
             Masood Akhtar Vaheed
           </Heading>
-          <Heading my={3} size="lg" >
+          <Heading my={3} size="lg">
             I &apos;m <span className="typed-text" ref={typedTextRef}></span>
           </Heading>
-          <div
-            style={{
-              fontSize: "2rem",
-              marginTop: "1.5rem",
-            }}
-          >
-            <Icon as={FaGithub}  />
-            <Icon as={FaInstagram} mx={3}  />
-            <Icon as={FaLinkedin}  />
-            <Icon as={FaTwitter} mx={3}  />
-          </div>
+          <Flex marginTop="1.5rem">
+            {socialMediaLinks.map((linkData, index) => (
+              <Link
+                key={index}
+                href={linkData.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                _hover={{ textDecoration: "none",backgroundColor:linkData.hoverColor }}
+                backgroundColor={linkData.backgroundColor}
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                my={3}
+                mr={3}
+                fontSize="2rem"
+                padding="10px"
+                borderRadius="1rem"
+              >
+                <Icon as={linkData.icon} />
+              </Link>
+            ))}
+          </Flex>
         </div>
       </div>
     </>
