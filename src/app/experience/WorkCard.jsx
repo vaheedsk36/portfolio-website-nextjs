@@ -1,38 +1,52 @@
 "use client";
 import React from "react";
-import { Card, CardBody, Image, Heading, Text } from "@chakra-ui/react";
+import {
+  Card,
+  CardBody,
+  Image,
+  Heading,
+  Text,
+  Flex,
+  Box,
+} from "@chakra-ui/react";
 
 const WorkCard = (props) => {
   const { company, duration, designation, companyImg, description } =
     props.data;
   return (
     <>
-      <Card className="work-card-container" my={3}>
-        <CardBody className="work-card-body">
-          <div className="work-img-container">
+      <Card my={3} transition="all .3s ease-in-out" backgroundColor="#213363" _hover={{backgroundColor:"#213d8d"}} width= "80vw">
+        <CardBody>
+          <Flex flexDirection={["column","column","row"]} justifyContent="center" alignItems="center">
             <Image
               objectFit="cover"
               src={`/images/${companyImg}`}
               alt="Company Logo"
+              marginRight="1rem"
+              height={["15rem","15rem","13rem"]}
+              width={["15rem","15rem","13rem"]}
+              margin={["2rem auto","1rem","auto 1rem"]}
+              backgroundColor="white"
+              display={["none","unset","unset"]}
             />
-          </div>
-          <div>
-            <Heading fontSize="1.5rem">{company}</Heading>
-            <Heading size="sm" my={2}>
-              {duration}
-            </Heading>
-            <Text size="xs" my={2} fontStyle="italic">
-              {designation}
-            </Text>
-            <div
-              style={{
-                marginLeft: "1.5rem",
-                fontSize: "0.95rem",
-              }}
-            >
-              {description}
-            </div>
-          </div>
+            <Box>
+              <Heading fontSize="1.5rem">{company}</Heading>
+              <Heading size="sm" my={2}>
+                {duration}
+              </Heading>
+              <Text size="xs" my={2} fontStyle="italic">
+                {designation}
+              </Text>
+              <div
+                style={{
+                  marginLeft: "1.5rem",
+                  fontSize: "0.95rem",
+                }}
+              >
+                {description}
+              </div>
+            </Box>
+          </Flex>
         </CardBody>
       </Card>
     </>
