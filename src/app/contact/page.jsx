@@ -41,10 +41,12 @@ const Contact = () => {
               </Link>
             </Tooltip>
 
-                <Text className="contact-text-span" my={3} onClick={onOpen}>
+            <Tooltip label="Open Map">
+                <Text className="contact-text-span" my={3} onClick={onOpen} cursor="pointer">
                   <Icon as={ImLocation} mx={2} />
                   <span>Hyderabad, India</span>
                 </Text>
+            </Tooltip>
           </Stack>
           <SocialIcons />
         </div>
