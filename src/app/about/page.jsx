@@ -15,13 +15,15 @@ const Page = () => {
             </Heading>
             <SimpleGrid columns={[1, null, 2]} gap={6} fontSize="1.1rem" marginBottom="4rem" templateColumns={[null,null,"30% 70%"]}>
             <Image
-                className="profile-image"
                 objectFit="shrink"
                 src="/images/profile.png"
                 alt="profile-image"
+                width={["20rem","30rem","20rem"]}
+                height={["20rem","30rem","20rem"]}
+                marginBottom={["1rem","1rem",null]}
               />
 
-              <Box >
+              <Box textAlign="justify">
                 <Heading size="xl" mb={3}>
                   👋 Hey there
                 </Heading>
