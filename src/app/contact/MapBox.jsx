@@ -6,7 +6,6 @@ import {
   ModalHeader,
   ModalCloseButton,
   ModalBody,
-  ModalFooter,
   Box,
 } from "@chakra-ui/react";
 import mapboxgl from "mapbox-gl";
@@ -38,7 +37,7 @@ const MapBox = ({ isOpen, onClose }) => {
   }, [isOpen]);
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} height="1000px" mx={2}>
+    <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
       <ModalContent>
         <ModalHeader>Location</ModalHeader>
@@ -46,7 +45,6 @@ const MapBox = ({ isOpen, onClose }) => {
         <ModalBody>
           <Box ref={mapContainer} className="map-container" height="400px" />
         </ModalBody>
-        <ModalFooter></ModalFooter>
       </ModalContent>
     </Modal>
   );

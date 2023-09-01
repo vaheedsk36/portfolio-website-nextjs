@@ -3,6 +3,13 @@
     margin: 0;
     font-family: Manrope;
     color: white;
+    .mapboxgl-ctrl-attrib {
+        display: none;
+    }
+  
+  .mapboxgl-ctrl-compact {
+    display: none;
+  }
 }
 
 $background-color: #02001E;
