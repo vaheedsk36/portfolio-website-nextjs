@@ -6,7 +6,7 @@ import { Link } from "@chakra-ui/next-js";
 import React from "react";
 import { links } from "../utils/constants";
 
-export default function MobileDrawer({ pathname }) {
+export default function MobileHeader({ pathname }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 

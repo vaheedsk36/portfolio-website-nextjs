@@ -1,7 +1,7 @@
 import { Flex, HStack, chakra, Text } from "@chakra-ui/react";
 import { Link } from "@chakra-ui/next-js";
 import React from "react";
-import MobileDrawer from "./MobileDrawer";
+import MobileHeader from "./MobileHeader";
 import { links } from "../utils/constants";
 import { usePathname } from "next/navigation";
 
@@ -42,7 +42,7 @@ export default function Header() {
         </HStack>
 
         <HStack>
-          <MobileDrawer {...{ pathname }} />
+          <MobileHeader {...{ pathname }} />
         </HStack>
       </Flex>
     </chakra.header>
