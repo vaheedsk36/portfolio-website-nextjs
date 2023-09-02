@@ -115,8 +115,8 @@ const ContactForm = () => {
             <FormLabel htmlFor="name">Enter Name</FormLabel>
             <Input
               id="name"
+              className="contact-input"
               placeholder="Your Name"
-              color="black"
               value={formData.name.label}
               onChange={(e) => handleInputChange(e, "name")}
             />
@@ -127,9 +127,9 @@ const ContactForm = () => {
             <FormLabel htmlFor="email">Enter Email</FormLabel>
             <Input
               id="email"
+              className="contact-input"
               type="email"
               placeholder="Your Email"
-              color="black"
               value={formData.email.label}
               onChange={(e) => handleInputChange(e, "email")}
             />
@@ -145,7 +145,10 @@ const ContactForm = () => {
                 handleInputChange({ target: { value: valueString } }, "number")
               }
             >
-              <NumberInputField color="black" placeholder="Your Phone No." />
+              <NumberInputField
+                className="contact-input"
+                placeholder="Your Phone No."
+              />
             </NumberInput>
           </FormControl>
 
@@ -153,15 +156,15 @@ const ContactForm = () => {
             <FormLabel htmlFor="message">Enter Message</FormLabel>
             <Textarea
               id="message"
+              className="contact-input"
               placeholder="Your Message"
               value={formData.message.label}
-              color="black"
               onChange={(e) => handleInputChange(e, "message")}
             />
             <ErrorMsgComponent data="message" />
           </FormControl>
 
-          <Button colorScheme="pink" my={3} onClick={handleSubmit}>
+          <Button backgroundColor="#D53F8C" my={3} onClick={handleSubmit}>
             <Icon mr={1} as={BsFillSendFill} />
             Send Message
           </Button>

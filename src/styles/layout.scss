@@ -69,6 +69,14 @@ $neon-green-color: #16FF00;
     background-color: $neon-green-color;
 }
 
+.contact-input{
+    color: #02001E;
+    border: 1.2px solid #9E9FA5;
+    &:hover{
+        border-color: #bcbcbc;
+    }
+}
+
 // ******** HOMEPAGE COMPONENT ********
 
 .home-container {
