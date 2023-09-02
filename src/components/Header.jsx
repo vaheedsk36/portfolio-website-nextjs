@@ -1,4 +1,4 @@
-import { Flex, HStack, chakra, Text } from "@chakra-ui/react";
+import { Flex, HStack, chakra } from "@chakra-ui/react";
 import { Link } from "@chakra-ui/next-js";
 import React from "react";
 import MobileHeader from "./MobileHeader";
