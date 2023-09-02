@@ -31,6 +31,7 @@ export default function MobileDrawer({ pathname }) {
               fontSize="md"
               my={2}
               textAlign="center"
+              color={pathname === link.path ? "#16FF00" : ""}
             >
               {link.text}
             </Link>
