@@ -28,6 +28,7 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.45.4",
     "react-icons": "^4.10.1",
+    "react-loader-spinner": "^5.4.5",
     "three": "0.124.0",
     "typed.js": "^2.0.16",
     "vanta": "0.5.21"

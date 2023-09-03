@@ -1,9 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import ArticlesCard from "./ArticlesCard";
-import { Heading, Spinner, Box, Center } from "@chakra-ui/react";
+import { Heading, Box, Center } from "@chakra-ui/react";
 import NewsLetterComponent from "./NewsLetterComponent";
 import { getArticlesData } from "../../utils/utils";
+import { FidgetSpinner } from "react-loader-spinner";
 
 const Blogs = () => {
   const [articlesData, setArticlesData] = useState([]);
@@ -18,41 +19,40 @@ const Blogs = () => {
 
   return (
     <>
-      <div mt={3}>
+      <Center m={5}>
         {isLoading ? (
-          <div className="blog-spinner">
-            <Spinner
-              thickness="10px"
-              speed="0.6s"
-              emptyColor="gray.200"
-              color="blue.500"
-              size="xl"
-              height={100}
-              width={100}
-              mb={3}
+          <Box
+          position="absolute"
+          display="flex"
+          top="40vh"
+          justifyContent="center"
+          >
+            <FidgetSpinner
+              visible={true}
+              height="100"
+              width="100"
+              ariaLabel="dna-loading"
+              wrapperClass="dna-wrapper"
+              ballColors={["#ff0000", "#00ff00", "#0000ff"]}
+              backgroundColor="white"
             />
-            <Heading>Loading...</Heading>
-          </div>
+          </Box>
         ) : (
-          <>
-            <Center m={5}>
-              <Box width="95%" height="100%">
-                <Heading className="sub-heading" size="md">
-                  Blogs
-                </Heading>
+          <Box width="95%" height="100%">
+            <Heading className="sub-heading" size="md">
+              Blogs
+            </Heading>
 
-                <NewsLetterComponent />
+            <NewsLetterComponent />
 
-                <div className="blogs-grid-container">
-                  {articlesData.map((data, index) => (
-                    <ArticlesCard data={data} key={index} />
-                  ))}
-                </div>
-              </Box>
-            </Center>
-          </>
+            <div className="blogs-grid-container">
+              {articlesData.map((data, index) => (
+                <ArticlesCard data={data} key={index} />
+              ))}
+            </div>
+          </Box>
         )}
-      </div>
+      </Center>
     </>
   );
 };
