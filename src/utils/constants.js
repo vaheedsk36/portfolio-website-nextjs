@@ -287,28 +287,6 @@ export const projectsData = [
   },
 ];
 
-export const initialFormData = {
-  name: {
-    label: "",
-    isError: false,
-    errorMsg: "Name is required",
-  },
-  email: {
-    label: "",
-    isError: false,
-    errorMsg: "Email is required",
-  },
-  number: {
-    label: "",
-    isError: false,
-    errorMsg: "Number is required",
-  },
-  message: {
-    label: "",
-    isError: false,
-    errorMsg: "Message is required",
-  },
-};
 
 export const socialMediaLinks = [
   {

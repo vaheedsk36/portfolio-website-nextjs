@@ -18,16 +18,16 @@ import {
 } from "@chakra-ui/react";
 import { BsFillSendFill } from "react-icons/bs";
 import RadioCard from "../../components/RadioCards";
-import { initialFormData } from "../../utils/constants";
 import { useForm } from "react-hook-form";
-import ShowToast from "../../components/ShowToast";
+import { useToast } from "@chakra-ui/react";
 
 const ContactForm = () => {
+  const toast = useToast();
   const options = ["Web Development", "Hiring", "Freelance", "Other"];
-  const [interestedIn, setInterestedIn] = useState();
+  const [interestedIn, setInterestedIn] = useState("Web Development");
   const { getRootProps, getRadioProps } = useRadioGroup({
     name: "interested",
-    defaultValue: "Web Development",
+    defaultValue: interestedIn,
     onChange: (value) => setInterestedIn(value),
   });
 
@@ -39,28 +39,35 @@ const ContactForm = () => {
   } = useForm();
 
   const onSubmit = async (formData) => {
-    const formSubmitURL = "https://formsubmit.co/vaheedsk36@gmail.com"; 
+    formData["interested-in"] = interestedIn;
+    const formSubmitURL = `https://fabform.io/f/${process.env.NEXT_PUBLIC_FAB_FORM_KEY}`;
     try {
       const response = await fetch(formSubmitURL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({...formData,interestedIn}),
+        body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
-        ShowToast({
-          title: "Message sent successfully",
-          status: "success",
-        });
-      } else {
+      if (!response.ok) {
         throw new Error("Unable to send message ");
       }
+      toast({
+        title: "Message sent successfully",
+        status: "success",
+        position: "bottom",
+        duration: 9000,
+        isClosable: true,
+      });
     } catch (error) {
-      ShowToast({
+      console.error("Error sending message:", error);
+      toast({
         title: error.message,
         status: "error",
+        position: "bottom",
+        duration: 9000,
+        isClosable: true,
       });
     }
   };
@@ -72,22 +79,23 @@ const ContactForm = () => {
           <Heading size="md" color="black" my={3}>
             I&apos;m interested in...
           </Heading>
+          <HStack {...group} className="radio-btn-stack">
+            {options.map((value) => {
+              const radio = getRadioProps({ value });
+              return (
+                <RadioCard key={value} {...radio}>
+                  {value}
+                </RadioCard>
+              );
+            })}
+          </HStack>
           <Stack as="form" onSubmit={handleSubmit(onSubmit)}>
-            <HStack {...group} className="radio-btn-stack">
-              {options.map((value) => {
-                const radio = getRadioProps({ value });
-                return (
-                  <RadioCard key={value} {...radio}>
-                    {value}
-                  </RadioCard>
-                );
-              })}
-            </HStack>
             <FormControl isRequired isInvalid={errors.name} my={4}>
               <FormLabel htmlFor="name">Enter Name</FormLabel>
               <Input
                 id="name"
                 className="contact-input"
+                type="text"
                 placeholder="Your Name"
                 {...register("name", { required: true })}
               />
