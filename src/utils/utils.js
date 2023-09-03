@@ -1,17 +1,4 @@
-const query = `
-query GetUserArticles($page: Int = 0) {
-  user(username: "vaheed") {
-    publication {
-      posts(page: $page) {
-        title
-        brief
-        slug
-        coverImage
-      }
-    }
-  }
-}
-`;
+import { query } from "./constants";
 
 export const getArticlesData = async () => {
   // We have to make multiple api request to hasnode using currentPage to get all the articles

@@ -320,3 +320,18 @@ export const socialMediaLinks = [
     hoverColor: "#7A84E6", // Add a suitable hover color
   },
 ];
+
+export const query = `
+query GetUserArticles($page: Int = 0) {
+  user(username: "vaheed") {
+    publication {
+      posts(page: $page) {
+        title
+        brief
+        slug
+        coverImage
+      }
+    }
+  }
+}
+`;
