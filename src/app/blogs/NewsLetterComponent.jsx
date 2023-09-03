@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import {
-  Form,
+  Stack,
   FormControl,
   Input,
   Button,
@@ -30,7 +30,7 @@ export default function NewsLetterComponent() {
         >
           Subscribe to my Newsletter
         </Heading>
-        <Form
+        <Stack
           direction={{ base: "column", md: "row" }}
           as={"form"}
           spacing={"12px"}
@@ -76,7 +76,7 @@ export default function NewsLetterComponent() {
               {state === "success" ? <CheckIcon /> : "Submit"}
             </Button>
           </FormControl>
-        </Form>
+        </Stack>
         <Text
           mt={2}
           textAlign={"center"}
