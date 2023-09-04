@@ -38,7 +38,7 @@ const Blogs = () => {
             />
           </Box>
         ) : (
-          <Box width={["87vw", "87vw", "87vw"]} height="100%">
+          <Box width={["87vw", "87vw", "95vw"]} height="100%">
             <Heading className="sub-heading" size="md">
               Blogs
             </Heading>
