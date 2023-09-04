@@ -6,7 +6,7 @@ const ProjectCard = (props) => {
   const { title, link, source, image } = props.data;
   return (
     <>
-      <ScaleFade initialScale={1.2} in={true} reverse={true} width="50%">
+      <ScaleFade initialScale={1.2} in={true} reverse={true}>
         <Text
           style={{
             fontSize: "1.5rem",
