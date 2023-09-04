@@ -11,7 +11,7 @@ import {
   Card,
   CardBody,
   useRadioGroup,
-  HStack,
+  Flex,
   Heading,
   Icon,
   Stack,
@@ -74,12 +74,12 @@ const ContactForm = () => {
 
   return (
     <>
-      <Card className="contact-form-card">
+      <Card className="contact-form-card" borderRadius="2rem" backgroundColor="white" padding="10px 15px">
         <CardBody>
           <Heading size="md" color="black" my={3}>
             I&apos;m interested in...
           </Heading>
-          <HStack {...group} className="radio-btn-stack">
+          <Flex {...group} wrap="wrap" px={1}>
             {options.map((value) => {
               const radio = getRadioProps({ value });
               return (
@@ -88,7 +88,7 @@ const ContactForm = () => {
                 </RadioCard>
               );
             })}
-          </HStack>
+          </Flex>
           <Stack as="form" onSubmit={handleSubmit(onSubmit)}>
             <FormControl isRequired isInvalid={errors.name} my={4}>
               <FormLabel htmlFor="name">Enter Name</FormLabel>

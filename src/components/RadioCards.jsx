@@ -23,6 +23,8 @@ const RadioCard = (props) => {
         }}
         px={3}
         py={1}
+        mt={1}
+        mr={1}
       >
         {props.children}
       </Box>

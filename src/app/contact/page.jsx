@@ -13,7 +13,7 @@ const Contact = () => {
   
   return (
     <Center>
-      <SimpleGrid backgroundColor={["cyan","red","green"]} my={["5rem","4rem"]} width={["90vw","95vw","85vw"]} templateColumns={[null,null,"40% 55%"]}>
+      <SimpleGrid my={["5rem","4rem"]} width={["90vw","95vw","85vw"]} templateColumns={[null,null,"40% 55%"]}>
         <div>
           <Heading fontSize="2.8rem">
             Let&apos;s discuss on something{" "}

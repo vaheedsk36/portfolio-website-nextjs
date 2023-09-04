@@ -178,16 +178,11 @@ $neon-green-color: #16FF00;
     display: flex;
     align-items: center;
 }
-
+// keep it
 .contact-form-card {
-    border-radius: 2rem;
-    padding: 10px 15px;
-    background-color: white;
-
     label {
         color: $form-label-gray;
         font-weight: 900;
-
     }
 }
 
@@ -281,7 +276,7 @@ $neon-green-color: #16FF00;
         display: flex;
         align-items: center;
     }
-
+// Keep this one
     .contact-form-card {
         padding: 0;
         margin-bottom: 3rem;
@@ -294,10 +289,6 @@ $neon-green-color: #16FF00;
             font-size: 1rem;
         }
 
-        .radio-btn-stack {
-            display: flex;
-            flex-wrap: wrap;
-        }
     }
 
     .social-container {
