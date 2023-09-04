@@ -1,7 +1,7 @@
 "use client";
 import React,{useState} from "react";
 import ContactForm from "./ContactForm";
-import { Heading, Icon, Stack, Text, Tooltip,useDisclosure } from "@chakra-ui/react";
+import { Heading, Icon, Stack, Text, Tooltip,useDisclosure,Center,SimpleGrid } from "@chakra-ui/react";
 import { IoIosMail } from "react-icons/io";
 import { ImLocation } from "react-icons/im";
 import { Link } from "@chakra-ui/next-js";
@@ -12,8 +12,8 @@ const Contact = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   
   return (
-    <div className="container">
-      <div className="contact-container">
+    <Center>
+      <SimpleGrid backgroundColor={["cyan","red","green"]} my={["5rem","4rem"]} width={["90vw","95vw","85vw"]} templateColumns={[null,null,"40% 55%"]}>
         <div>
           <Heading fontSize="2.8rem">
             Let&apos;s discuss on something{" "}
@@ -52,9 +52,9 @@ const Contact = () => {
         </div>
 
         <ContactForm />
-      </div>
+      </SimpleGrid>
       <MapBox {...{isOpen, onOpen, onClose }}/>
-    </div>
+    </Center>
   );
 };
 
