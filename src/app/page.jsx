@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
-import { Heading } from "@chakra-ui/react";
+import { Heading, Flex, Center } from "@chakra-ui/react";
 import NET from "vanta/dist/vanta.net.min";
 import Typed from "typed.js";
 import SocialIcons from "../components/SocialIcons";
@@ -44,17 +44,37 @@ export default function Home() {
 
   return (
     <>
-      <div className="home-container body-theme" ref={vantaRef}>
-        <div className="about-main-container">
-          <Heading fontFamily="Black Ops One" className="name-heading">
-            Masood Akhtar Vaheed
-          </Heading>
+      <Center backgroundColor="#02001E" ref={vantaRef} height="100vh">
+        <Flex
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
+          height="100%"
+          width="100%"
+        >
+          <Flex
+            alignItems="center"
+            marginBottom="3rem"
+            flexDirection={["column", "column", "row"]}
+          >
+            <Heading fontFamily="Black Ops One" fontSize={["2.5rem", "3.7rem"]}>
+              Masood Akhtar
+            </Heading>
+
+            <Heading
+              fontFamily="Black Ops One"
+              fontSize={["2.5rem", "3.7rem"]}
+              ml={[null, "1rem"]}
+            >
+              Vaheed
+            </Heading>
+          </Flex>
           <Heading my={3} size="lg">
             I &apos;m <span className="typed-text" ref={typedTextRef}></span>
           </Heading>
-          <SocialIcons/>
-        </div>
-      </div>
+          <SocialIcons />
+        </Flex>
+      </Center>
     </>
   );
 }
