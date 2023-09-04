@@ -6,7 +6,12 @@ import { Link } from "@chakra-ui/next-js";
 
 const SocialIcons = () => {
   return (
-    <Flex margin="1.5rem 0">
+    <Flex
+      margin="1.5rem 0"
+      display="flex"
+      alignItems="center"
+      justifyContent={["center","left","left"]}
+    >
       {socialMediaLinks.map((linkData, index) => (
         <Link
           key={index}
@@ -23,7 +28,7 @@ const SocialIcons = () => {
           justifyContent="center"
           my={3}
           mr={3}
-          fontSize="2rem"
+          fontSize={["1.5rem", "2rem", "2rem"]}
           padding="10px"
           borderRadius="1rem"
         >
