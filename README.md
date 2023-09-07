@@ -1,4 +1,4 @@
-# ⭐ Personal Portfolio Website ⭐ (****Under Construction****)
+# ⭐ Personal Portfolio Website ⭐ (****Work In Progress****)
 
 > [Deployed here](https://vaheedshaik.vercel.app/)
 
