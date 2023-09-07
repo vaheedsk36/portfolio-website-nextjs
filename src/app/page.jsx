@@ -21,21 +21,21 @@ export default function Home() {
 
     const typed = new Typed(typedTextRef.current, options);
 
-    if (!vantaEffect) {
-      setVantaEffect(
-        NET({
-          el: vantaRef.current,
-          THREE: THREE,
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.0,
-          minWidth: 200.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
-        })
-      );
-    }
+    // if (!vantaEffect) {
+    //   setVantaEffect(
+    //     NET({
+    //       el: vantaRef.current,
+    //       THREE: THREE,
+    //       mouseControls: true,
+    //       touchControls: true,
+    //       gyroControls: false,
+    //       minHeight: 200.0,
+    //       minWidth: 200.0,
+    //       scale: 1.0,
+    //       scaleMobile: 1.0,
+    //     })
+    //   );
+    // }
     return () => {
       if (vantaEffect) vantaEffect.destroy();
       typed.destroy();
@@ -44,7 +44,8 @@ export default function Home() {
 
   return (
     <>
-      <Center backgroundColor="blueTheme.bg" ref={vantaRef} height="100vh">
+      {/* <Center ref={vantaRef} height="100vh"> */}
+      <Center height="100vh">
         <Flex
           flexDirection="column"
           alignItems="center"
@@ -52,9 +53,11 @@ export default function Home() {
           height="100%"
           width="100%"
         >
+            <Heading size="lg" color="blueTheme.navLinkActive">Hi, my name is</Heading>
+
           <Flex
             alignItems="center"
-            marginBottom="3rem"
+            my="3rem"
             flexDirection={["column", "column", "row"]}
           >
             <Heading fontFamily="Black Ops One" fontSize={["2.5rem", "3.7rem"]}>

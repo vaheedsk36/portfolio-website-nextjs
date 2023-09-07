@@ -24,7 +24,7 @@ export default function Header() {
           fontSize="lg"
           _hover={{ textDecoration: "none" }}
         >
-          VAHEED SHAIK{" "}
+          VAHEED SHAIK  {"</>"} {" "}
         </Link>
 
         <HStack as="nav" spacing="5" display={{ base: "none", md: "flex" }}>

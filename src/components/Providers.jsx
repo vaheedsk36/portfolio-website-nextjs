@@ -15,7 +15,7 @@ export function Providers({
       colors: {
         blueTheme: {
           // current active theme
-          bg: "#0a192f",
+          bg: "#02001E",
           navBg: "rgba(10, 25, 47, 0.85)",
           navLinkActive:"#64ffda",
           navShadow:"rgba(2,12,27,0.7)",
