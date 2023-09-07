@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <chakra.header
       id="header"
-      backgroundColor="#200b8b3c"
+      backgroundColor="blueTheme.navBg"
       pos="sticky"
       top={0}
       zIndex="100"
@@ -32,7 +32,7 @@ export default function Header() {
               key={index}
               href={link.path}
               fontWeight="extrabold"
-              _hover={{ textDecoration: "none", color: "#16FF00" }}
+              _hover={{ textDecoration: "none", color: "blueTheme.navLinkActive" }}
               fontSize="lg"
               className={pathname === link.path ? "active-link" : ""}
             >

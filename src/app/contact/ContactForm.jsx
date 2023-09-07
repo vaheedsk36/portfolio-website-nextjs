@@ -139,9 +139,9 @@ const ContactForm = () => {
             </FormControl>
             <FormControl>
               <Button
-                backgroundColor="#D53F8C"
+                backgroundColor="social.instagram"
                 my={3}
-                _hover={{ backgroundColor: "#D53F8C" }}
+                _hover={{ backgroundColor: "social.instagramHover" }}
                 type="submit"
               >
                 <Icon mr={1} as={BsFillSendFill} />

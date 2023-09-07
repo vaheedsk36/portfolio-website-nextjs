@@ -31,7 +31,7 @@ export default function MobileHeader({ pathname }) {
               fontSize="md"
               my={2}
               textAlign="center"
-              color={pathname === link.path ? "#16FF00" : ""}
+              color={pathname === link.path ? "blueTheme.navLinkActive" : ""}
             >
               {link.text}
             </Link>

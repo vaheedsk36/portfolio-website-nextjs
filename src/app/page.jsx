@@ -44,7 +44,7 @@ export default function Home() {
 
   return (
     <>
-      <Center backgroundColor="#02001E" ref={vantaRef} height="100vh">
+      <Center backgroundColor="blueTheme.bg" ref={vantaRef} height="100vh">
         <Flex
           flexDirection="column"
           alignItems="center"

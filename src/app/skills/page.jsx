@@ -28,11 +28,11 @@ const Skills = () => {
             return (
               <Card
                 key={index}
-                backgroundColor="#213363"
+                backgroundColor="blueTheme.card"
                 transition="all .2s ease-in-out"
                 _hover={{
                   cursor: "pointer",
-                  backgroundColor: "#213d8d",
+                  backgroundColor: "blueTheme.cardHover",
                   transform: "scale(1.1)",
                 }}
               >

@@ -19,7 +19,7 @@ const Contact = () => {
             Let&apos;s discuss on something{" "}
             <span
               style={{
-                color: "#D53F8C",
+                color: "social.instagram",
               }}
             >
               cool

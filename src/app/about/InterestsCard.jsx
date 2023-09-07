@@ -12,13 +12,13 @@ const InterestsCard = ({ interest, icon }) => {
       width={["80vw","80vw","17.5rem"]}
       height="5rem"
       borderRadius="0"
-      backgroundColor="#213363"
+      backgroundColor="blueTheme.card"
       fontSize="2.5rem"
       padding="16px"
       cursor="pointer"
       transition="background-color .3s ease-in-out"
       _hover={{
-        backgroundColor: "#213d8d",
+        backgroundColor: "blueTheme.cardHover",
       }}
     >
       <Icon as={icon} />

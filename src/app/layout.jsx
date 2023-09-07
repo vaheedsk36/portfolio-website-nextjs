@@ -1,5 +1,5 @@
 "use client";
-import { Providers } from "./providers";
+import { Providers } from "../components/Providers";
 import Header from "../components/Header";
 import Script from "next/script";
 import "../styles/main.scss";
