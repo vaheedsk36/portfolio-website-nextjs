@@ -33,7 +33,7 @@ const Skills = () => {
                 _hover={{
                   cursor: "pointer",
                   backgroundColor: "blueTheme.cardHover",
-                  transform: "scale(1.1)",
+                  transform:"scale(1.05)"
                 }}
               >
                 <CardBody display="flow" alignItems="center" textAlign="center">
