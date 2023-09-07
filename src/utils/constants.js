@@ -247,8 +247,8 @@ export const projectsData = [
     type: "WEB-APP",
     title: "Guess Game",
     image: "guess-game",
-    link: "https://vaheedsk36.github.io/guess-game",
-    source: "https://github.com/vaheedsk36/guess-game",
+    link: "https://vaheedsk36.github.io/guess-my-number",
+    source: "https://github.com/vaheedsk36/guess-my-number",
   },
   {
     type: "WEB-APP",

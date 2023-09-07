@@ -1,11 +1,14 @@
 "use client";
-import React from "react";
-import { Card, ScaleFade, Image, Text, Button, Link } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { Card, ScaleFade, Image, Text, Link, Icon,Flex } from "@chakra-ui/react";
+import { FaLink,FaGithub } from "react-icons/fa6";
 
 const ProjectCard = (props) => {
-  const { title, link, source, image } = props.data;
+  const { title, image, link, source } = props.data;
+  const [showHover, setShowHover] = useState(false);
+  const linkHover = {fill:"blueTheme.navLinkActive",transition:"all ease-in-out 0.5s"}
+
   return (
-    <>
       <ScaleFade initialScale={1.2} in={true} reverse={true}>
         <Text
           style={{
@@ -16,30 +19,35 @@ const ProjectCard = (props) => {
         >
           {title}
         </Text>
-        <Card>
-          <Image
-            objectFit="cover"
-            src={`images/${image}.png`}
-            alt="project-img"
+        <Card
+            onMouseEnter={() => setShowHover(true)}
+            onMouseLeave={() => setShowHover(false)}
+            zIndex={0}
+          >
+            <Image
+              objectFit="cover"
+              src={`images/${image}.png`}
+              alt="project-img"
+              height="13rem"
+            />
+            <Flex
+            
             height="13rem"
-          />
-          {/* <Stack mt="6" spacing="3">
-              <div>
-                <Button colorScheme="gray">
-                  <Link href={link} target="_blank">
-                    Open
-                  </Link>
-                </Button>
-                <Button colorScheme="gray" mx={3}>
-                  <Link href={source} target="_blank">
-                    Github
-                  </Link>
-                </Button>
-              </div>
-            </Stack> */}
-        </Card>
+            backgroundColor="hover.gray"
+            position="absolute"
+            zIndex={showHover ? 1 : 0}
+            opacity={showHover ? 1 : 0}
+            width="100%"
+            transition="all ease-in-out 0.3s"
+            alignItems="center"
+            justifyContent="center"
+            fontSize="2.5rem"
+          >
+            <Link href={link} target="_blank" mr={3}><Icon as={FaLink} _hover={linkHover}/></Link>
+            <Link href={source} target="_blank" mr={1}><Icon as={FaGithub} _hover={linkHover}/></Link>
+          </Flex>
+          </Card>
       </ScaleFade>
-    </>
   );
 };
 

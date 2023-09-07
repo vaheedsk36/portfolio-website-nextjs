@@ -22,6 +22,9 @@ export function Providers({
           card:"#213363",
           cardHover:"#213d8d",
         },
+        hover:{
+          gray:"rgba(0, 0, 0, 0.6)"
+        },
         social:{
           instagram:"#D53F8C",
           instagramHover:"#FF63B4",
