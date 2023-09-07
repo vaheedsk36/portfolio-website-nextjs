@@ -293,31 +293,31 @@ export const socialMediaLinks = [
     href: "https://github.com/vaheedsk36",
     icon: FaGithub,
     backgroundColor: "gray.700",
-    hoverColor: "gray.600", // Add a suitable hover color
+    hoverColor: "gray.600",
   },
   {
     href: "https://www.instagram.com/codersk36/",
     icon: FaInstagram,
-    backgroundColor: "#D53F8C",
-    hoverColor: "#FF63B4", // Add a suitable hover color
+    backgroundColor: "social.instagram",
+    hoverColor: "social.instagramHover",
   },
   {
     href: "https://www.linkedin.com/in/sk36/",
     icon: FaLinkedin,
-    backgroundColor: "#0072b1",
-    hoverColor: "#1282B1", // Add a suitable hover color
+    backgroundColor: "social.linkedin",
+    hoverColor: "social.linkedinHover",
   },
   {
     href: "https://twitter.com/codersk36",
     icon: FaTwitter,
-    backgroundColor: "#00acee",
-    hoverColor: "#63C5F4", // Add a suitable hover color
+    backgroundColor: "social.twitter",
+    hoverColor: "social.twitterHover",
   },
   {
     href: "https://codersk36.hashnode.dev/",
     icon: FaHashnode,
-    backgroundColor: "#265FF7",
-    hoverColor: "#7A84E6", // Add a suitable hover color
+    backgroundColor: "social.hashnode",
+    hoverColor: "social.hashnodeHover",
   },
 ];
 

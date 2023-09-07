@@ -8,7 +8,7 @@ const Page = () => {
   return (
     <>
       <Center m={5}>
-        <Box width="80vw" height="100%">
+        <Box width="80vw" height="100%" bg="blue.bgc">
           <section id="about">
             <Heading className="sub-heading" size="md" my={3}>
               ABOUT
