@@ -17,6 +17,7 @@ const InterestsCard = ({ interest, icon }) => {
       padding="16px"
       cursor="pointer"
       transition="background-color .3s ease-in-out"
+      boxShadow="0 10px 30px -15px blueTheme.navShadow"
       _hover={{
         backgroundColor: "blueTheme.cardHover",
       }}

@@ -17,13 +17,9 @@ const Contact = () => {
         <div>
           <Heading fontSize="2.8rem">
             Let&apos;s discuss on something{" "}
-            <span
-              style={{
-                color: "social.instagram",
-              }}
-            >
+            <Text color="social.instagram" display="inline">
               cool
-            </span>{" "}
+            </Text>{" "}
             together
           </Heading>
 

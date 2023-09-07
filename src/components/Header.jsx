@@ -15,6 +15,7 @@ export default function Header() {
       pos="sticky"
       top={0}
       zIndex="100"
+      boxShadow="0 10px 30px -10px blueTheme.navShadow"
     >
       <Flex w="100%" px="6" py="5" align="center" justify="space-between">
         <Link

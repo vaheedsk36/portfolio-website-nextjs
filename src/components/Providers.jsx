@@ -14,13 +14,20 @@ export function Providers({
       },
       colors: {
         blueTheme: {
+          // current active theme
+          bg: "#0a192f",
+          navBg: "rgba(10, 25, 47, 0.85)",
+          navLinkActive:"#64ffda",
+          navShadow:"rgba(2,12,27,0.7)",
+          card:"#112240",
+          cardHover:"#176B87"
+        },
+        defaultTheme:{
           bg: "#02001E",
           navBg: "#200b8b3c",
-          navLink: "#150639d5",
           navLinkActive:"#16FF00",
-          subHeader: "#dee2e6",
           card:"#213363",
-          cardHover:"#213d8d",
+          cardHover:"#213d8d"
         },
         hover:{
           gray:"rgba(0, 0, 0, 0.6)"

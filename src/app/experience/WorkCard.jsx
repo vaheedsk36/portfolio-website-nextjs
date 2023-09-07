@@ -15,7 +15,12 @@ const WorkCard = (props) => {
     props.data;
   return (
     <>
-      <Card my={3} transition="all .3s ease-in-out" backgroundColor="blueTheme.card" _hover={{backgroundColor:"blueTheme.cardHover"}} width= "80vw">
+      <Card my={3} transition="all .3s ease-in-out"
+       backgroundColor="blueTheme.card"
+        _hover={{backgroundColor:"blueTheme.cardHover"}} width= "80vw"
+          boxShadow="0 10px 30px -15px blueTheme.navShadow"
+
+        >
         <CardBody>
           <Flex flexDirection={["column","column","row"]} justifyContent="center" alignItems="center">
             <Image

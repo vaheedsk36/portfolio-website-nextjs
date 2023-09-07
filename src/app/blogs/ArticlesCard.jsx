@@ -16,7 +16,13 @@ const ArticlesCard = (props) => {
   const articleUrl = `https://codersk36.hashnode.dev/${slug}`;
   return (
     <>
-      <Card className="articles-card">
+      <Card 
+          backgroundColor= "blueTheme.card"
+          width= "20rem"
+          height= "30rem"
+          margin= "0.5rem"
+          boxShadow="0 10px 30px -15px blueTheme.navShadow"
+      >
         <CardBody>
           <Image
             objectFit="contain"
