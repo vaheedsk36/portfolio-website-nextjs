@@ -31,7 +31,8 @@ export default function DrawerComponent({
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />
-        <DrawerContent alignItems="center" backgroundColor="#0f0347cb">
+        <DrawerContent alignItems="center"
+        backgroundColor="blueTheme.navBg">
           <DrawerCloseButton alignSelf="end" mx={p} my={p} />
           <DrawerHeader my={p}>
             <Text as="p"> {title} </Text>
