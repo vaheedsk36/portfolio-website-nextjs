@@ -1,15 +1,23 @@
 "use client";
-import React from "react";
+import React,{useEffect} from "react";
 import { Heading, SimpleGrid, Image, Center, Box, Text } from "@chakra-ui/react";
 import InterestsCard from "./InterestsCard";
 import { interestsData } from "../../utils/constants";
+import ScrollReveal  from "scrollreveal"
 
 const Page = () => {
+
+  useEffect(()=>{
+    ScrollReveal().reveal('.about-body',{ delay: 600 });
+    ScrollReveal().reveal('.interests-body',{ delay: 1000 });
+
+  },[]);
+
   return (
     <>
       <Center m={5}>
         <Box width="80vw" height="100%">
-          <section id="about">
+          <section id="about" className="about-body">
             <Heading className="sub-heading" size="md" my={3}>
               ABOUT
             </Heading>
@@ -52,7 +60,7 @@ const Page = () => {
             </SimpleGrid>
           </section>
 
-          <section id="interests">
+          <section id="interests" className="interests-body">
             <Heading className="sub-heading" size="md" my={3}>
               INTERESTS
             </Heading>

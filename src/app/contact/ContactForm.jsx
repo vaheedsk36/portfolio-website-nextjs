@@ -74,7 +74,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <Card className="contact-form-card" borderRadius="2rem" backgroundColor="white" padding="10px 15px">
+      <Card className="contact-form-body contact-form-card" borderRadius="2rem" backgroundColor="white" padding="10px 15px">
         <CardBody>
           <Heading size="md" color="black" my={3}>
             I&apos;m interested in...

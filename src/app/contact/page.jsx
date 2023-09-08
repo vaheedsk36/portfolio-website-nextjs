@@ -1,5 +1,5 @@
 "use client";
-import React,{useState} from "react";
+import React,{useEffect} from "react";
 import ContactForm from "./ContactForm";
 import { Heading, Icon, Stack, Text, Tooltip,useDisclosure,Center,SimpleGrid } from "@chakra-ui/react";
 import { IoIosMail } from "react-icons/io";
@@ -7,14 +7,19 @@ import { ImLocation } from "react-icons/im";
 import { Link } from "@chakra-ui/next-js";
 import SocialIcons from "../../components/SocialIcons";
 import MapBox from "./MapBox";
+import ScrollReveal from "scrollreveal";
 
 const Contact = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  useEffect(()=>{
+    ScrollReveal().reveal('.contact-body',{ delay: 300 });
+    ScrollReveal().reveal('.contact-form-body',{ delay: 600 });
+  },[]);
   
   return (
     <Center>
       <SimpleGrid my={["5rem","4rem"]} width={["90vw","95vw","85vw"]} templateColumns={[null,null,"40% 55%"]}>
-        <div>
+        <div className="contact-body">
           <Heading fontSize="2.8rem">
             Let&apos;s discuss on something{" "}
             <Text color="social.instagram" display="inline">
