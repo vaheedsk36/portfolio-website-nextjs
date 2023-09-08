@@ -5,6 +5,7 @@ import { Heading, Box, Center, SimpleGrid } from "@chakra-ui/react";
 import NewsLetterComponent from "./NewsLetterComponent";
 import { getArticlesData } from "../../utils/utils";
 import { FidgetSpinner } from "react-loader-spinner";
+import ScrollReveal from "scrollreveal";
 
 const Blogs = () => {
   const [articlesData, setArticlesData] = useState([]);
@@ -16,6 +17,10 @@ const Blogs = () => {
       setIsLoading(false);
     });
   }, []);
+
+  useEffect(()=>{
+    articlesData.length && ScrollReveal().reveal('.blog-body',{ delay: 300 })
+  },[articlesData]);
 
   return (
     <>
@@ -40,7 +45,7 @@ const Blogs = () => {
         ) : (
           <Box width={["87vw", "87vw", "95vw"]} height="100%">
             <Heading className="sub-heading" size="md">
-              Blogs
+              BLOGS
             </Heading>
 
             <NewsLetterComponent />
@@ -52,8 +57,9 @@ const Blogs = () => {
                 "repeat(auto-fill, minmax(250px, 1fr))",
                 "repeat(auto-fill, minmax(300px, 1fr))",
               ]}
+              className="blog-body"
             >
-              {articlesData.map((data, index) => (
+              {articlesData?.map((data, index) => (
                 <ArticlesCard data={data} key={index} />
               ))}
             </SimpleGrid>

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React,{useEffect} from "react";
 import {
   Card,
   CardBody,
@@ -9,10 +9,15 @@ import {
   Box,
   Center,
 } from "@chakra-ui/react";
-
 import { skillsData } from "../../utils/constants";
+import ScrollReveal from "scrollreveal";
 
 const Skills = () => {
+
+  useEffect(()=>{
+    ScrollReveal().reveal('.skills-body',{ delay: 300 })
+  },[]);
+
   return (
     <Center height="70vh" width="100vw">
       <Box width="80vw" height="100%">
@@ -23,6 +28,7 @@ const Skills = () => {
           marginTop="4rem"
           spacing={5}
           templateColumns="repeat(auto-fill, minmax(135px, 1fr))"
+          className="skills-body"
         >
           {skillsData.map((data, index) => {
             return (
