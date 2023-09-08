@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useCallback } from "react";
-import { Heading, Flex, Center } from "@chakra-ui/react";
+import { Heading, Flex, Center, Image } from "@chakra-ui/react";
 import Typed from "typed.js";
 import SocialIcons from "../components/SocialIcons";
 import Particles from "react-tsparticles";
@@ -47,13 +47,23 @@ export default function Home() {
           top="45vh"
           zIndex={1}
         >
+            <Image
+                objectFit="shrink"
+                src="/images/ar-profile-transformed.png"
+                alt="profile-image"
+                width="15rem"
+                height="15rem"
+                marginBottom={["1rem", "1rem", null]}
+                backgroundColor="blueTheme.navBg"
+                borderRadius="30rem"
+              />
           <Heading size="lg" color="blueTheme.navLinkActive">
             Hi, my name is
           </Heading>
 
           <Flex
             alignItems="center"
-            my="3rem"
+            my="1rem"
             flexDirection={["column", "column", "row"]}
           >
             <Heading fontFamily="Black Ops One" fontSize={["2.5rem", "3.7rem"]}>
