@@ -32,6 +32,10 @@ $active-green-color: #64ffda;
 
 // ******** COMMON CLASSES ********
 
+html.sr .load-hidden {
+    visibility: hidden;
+   }
+
 .container {
     margin: 2rem 7rem;
 }

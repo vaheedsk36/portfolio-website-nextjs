@@ -75,7 +75,7 @@ const ContactForm = () => {
 
   return (
     <>
-    <RevealWrapper delay={600}>
+    <RevealWrapper className="load-hidden" delay={600}>
       <Card className="contact-form-card" borderRadius="2rem" backgroundColor="white" padding="10px 15px">
         <CardBody>
           <Heading size="md" color="black" my={3}>

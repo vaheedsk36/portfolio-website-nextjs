@@ -17,7 +17,7 @@ const Page = () => {
     <>
       <Center m={5}>
         <Box width="80vw" height="100%">
-          <RevealWrapper id="about" delay={300}>
+          <RevealWrapper className="load-hidden" id="about" delay={300}>
             <Heading className="sub-heading" size="md" my={3}>
               ABOUT
             </Heading>
@@ -65,7 +65,7 @@ const Page = () => {
               </Box>
             </SimpleGrid>
           </RevealWrapper>
-          <RevealWrapper id="interests" delay={600}>
+          <RevealWrapper className="load-hidden" id="interests" delay={600}>
             <Heading className="sub-heading" size="md" my={3}>
               INTERESTS
             </Heading>

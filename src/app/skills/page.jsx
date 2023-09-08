@@ -20,7 +20,7 @@ const Skills = () => {
         <Heading className="sub-heading" size="md" my={3}>
           SKILLS
         </Heading>
-        <RevealWrapper delay={300}>
+        <RevealWrapper className="load-hidden" delay={300}>
         <SimpleGrid
           marginTop="4rem"
           spacing={5}

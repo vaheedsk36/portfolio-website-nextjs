@@ -13,7 +13,7 @@ const Work = () => {
           <Heading className="sub-heading" size="md" my={3}>
             EXPERIENCE
           </Heading>
-          <RevealWrapper delay={300}>
+          <RevealWrapper className="load-hidden" delay={300}>
             <SimpleGrid>
               {workData.map((data, index) => {
                 return <WorkCard {...{ data }} key={index} />;

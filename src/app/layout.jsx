@@ -19,7 +19,7 @@ import "../styles/main.scss";
 export default function RootLayout({ children }) {
   
   return (
-    <html lang="en">
+    <html lang="en" className='sr'>
       <body
         style={{
           backgroundColor: "#02001E",

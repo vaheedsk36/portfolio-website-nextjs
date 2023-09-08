@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import RadioCard from "../../components/RadioCards";
 import { projectsData } from "../../utils/constants";
-import { RevealWrapper } from "next-reveal";
+import { RevealList } from "next-reveal";
 
 const Projects = () => {
   const [selectedData, setSelectedData] = useState(projectsData);
@@ -49,7 +49,7 @@ const Projects = () => {
             })}
           </HStack>
         </Flex>
-        <RevealWrapper delay={300}>
+        <RevealList className="load-hidden" interval={60} delay={300}>
           <SimpleGrid
             spacing={4}
             templateColumns="repeat(auto-fill, minmax(350px, 1fr))"
@@ -58,7 +58,7 @@ const Projects = () => {
               return <ProjectCard {...{ data }} key={index} />;
             })}
           </SimpleGrid>
-        </RevealWrapper>
+        </RevealList>
       </Box>
     </Center>
   );

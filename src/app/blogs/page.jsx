@@ -45,7 +45,7 @@ const Blogs = () => {
             </Heading>
 
             <NewsLetterComponent />
-            <RevealWrapper delay={300}>
+            <RevealWrapper className="load-hidden" delay={300}>
               <SimpleGrid
                 spacing={4}
                 templateColumns={[
