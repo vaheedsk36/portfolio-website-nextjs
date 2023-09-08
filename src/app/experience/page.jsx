@@ -1,15 +1,11 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import WorkCard from "./WorkCard";
 import { Heading, SimpleGrid, Center, Box } from "@chakra-ui/react";
 import { workData } from "../../utils/constants";
-import ScrollReveal from "scrollreveal";
+import { RevealWrapper } from "next-reveal";
 
 const Work = () => {
-  useEffect(() => {
-    ScrollReveal().reveal(".work-body", { delay: 300 });
-  }, []);
-
   return (
     <>
       <Center>
@@ -17,12 +13,13 @@ const Work = () => {
           <Heading className="sub-heading" size="md" my={3}>
             EXPERIENCE
           </Heading>
-
-          <SimpleGrid className="work-body">
-            {workData.map((data, index) => {
-              return <WorkCard {...{ data }} key={index} />;
-            })}
-          </SimpleGrid>
+          <RevealWrapper delay={300}>
+            <SimpleGrid>
+              {workData.map((data, index) => {
+                return <WorkCard {...{ data }} key={index} />;
+              })}
+            </SimpleGrid>
+          </RevealWrapper>
         </Box>
       </Center>
     </>

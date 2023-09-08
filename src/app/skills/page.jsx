@@ -10,13 +10,9 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { skillsData } from "../../utils/constants";
-import ScrollReveal from "scrollreveal";
+import { RevealWrapper } from "next-reveal";
 
 const Skills = () => {
-
-  useEffect(()=>{
-    ScrollReveal().reveal('.skills-body',{ delay: 300 })
-  },[]);
 
   return (
     <Center height="70vh" width="100vw">
@@ -24,11 +20,11 @@ const Skills = () => {
         <Heading className="sub-heading" size="md" my={3}>
           SKILLS
         </Heading>
+        <RevealWrapper delay={300}>
         <SimpleGrid
           marginTop="4rem"
           spacing={5}
           templateColumns="repeat(auto-fill, minmax(135px, 1fr))"
-          className="skills-body"
         >
           {skillsData.map((data, index) => {
             return (
@@ -52,6 +48,7 @@ const Skills = () => {
             );
           })}
         </SimpleGrid>
+        </RevealWrapper>
       </Box>
     </Center>
   );

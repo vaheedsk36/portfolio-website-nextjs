@@ -1,34 +1,40 @@
 "use client";
-import React,{useEffect} from "react";
-import { Heading, SimpleGrid, Image, Center, Box, Text } from "@chakra-ui/react";
+import React from "react";
+import {
+  Heading,
+  SimpleGrid,
+  Image,
+  Center,
+  Box,
+  Text,
+} from "@chakra-ui/react";
 import InterestsCard from "./InterestsCard";
 import { interestsData } from "../../utils/constants";
-import ScrollReveal  from "scrollreveal"
+import { RevealWrapper } from "next-reveal";
 
 const Page = () => {
-
-  useEffect(()=>{
-    ScrollReveal().reveal('.about-body',{ delay: 600 });
-    ScrollReveal().reveal('.interests-body',{ delay: 1000 });
-
-  },[]);
-
   return (
     <>
       <Center m={5}>
         <Box width="80vw" height="100%">
-          <section id="about" className="about-body">
+          <RevealWrapper id="about" delay={300}>
             <Heading className="sub-heading" size="md" my={3}>
               ABOUT
             </Heading>
-            <SimpleGrid columns={[1, null, 2]} gap={6} fontSize="1.1rem" marginBottom="4rem" templateColumns={[null,null,"30% 70%"]}>
-            <Image
+            <SimpleGrid
+              columns={[1, null, 2]}
+              gap={6}
+              fontSize="1.1rem"
+              marginBottom="4rem"
+              templateColumns={[null, null, "30% 70%"]}
+            >
+              <Image
                 objectFit="shrink"
                 src="/images/profile.png"
                 alt="profile-image"
-                width={["20rem","30rem","20rem"]}
-                height={["20rem","30rem","20rem"]}
-                marginBottom={["1rem","1rem",null]}
+                width={["20rem", "30rem", "20rem"]}
+                height={["20rem", "30rem", "20rem"]}
+                marginBottom={["1rem", "1rem", null]}
               />
 
               <Box textAlign="justify">
@@ -58,9 +64,8 @@ const Page = () => {
                 </Text>
               </Box>
             </SimpleGrid>
-          </section>
-
-          <section id="interests" className="interests-body">
+          </RevealWrapper>
+          <RevealWrapper id="interests" delay={600}>
             <Heading className="sub-heading" size="md" my={3}>
               INTERESTS
             </Heading>
@@ -78,7 +83,7 @@ const Page = () => {
                 );
               })}
             </SimpleGrid>
-          </section>
+          </RevealWrapper>
         </Box>
       </Center>
     </>

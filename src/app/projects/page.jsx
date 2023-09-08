@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import {
   Heading,
@@ -8,18 +8,13 @@ import {
   useRadioGroup,
   Center,
   Box,
-  Flex
+  Flex,
 } from "@chakra-ui/react";
 import RadioCard from "../../components/RadioCards";
 import { projectsData } from "../../utils/constants";
-import ScrollReveal from 'scrollreveal'
+import { RevealWrapper } from "next-reveal";
 
 const Projects = () => {
-
-  useEffect(()=>{
-  ScrollReveal().reveal('.project-body',{ delay: 300 })
-},[])
-
   const [selectedData, setSelectedData] = useState(projectsData);
   const valSelectFn = (value) =>
     setSelectedData(() => {
@@ -36,14 +31,14 @@ const Projects = () => {
   const group = getRootProps();
 
   return (
-      <Center>
-        <Box width={["90vw","90vw","80vw"]} height="100%" marginBottom="4rem">
-          <Heading className="sub-heading" size="md" my={3}>
-            PROJECTS
-          </Heading>
+    <Center>
+      <Box width={["90vw", "90vw", "80vw"]} height="100%" marginBottom="4rem">
+        <Heading className="sub-heading" size="md" my={3}>
+          PROJECTS
+        </Heading>
 
-          <Flex {...group} w="100%"  px="6" py="5" align="center" justify="center">
-            <HStack>
+        <Flex {...group} w="100%" px="6" py="5" align="center" justify="center">
+          <HStack>
             {options.map((value) => {
               const radio = getRadioProps({ value });
               return (
@@ -52,20 +47,20 @@ const Projects = () => {
                 </RadioCard>
               );
             })}
-            </HStack>
-          </Flex>
-
+          </HStack>
+        </Flex>
+        <RevealWrapper delay={300}>
           <SimpleGrid
             spacing={4}
             templateColumns="repeat(auto-fill, minmax(350px, 1fr))"
-            className="project-body"
           >
             {selectedData.map((data, index) => {
               return <ProjectCard {...{ data }} key={index} />;
             })}
           </SimpleGrid>
-        </Box>
-      </Center>
+        </RevealWrapper>
+      </Box>
+    </Center>
   );
 };
 

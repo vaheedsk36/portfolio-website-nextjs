@@ -20,6 +20,7 @@ import { BsFillSendFill } from "react-icons/bs";
 import RadioCard from "../../components/RadioCards";
 import { useForm } from "react-hook-form";
 import { useToast } from "@chakra-ui/react";
+import { RevealWrapper } from 'next-reveal'
 
 const ContactForm = () => {
   const toast = useToast();
@@ -74,7 +75,8 @@ const ContactForm = () => {
 
   return (
     <>
-      <Card className="contact-form-body contact-form-card" borderRadius="2rem" backgroundColor="white" padding="10px 15px">
+    <RevealWrapper delay={600}>
+      <Card className="contact-form-card" borderRadius="2rem" backgroundColor="white" padding="10px 15px">
         <CardBody>
           <Heading size="md" color="black" my={3}>
             I&apos;m interested in...
@@ -151,6 +153,7 @@ const ContactForm = () => {
           </Stack>
         </CardBody>
       </Card>
+    </RevealWrapper>
     </>
   );
 };

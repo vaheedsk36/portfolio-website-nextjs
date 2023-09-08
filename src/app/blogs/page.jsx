@@ -5,7 +5,7 @@ import { Heading, Box, Center, SimpleGrid } from "@chakra-ui/react";
 import NewsLetterComponent from "./NewsLetterComponent";
 import { getArticlesData } from "../../utils/utils";
 import { FidgetSpinner } from "react-loader-spinner";
-import ScrollReveal from "scrollreveal";
+import { RevealWrapper } from "next-reveal";
 
 const Blogs = () => {
   const [articlesData, setArticlesData] = useState([]);
@@ -17,10 +17,6 @@ const Blogs = () => {
       setIsLoading(false);
     });
   }, []);
-
-  useEffect(()=>{
-    articlesData.length && ScrollReveal().reveal('.blog-body',{ delay: 300 })
-  },[articlesData]);
 
   return (
     <>
@@ -49,20 +45,20 @@ const Blogs = () => {
             </Heading>
 
             <NewsLetterComponent />
-
-            <SimpleGrid
-              spacing={4}
-              templateColumns={[
-                "repeat(auto-fill, minmax(250px, 1fr))",
-                "repeat(auto-fill, minmax(250px, 1fr))",
-                "repeat(auto-fill, minmax(300px, 1fr))",
-              ]}
-              className="blog-body"
-            >
-              {articlesData?.map((data, index) => (
-                <ArticlesCard data={data} key={index} />
-              ))}
-            </SimpleGrid>
+            <RevealWrapper delay={300}>
+              <SimpleGrid
+                spacing={4}
+                templateColumns={[
+                  "repeat(auto-fill, minmax(250px, 1fr))",
+                  "repeat(auto-fill, minmax(250px, 1fr))",
+                  "repeat(auto-fill, minmax(300px, 1fr))",
+                ]}
+              >
+                {articlesData?.map((data, index) => (
+                  <ArticlesCard data={data} key={index} />
+                ))}
+              </SimpleGrid>
+            </RevealWrapper>
           </Box>
         )}
       </Center>
