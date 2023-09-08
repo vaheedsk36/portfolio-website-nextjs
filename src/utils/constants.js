@@ -275,8 +275,8 @@ export const projectsData = [
     type: "PROJECT",
     title: "Delta Assistant",
     image: "delta-assistant",
-    link: "https://vaheedsk36.github.io/delta-assistant",
-    source: "https://github.com/vaheedsk36/delta-assistant",
+    link: "",
+    source: "https://github.com/vaheedsk36/Delta-Desktop-Virtual-Assistant",
   },
   {
     type: "WEB-APP",

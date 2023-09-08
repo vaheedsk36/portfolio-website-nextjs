@@ -1,15 +1,17 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import { Heading, Flex, Center } from "@chakra-ui/react";
-import NET from "vanta/dist/vanta.net.min";
 import Typed from "typed.js";
 import SocialIcons from "../components/SocialIcons";
-import * as THREE from "three";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import particleConfig from "../particlesjs.json";
 
 export default function Home() {
-  const [vantaEffect, setVantaEffect] = useState(0);
-  const vantaRef = useRef(null);
   const typedTextRef = useRef(null);
+  const particlesInit = useCallback(async (engine) => {
+    await loadFull(engine);
+  }, []);
 
   useEffect(() => {
     const options = {
@@ -20,40 +22,34 @@ export default function Home() {
     };
 
     const typed = new Typed(typedTextRef.current, options);
-
-    // if (!vantaEffect) {
-    //   setVantaEffect(
-    //     NET({
-    //       el: vantaRef.current,
-    //       THREE: THREE,
-    //       mouseControls: true,
-    //       touchControls: true,
-    //       gyroControls: false,
-    //       minHeight: 200.0,
-    //       minWidth: 200.0,
-    //       scale: 1.0,
-    //       scaleMobile: 1.0,
-    //     })
-    //   );
-    // }
     return () => {
-      if (vantaEffect) vantaEffect.destroy();
       typed.destroy();
     };
-  }, [vantaEffect]);
+  }, []);
 
   return (
     <>
-      {/* <Center ref={vantaRef} height="100vh"> */}
-      <Center height="100vh">
+      <Center>
+        <Particles
+          id="tsparticles"
+          init={particlesInit}
+          options={particleConfig}
+          position="absolute"
+          zIndex={0}
+        />
         <Flex
           flexDirection="column"
           alignItems="center"
           justifyContent="center"
           height="100%"
           width="100%"
+          position="absolute"
+          top="45vh"
+          zIndex={1}
         >
-            <Heading size="lg" color="blueTheme.navLinkActive">Hi, my name is</Heading>
+          <Heading size="lg" color="blueTheme.navLinkActive">
+            Hi, my name is
+          </Heading>
 
           <Flex
             alignItems="center"

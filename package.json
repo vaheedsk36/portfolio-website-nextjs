@@ -29,9 +29,9 @@
     "react-hook-form": "^7.45.4",
     "react-icons": "^4.10.1",
     "react-loader-spinner": "^5.4.5",
-    "three": "0.124.0",
-    "typed.js": "^2.0.16",
-    "vanta": "0.5.21"
+    "react-tsparticles": "^2.12.2",
+    "tsparticles": "^2.12.0",
+    "typed.js": "^2.0.16"
   },
   "devDependencies": {
     "sass": "^1.64.2"
