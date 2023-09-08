@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import {
   Heading,
@@ -12,8 +12,14 @@ import {
 } from "@chakra-ui/react";
 import RadioCard from "../../components/RadioCards";
 import { projectsData } from "../../utils/constants";
+import ScrollReveal from 'scrollreveal'
 
 const Projects = () => {
+
+  useEffect(()=>{
+  ScrollReveal().reveal('.project-body',{ delay: 300 })
+},[])
+
   const [selectedData, setSelectedData] = useState(projectsData);
   const valSelectFn = (value) =>
     setSelectedData(() => {
@@ -52,6 +58,7 @@ const Projects = () => {
           <SimpleGrid
             spacing={4}
             templateColumns="repeat(auto-fill, minmax(350px, 1fr))"
+            className="project-body"
           >
             {selectedData.map((data, index) => {
               return <ProjectCard {...{ data }} key={index} />;
