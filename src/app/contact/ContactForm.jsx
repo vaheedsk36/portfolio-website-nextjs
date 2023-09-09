@@ -37,6 +37,7 @@ const ContactForm = () => {
     handleSubmit,
     register,
     formState: { errors },
+    reset
   } = useForm();
 
   const onSubmit = async (formData) => {
@@ -51,9 +52,17 @@ const ContactForm = () => {
         body: JSON.stringify(formData),
       });
 
+      reset({
+        name: "",
+        email: "",
+        number: "",
+        message: "",
+      });
+
       if (!response.ok) {
         throw new Error("Unable to send message ");
       }
+
       toast({
         title: "Message sent successfully",
         status: "success",
