@@ -9,7 +9,7 @@ import {
   Heading,
   Icon,
 } from "@chakra-ui/react";
-import { FaLink } from "react-icons/fa6";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const ArticlesCard = (props) => {
   const { title, coverImage, slug, brief } = props.data;
@@ -34,11 +34,11 @@ const ArticlesCard = (props) => {
             {title}
           </Heading>
           <Text fontSize="0.9rem">{brief.substring(0, 160)}...</Text>
-          <Button mt={4} size="sm" className="article-btn">
-            <Icon mr={1} as={FaLink}/>
+          <Button mt={4} size="sm">
             <Link href={articleUrl} target="_blank">
-              View here
+              Read here
             </Link>
+            <Icon ml={2} as={FaExternalLinkAlt}/>
           </Button>
         </CardBody>
       </Card>
