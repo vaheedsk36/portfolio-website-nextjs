@@ -14,7 +14,7 @@ import {
   Flex,
   Heading,
   Icon,
-  Stack,
+  Stack
 } from "@chakra-ui/react";
 import { BsFillSendFill } from "react-icons/bs";
 import RadioCard from "../../components/RadioCards";
@@ -31,7 +31,6 @@ const ContactForm = () => {
     defaultValue: interestedIn,
     onChange: (value) => setInterestedIn(value),
   });
-
   const group = getRootProps();
   const {
     handleSubmit,
@@ -70,7 +69,7 @@ const ContactForm = () => {
       toast({
         title: "Message sent successfully",
         status: "success",
-        position: "bottom",
+        position: "top",
         duration: 9000,
         isClosable: true,
       });
@@ -79,7 +78,7 @@ const ContactForm = () => {
       toast({
         title: error.message,
         status: "error",
-        position: "bottom",
+        position: "top",
         duration: 9000,
         isClosable: true,
       });
