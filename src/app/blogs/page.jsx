@@ -1,15 +1,32 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import ArticlesCard from "./ArticlesCard";
-import { Heading, Box, Center, SimpleGrid } from "@chakra-ui/react";
+import {
+  Heading,
+  Box,
+  Center,
+  SimpleGrid,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalCloseButton,
+  ModalBody,
+  useDisclosure,
+} from "@chakra-ui/react";
 import NewsLetterComponent from "./NewsLetterComponent";
 import { getArticlesData } from "../../utils/utils";
 import { FidgetSpinner } from "react-loader-spinner";
 import { RevealWrapper } from "next-reveal";
 
 const Blogs = () => {
+  const { isOpen,onOpen, onClose } = useDisclosure();
   const [articlesData, setArticlesData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [activeCard, setActiveCard] = useState([]);
+  const onCloseHandler = ()=>{
+    setActiveCard([]);
+    onClose();
+  };
 
   useEffect(() => {
     getArticlesData().then((data) => {
@@ -55,12 +72,29 @@ const Blogs = () => {
                 ]}
               >
                 {articlesData?.map((data, index) => (
-                  <ArticlesCard data={data} key={index} />
+                  <ArticlesCard key={index} {...{ data, setActiveCard,onOpen }} />
                 ))}
               </SimpleGrid>
             </RevealWrapper>
           </Box>
         )}
+
+        <Modal
+          isOpen={isOpen}
+          onClose={onCloseHandler}
+          isCentered
+          size={["xs", "md", "lg"]}
+        >
+          <ModalOverlay />
+          <ModalContent>
+            <ModalCloseButton />
+            <ModalBody>
+              {
+              activeCard?.brief
+              }
+            </ModalBody>
+          </ModalContent>
+        </Modal>
       </Center>
     </>
   );

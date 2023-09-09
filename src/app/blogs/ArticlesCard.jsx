@@ -8,20 +8,22 @@ import {
   Link,
   Heading,
   Icon,
+  Box,
 } from "@chakra-ui/react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 const ArticlesCard = (props) => {
-  const { title, coverImage, slug, brief } = props.data;
+  const { data, setActiveCard, onOpen } = props;
+  const { title, coverImage, slug, brief } = data;
   const articleUrl = `https://codersk36.hashnode.dev/${slug}`;
   return (
     <>
-      <Card 
-          backgroundColor= "blueTheme.card"
-          width= "20rem"
-          height= "30rem"
-          margin= "0.5rem"
-          boxShadow="0 10px 30px -15px blueTheme.navShadow"
+      <Card
+        backgroundColor="blueTheme.card"
+        width="20rem"
+        height="30rem"
+        margin="0.5rem"
+        boxShadow="0 10px 30px -15px blueTheme.navShadow"
       >
         <CardBody>
           <Image
@@ -33,12 +35,30 @@ const ArticlesCard = (props) => {
           <Heading size="sm" my={3}>
             {title}
           </Heading>
-          <Text fontSize="0.9rem">{brief.substring(0, 160)}...</Text>
-          <Button mt={4} size="sm">
-            <Link href={articleUrl} target="_blank">
-              Read here
-            </Link>
-            <Icon ml={2} as={FaExternalLinkAlt}/>
+          <Box fontSize="0.9rem">
+            {brief.substring(0, 160)}...
+            <Text
+              mx={3}
+              display="inline"
+              onClick={onOpen}
+              color="#068FFF"
+              fontSize="0.9rem"
+              cursor="pointer"
+              _hover={{ color: "#4E4FEB" }}
+            >
+              Read more
+            </Text>
+          </Box>
+          <Button
+            as="a"
+            href={articleUrl}
+            marginTop="1rem"
+            size="sm"
+            target="_blank"
+            onClick={() => setActiveCard(data)}
+          >
+            Read here
+            <Icon ml={2} as={FaExternalLinkAlt} />
           </Button>
         </CardBody>
       </Card>
