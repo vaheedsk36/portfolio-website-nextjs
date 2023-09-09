@@ -39,8 +39,10 @@ const ContactForm = () => {
     formState: { errors },
     reset
   } = useForm();
+  const [isLoading, setIsLoading] = useState(false);
 
   const onSubmit = async (formData) => {
+    setIsLoading(true);
     formData["interested-in"] = interestedIn;
     const formSubmitURL = `https://fabform.io/f/${process.env.NEXT_PUBLIC_FAB_FORM_KEY}`;
     try {
@@ -52,6 +54,10 @@ const ContactForm = () => {
         body: JSON.stringify(formData),
       });
 
+      if (!response.ok) {
+        throw new Error("Unable to send message ");
+      }
+
       reset({
         name: "",
         email: "",
@@ -59,9 +65,7 @@ const ContactForm = () => {
         message: "",
       });
 
-      if (!response.ok) {
-        throw new Error("Unable to send message ");
-      }
+      setIsLoading(false);
 
       toast({
         title: "Message sent successfully",
@@ -150,6 +154,8 @@ const ContactForm = () => {
             </FormControl>
             <FormControl>
               <Button
+                isLoading={isLoading}
+                loadingText='Submitting'
                 backgroundColor="social.instagram"
                 my={3}
                 _hover={{ backgroundColor: "social.instagramHover" }}
