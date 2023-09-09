@@ -5,7 +5,6 @@ import {
   Text,
   Button,
   Image,
-  Link,
   Heading,
   Icon,
   Box,
@@ -21,7 +20,7 @@ const ArticlesCard = (props) => {
       <Card
         backgroundColor="blueTheme.card"
         width="20rem"
-        height="30rem"
+        height="28rem"
         margin="0.5rem"
         boxShadow="0 10px 30px -15px blueTheme.navShadow"
       >
@@ -36,15 +35,18 @@ const ArticlesCard = (props) => {
             {title}
           </Heading>
           <Box fontSize="0.9rem">
-            {brief.substring(0, 160)}...
+            {brief.substring(0, 100)}...
             <Text
               mx={3}
               display="inline"
-              onClick={onOpen}
               color="#068FFF"
               fontSize="0.9rem"
               cursor="pointer"
               _hover={{ color: "#4E4FEB" }}
+              onClick={() => {
+                setActiveCard(data)
+                onOpen(true);
+              }}
             >
               Read more
             </Text>
@@ -55,7 +57,6 @@ const ArticlesCard = (props) => {
             marginTop="1rem"
             size="sm"
             target="_blank"
-            onClick={() => setActiveCard(data)}
           >
             Read here
             <Icon ml={2} as={FaExternalLinkAlt} />

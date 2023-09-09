@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import ArticlesCard from "./ArticlesCard";
 import {
   Heading,
@@ -12,6 +12,8 @@ import {
   ModalCloseButton,
   ModalBody,
   useDisclosure,
+  ModalHeader,
+  Link,
 } from "@chakra-ui/react";
 import NewsLetterComponent from "./NewsLetterComponent";
 import { getArticlesData } from "../../utils/utils";
@@ -19,11 +21,19 @@ import { FidgetSpinner } from "react-loader-spinner";
 import { RevealWrapper } from "next-reveal";
 
 const Blogs = () => {
-  const { isOpen,onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const [articlesData, setArticlesData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [activeCard, setActiveCard] = useState();
-  const onCloseHandler = ()=>{
+  const activeCardBrief = useMemo(() => {
+    // article brief from hashnode, is not completely full itgives ... at end so we have fixed the issue by omitting the string
+    const fixedBrief = activeCard?.brief
+      ?.substring(0, activeCard.brief.length - 3)
+      .split(". ");
+    fixedBrief?.pop();
+    return `${fixedBrief?.join(". ")}.`;
+  }, [activeCard]);
+  const onCloseHandler = () => {
     setActiveCard([]);
     onClose();
   };
@@ -72,13 +82,15 @@ const Blogs = () => {
                 ]}
               >
                 {articlesData?.map((data, index) => (
-                  <ArticlesCard key={index} {...{ data, setActiveCard,onOpen }} />
+                  <ArticlesCard
+                    key={index}
+                    {...{ data, setActiveCard, onOpen }}
+                  />
                 ))}
               </SimpleGrid>
             </RevealWrapper>
           </Box>
         )}
-
         <Modal
           isOpen={isOpen}
           onClose={onCloseHandler}
@@ -87,13 +99,17 @@ const Blogs = () => {
         >
           <ModalOverlay />
           <ModalContent>
+            <ModalHeader>
+              <Link
+                href={`https://codersk36.hashnode.dev/${activeCard?.slug}`}
+                target="_blank"
+              >
+                {activeCard?.title}
+              </Link>
+            </ModalHeader>
             <ModalCloseButton />
             <ModalBody>
-            Under Construction
-              {
-                
-                activeCard?.brief
-              }
+              <Box my={3}>{activeCardBrief}</Box>
             </ModalBody>
           </ModalContent>
         </Modal>
