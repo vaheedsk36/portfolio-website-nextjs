@@ -22,7 +22,7 @@ const Blogs = () => {
   const { isOpen,onOpen, onClose } = useDisclosure();
   const [articlesData, setArticlesData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [activeCard, setActiveCard] = useState([]);
+  const [activeCard, setActiveCard] = useState();
   const onCloseHandler = ()=>{
     setActiveCard([]);
     onClose();
@@ -83,14 +83,16 @@ const Blogs = () => {
           isOpen={isOpen}
           onClose={onCloseHandler}
           isCentered
-          size={["xs", "md", "lg"]}
+          size={["xs", "md"]}
         >
           <ModalOverlay />
           <ModalContent>
             <ModalCloseButton />
             <ModalBody>
+            Under Construction
               {
-              activeCard?.brief
+                
+                activeCard?.brief
               }
             </ModalBody>
           </ModalContent>
