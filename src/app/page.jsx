@@ -51,8 +51,9 @@ export default function Home() {
                 objectFit="shrink"
                 src="/images/ar-profile-transformed.png"
                 alt="profile-image"
-                width="15rem"
-                height="15rem"
+                width={["13rem","13rem","15rem"]}
+                height={["13rem","13rem","15rem"]}
+                marginTop={["5rem", "5rem", null]}
                 marginBottom={["1rem", "1rem", null]}
                 backgroundColor="blueTheme.navBg"
                 borderRadius="30rem"
