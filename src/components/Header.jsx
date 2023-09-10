@@ -23,7 +23,7 @@ export default function Header() {
           href="/"
           fontFamily="Righteous"
           fontSize="lg"
-          _hover={{ textDecoration: "none" }}
+          _hover={{ textDecoration: "none", color:"blueTheme.navLinkActive",transition:"all .5s ease-in-out" }}
         >
           VAHEED SHAIK  {"</>"} {" "}
         </Link>
