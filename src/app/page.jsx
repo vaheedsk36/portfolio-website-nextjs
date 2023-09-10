@@ -57,7 +57,7 @@ export default function Home() {
                 backgroundColor="blueTheme.navBg"
                 borderRadius="30rem"
               />
-          <Heading size="lg" color="blueTheme.navLinkActive">
+          <Heading size="lg" color="blueTheme.navLinkActive" fontFamily="Righteous">
             Hi, my name is
           </Heading>
 
@@ -78,7 +78,7 @@ export default function Home() {
               Vaheed
             </Heading>
           </Flex>
-          <Heading my={3} size="lg">
+          <Heading my={3} size="lg" fontFamily="Righteous">
             I &apos;m <span className="typed-text" ref={typedTextRef}></span>
           </Heading>
           <SocialIcons />
