@@ -15,6 +15,7 @@ const ProjectCard = (props) => {
             fontSize: "1.5rem",
             marginBottom: "5px",
             textAlign: "center",
+            fontFamily:"Righteous"
           }}
         >
           {title}
