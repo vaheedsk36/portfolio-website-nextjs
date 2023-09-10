@@ -25,6 +25,7 @@ const Skills = () => {
           marginTop="4rem"
           spacing={5}
           templateColumns="repeat(auto-fill, minmax(135px, 1fr))"
+          paddingBottom="2rem"
         >
           {skillsData.map((data, index) => {
             return (
