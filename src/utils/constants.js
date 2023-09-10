@@ -231,6 +231,13 @@ export const workData = [
 export const projectsData = [
   {
     type: "WEB-APP",
+    title: "Portfolio Website",
+    image: "portfolio-website",
+    link: null,
+    source: "https://github.com/vaheedsk36/portfolio-website-nextjs",
+  },
+  {
+    type: "WEB-APP",
     title: "Weather App",
     image: "weather-app",
     link: "https://vaheedsk36.github.io/weather-app/",

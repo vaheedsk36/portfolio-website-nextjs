@@ -23,6 +23,8 @@ const ProjectCard = (props) => {
             onMouseEnter={() => setShowHover(true)}
             onMouseLeave={() => setShowHover(false)}
             zIndex={0}
+            boxShadow="0 10px 30px -10px black"
+
           >
             <Image
               objectFit="cover"
@@ -43,7 +45,12 @@ const ProjectCard = (props) => {
             justifyContent="center"
             fontSize="2.5rem"
           >
-            <Link href={link} target="_blank" mr={3}><Icon as={FaLink} _hover={linkHover}/></Link>
+            {
+              link !==null ?
+              <Link href={link} target="_blank" mr={3}><Icon as={FaLink} _hover={linkHover}/></Link>
+              :
+              null
+            }
             <Link href={source} target="_blank" mr={1}><Icon as={FaGithub} _hover={linkHover}/></Link>
           </Flex>
           </Card>
