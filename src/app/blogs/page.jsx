@@ -1,6 +1,6 @@
 import React from 'react';
 
-class DownloadButton extends React.Component {
+class Blogs extends React.Component {
   handleDownload = () => {
     // Replace 'path-to-your-cv.pdf' with the actual path to your CV file.
     const cvPath = '../../../public/images/resume.pdf';
@@ -31,4 +31,4 @@ class DownloadButton extends React.Component {
   }
 }
 
-export default DownloadButton;
+export default Blogs;
