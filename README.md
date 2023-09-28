@@ -6,7 +6,7 @@
 
 [![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/BoussemousseT/my-portfolio/commits/main)
 [![Website](https://img.shields.io/badge/website-up-yellow)](https://portfolio-website-nextjs-fg8tgfru0-taoufik-portfolios-projects.vercel.app/)
-[![Message](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sk36)
+[![Message](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/t-boussemousse/)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat&logo)](http://badges.mit-license.org)
 
 ## Tech Stack and Services Used 🛠️
