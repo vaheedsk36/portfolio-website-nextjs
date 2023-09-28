@@ -14,15 +14,15 @@ import {
 } from "react-icons/fa";
 
 import {
-  TbBrandTypescript,
+  TbBrandCSharp,
   TbBrandJavascript,
   TbBrandCpp,
   TbBrandRedux,
   TbBrandBootstrap,
 } from "react-icons/tb";
-import { BiLogoJquery, BiLogoPostgresql } from "react-icons/bi";
+import { BiLogoJquery, BiLogoJava ,BiLogoPhp} from "react-icons/bi";
 import {
-  SiPug,
+  SiAdobephotoshop,
   SiExpress,
   SiPostman,
   SiGnubash,
@@ -33,9 +33,10 @@ import { FaHashnode } from "react-icons/fa6";
 import {
   BsGlobe,
   BsCodeSlash,
-  BsRobot,
+  BsFiletypeSql,
   BsFileBarGraph,
   BsGit,
+  BsAndroid2,
   BsMarkdown,
 } from "react-icons/bs";
 import { GiArchiveResearch, GiArtificialIntelligence } from "react-icons/gi";
@@ -62,16 +63,12 @@ export const interestsData = [
   },
   {
     interest: "Mobile App Development",
-    icon: BsRobot,
+    icon: BsAndroid2,
   },
   {
     interest: "Software Development",
     icon: AiFillCode,
   },
-  // {
-  //   interest: "Internet of Things",
-  //   icon: FcElectronics,
-  // },
   {
     interest: "Market Research",
     icon: GiArchiveResearch,
@@ -105,12 +102,12 @@ export const skillsData = [
     icon: BiLogoJquery,
   },
   {
-    name: "Typescript",
-    icon: TbBrandTypescript,
+    name: "C#",
+    icon: TbBrandCSharp,
   },
   {
-    name: "SASS",
-    icon: FaSass,
+    name: "Java",
+    icon: BiLogoJava,
   },
   {
     name: "Bootstrap",
@@ -121,40 +118,32 @@ export const skillsData = [
     icon: TbBrandCpp,
   },
   {
-    name: "Python",
-    icon: FaPython,
+    name: "PHP",
+    icon: BiLogoPhp,
   },
   {
     name: "ReactJS",
     icon: FaReact,
   },
   {
-    name: "NextJS",
-    icon: SiNextdotjs,
+    name: "SQL",
+    icon: BsFiletypeSql,
   },
   {
-    name: "Redux",
-    icon: TbBrandRedux,
+    name: "Android",
+    icon: BsAndroid2,
   },
   {
     name: "NodeJs",
     icon: FaNodeJs,
   },
   {
-    name: "PugJs",
-    icon: SiPug,
-  },
-  {
     name: "Express",
     icon: SiExpress,
   },
   {
-    name: "Docker",
-    icon: FaDocker,
-  },
-  {
-    name: "Postgres",
-    icon: BiLogoPostgresql,
+    name: "Photoshop",
+    icon: SiAdobephotoshop,
   },
   {
     name: "Postman",
@@ -175,10 +164,6 @@ export const skillsData = [
   {
     name: "Bash",
     icon: SiGnubash,
-  },
-  {
-    name: "Markdown",
-    icon: BsMarkdown,
   },
 ];
 
@@ -236,48 +221,48 @@ export const projectsData = [
     title: "Portfolio Website",
     image: "portfolio-website",
     link: null,
-    source: "https://github.com/vaheedsk36/portfolio-website-nextjs",
+    source: "https://github.com/sk36/portfolio-website-nextjs",
   },
   {
     type: "WEB-APP",
     title: "Weather App",
     image: "weather-app",
-    link: "https://vaheedsk36.github.io/weather-app/",
-    source: "https://github.com/vaheedsk36/weather-app",
+    link: "https://sk36.github.io/weather-app/",
+    source: "https://github.com/sk36/weather-app",
   },
   {
     type: "WEB-APP",
     title: "Landing Page",
     image: "landing-page",
-    link: "https://vaheedsk36.github.io/demo-frontend-bootcamp",
-    source: "https://github.com/vaheedsk36/demo-frontend-bootcamp",
+    link: "https://sk36.github.io/demo-frontend-bootcamp",
+    source: "https://github.com/sk36/demo-frontend-bootcamp",
   },
   {
     type: "WEB-APP",
     title: "Guess Game",
     image: "guess-game",
-    link: "https://vaheedsk36.github.io/guess-my-number",
-    source: "https://github.com/vaheedsk36/guess-my-number",
+    link: "https://sk36.github.io/guess-my-number",
+    source: "https://github.com/sk36/guess-my-number",
   },
   {
     type: "WEB-APP",
     title: "Notes App",
     image: "react-notes-app",
-    link: "https://vaheedsk36.github.io/react-notes-app/",
-    source: "https://github.com/vaheedsk36/react-notes-app",
+    link: "https://sk36.github.io/react-notes-app/",
+    source: "https://github.com/sk36/react-notes-app",
   },
   {
     type: "WEB-APP",
     title: "Dice Multiplayer",
     image: "dice-multiplayer",
-    link: "https://vaheedsk36.github.io/dice-multiplayer",
-    source: "https://github.com/vaheedsk36/dice-multiplayer",
+    link: "https://sk36.github.io/dice-multiplayer",
+    source: "https://github.com/sk36/dice-multiplayer",
   },
   {
     type: "PROJECT",
     title: "Snake Game",
     image: "snake-game",
-    link: "https://vaheedsk36.github.io/Snake-game",
+    link: "https://sk36.github.io/Snake-game",
     source: "",
   },
   {
@@ -285,14 +270,14 @@ export const projectsData = [
     title: "Delta Assistant",
     image: "delta-assistant",
     link: "",
-    source: "https://github.com/vaheedsk36/Delta-Desktop-Virtual-Assistant",
+    source: "https://github.com/sk36/Delta-Desktop-Virtual-Assistant",
   },
   {
     type: "WEB-APP",
     title: "Text Utility App",
     image: "text-utility-app",
-    link: "https://vaheedsk36.github.io/text-utility-app/",
-    source: "https://github.com/vaheedsk36/text-utility-app",
+    link: "https://sk36.github.io/text-utility-app/",
+    source: "https://github.com/sk36/text-utility-app",
   },
 ];
 
@@ -332,7 +317,7 @@ export const socialMediaLinks = [
 
 export const query = `
 query GetUserArticles($page: Int = 0) {
-  user(username: "vaheed") {
+  user(username: "") {
     publication {
       posts(page: $page) {
         title
