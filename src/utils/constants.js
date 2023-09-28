@@ -56,12 +56,12 @@ export const interestsData = [
     icon: BsCodeSlash,
   },
   {
-    interest: "Mobile App Development",
-    icon: BsRobot,
-  },
-  {
     interest: "Web Development",
     icon: BsGlobe,
+  },
+  {
+    interest: "Mobile App Development",
+    icon: BsRobot,
   },
   {
     interest: "Software Development",
@@ -79,10 +79,10 @@ export const interestsData = [
     interest: "Visualization",
     icon: BsFileBarGraph,
   },
-  // {
-  //   interest: "Gaming",
-  //   icon: Gamepad,
-  // },
+  {
+    interest: "Gaming",
+    icon: AnimationPlaybackEvent ,
+  },
 
 ];
 
