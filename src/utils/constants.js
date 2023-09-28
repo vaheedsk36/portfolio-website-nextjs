@@ -17,7 +17,7 @@ import {
   TbBrandCSharp,
   TbBrandJavascript,
   TbBrandCpp,
-  TbBrandRedux,
+  TbDatabaseSearch,
   TbBrandBootstrap,
 } from "react-icons/tb";
 import { BiLogoJquery, BiLogoJava ,BiLogoPhp} from "react-icons/bi";
@@ -29,7 +29,6 @@ import {
   SiNextdotjs,
 } from "react-icons/si";
 import { AiFillCode } from "react-icons/ai";
-import { LuSearchCode } from "react-icons/lu";
 import {
   BsGlobe,
   BsCodeSlash,
@@ -75,7 +74,7 @@ export const interestsData = [
   },
   {
     interest: "Analyst",
-    icon: LuSearchCode,
+    icon: TbDatabaseSearch,
   },
   {
     interest: "Gaming",
