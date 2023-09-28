@@ -1,121 +1,34 @@
-"use client";
-import React, { useEffect, useMemo, useState } from "react";
-import ArticlesCard from "./ArticlesCard";
-import {
-  Heading,
-  Box,
-  Center,
-  SimpleGrid,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalCloseButton,
-  ModalBody,
-  useDisclosure,
-  ModalHeader,
-  Link,
-} from "@chakra-ui/react";
-import NewsLetterComponent from "./NewsLetterComponent";
-import { getArticlesData } from "../../utils/utils";
-import { FidgetSpinner } from "react-loader-spinner";
-import { RevealWrapper } from "next-reveal";
+import React from 'react';
 
-const Blogs = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [articlesData, setArticlesData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [activeCard, setActiveCard] = useState();
-  const activeCardBrief = useMemo(() => {
-    // article brief from hashnode, is not completely full itgives ... at end so we have fixed the issue by omitting the string
-    const fixedBrief = activeCard?.brief
-      ?.substring(0, activeCard.brief.length - 3)
-      .split(". ");
-    fixedBrief?.pop();
-    return `${fixedBrief?.join(". ")}.`;
-  }, [activeCard]);
-  const onCloseHandler = () => {
-    setActiveCard([]);
-    onClose();
+class DownloadButton extends React.Component {
+  handleDownload = () => {
+    // Replace 'path-to-your-cv.pdf' with the actual path to your CV file.
+    const cvPath = '../../../public/images/resume.pdf';
+
+    // Use the `fetch` API to retrieve the CV file.
+    fetch(cvPath)
+      .then((response) => response.blob())
+      .then((blob) => {
+        // Create a temporary anchor element to trigger the download.
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.style.display = 'none';
+        a.href = url;
+        a.download = 'taoufik-resume.pdf'; // Set the desired filename for the download.
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url); // Clean up the URL object after download.
+      })
+      .catch((error) => {
+        console.error('Error downloading CV:', error);
+      });
   };
 
-  useEffect(() => {
-    getArticlesData().then((data) => {
-      setArticlesData(data);
-      setIsLoading(false);
-    });
-  }, []);
+  render() {
+    return (
+      <button onClick={this.handleDownload}>Download CV</button>
+    );
+  }
+}
 
-  return (
-    <>
-      <Center my={5}>
-        {isLoading ? (
-          <Box
-            position="absolute"
-            display="flex"
-            top="40vh"
-            justifyContent="center"
-          >
-            <FidgetSpinner
-              visible={true}
-              height="100"
-              width="100"
-              ariaLabel="dna-loading"
-              wrapperClass="dna-wrapper"
-              ballColors={["#ff0000", "#00ff00", "#0000ff"]}
-              backgroundColor="white"
-            />
-          </Box>
-        ) : (
-          <Box width={["87vw", "87vw", "95vw"]} height="100%">
-            <Heading className="sub-heading" size="md">
-              BLOGS
-            </Heading>
-
-            <NewsLetterComponent />
-            <RevealWrapper className="load-hidden" delay={300}>
-              <SimpleGrid
-                spacing={4}
-                templateColumns={[
-                  "repeat(auto-fill, minmax(250px, 1fr))",
-                  "repeat(auto-fill, minmax(250px, 1fr))",
-                  "repeat(auto-fill, minmax(300px, 1fr))",
-                ]}
-              >
-                {articlesData?.map((data, index) => (
-                  <ArticlesCard
-                    key={index}
-                    {...{ data, setActiveCard, onOpen }}
-                  />
-                ))}
-              </SimpleGrid>
-            </RevealWrapper>
-          </Box>
-        )}
-        <Modal
-          isOpen={isOpen}
-          onClose={onCloseHandler}
-          isCentered
-          size={["xs", "md"]}
-        >
-          <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>
-              <Link
-                href={`https://codersk36.hashnode.dev/${activeCard?.slug}`}
-                target="_blank"
-              >
-                {activeCard?.title}
-              </Link>
-            </ModalHeader>
-            <ModalCloseButton />
-            <ModalBody>
-              <Box my={3}>{activeCardBrief}</Box>
-            </ModalBody>
-          </ModalContent>
-        </Modal>
-      </Center>
-    </>
-  );
-};
-
-export default Blogs;
+export default DownloadButton;
