@@ -1,6 +1,6 @@
 # ⭐ Personal Portfolio Website ⭐
 
-> [Deployed here](https://vaheedshaik.vercel.app/)
+> [Deployed here](https://portfolio-website-nextjs-git-main-taoufik-portfolios-projects.vercel.app/)
 
 ⭐ Star me on GitHub ⭐
 
@@ -39,7 +39,6 @@ Explore different sections of my profile:
 - **🛠️ Skills**
 - **💼 Projects**
 - **🔍 Experience**
-- **📝 Blogs**
 - **📬 Contact**
 
 ## Contributing 💡
