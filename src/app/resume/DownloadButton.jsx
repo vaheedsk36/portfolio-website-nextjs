@@ -2,8 +2,8 @@ import React from 'react';
 
 class DownloadButton extends React.Component {
   handleDownload = () => {
-    // Replace 'path-to-your-cv.pdf' with the actual path to your CV file.
-    const cvPath = '/photo.jpg'
+
+    const cvPath = '/resume.pdf'
 
     // Use the `fetch` API to retrieve the CV file.
     fetch(cvPath)
@@ -20,7 +20,7 @@ const url = window.URL.createObjectURL(blob);
 const a = document.createElement('a');
 a.style.display = 'none';
 a.href = url;
-a.download = 'photo.jpg' // Set the desired filename for the download.
+a.download = 'resume.pdf' // Set the desired filename for the download.
 document.body.appendChild(a);
 a.click();
 window.URL.revokeObjectURL(url); // Clean up the URL object after download.
@@ -38,6 +38,3 @@ window.URL.revokeObjectURL(url); // Clean up the URL object after download.
 }
 
 export default DownloadButton;
-
-
-

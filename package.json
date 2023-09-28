@@ -35,6 +35,7 @@
     "typed.js": "^2.0.16"
   },
   "devDependencies": {
+    "file-loader": "^6.2.0",
     "sass": "^1.64.2"
   }
 }
