@@ -10,6 +10,7 @@ import {
   FaInstagram,
   FaLinkedin,
   FaTwitter,
+  FaGamepad,
 } from "react-icons/fa";
 
 import {
