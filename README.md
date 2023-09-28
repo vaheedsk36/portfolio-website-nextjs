@@ -4,8 +4,8 @@
 
 ⭐ Star me on GitHub ⭐
 
-[![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/vaheedsk36/portfolio-website-nextjs/commits/main)
-[![Website](https://img.shields.io/badge/website-up-yellow)](https://vaheedshaik.vercel.app/)
+[![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/BoussemousseT/my-portfolio/commits/main)
+[![Website](https://img.shields.io/badge/website-up-yellow)](https://portfolio-website-nextjs-fg8tgfru0-taoufik-portfolios-projects.vercel.app/)
 [![Message](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sk36)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat&logo)](http://badges.mit-license.org)
 
