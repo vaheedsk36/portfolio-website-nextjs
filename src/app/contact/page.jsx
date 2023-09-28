@@ -8,6 +8,7 @@ import { Link } from "@chakra-ui/next-js";
 import SocialIcons from "../../components/SocialIcons";
 import MapBox from "./MapBox";
 import { RevealWrapper } from 'next-reveal'
+import { PhoneIcon } from "@chakra-ui/icons";
 
 
 const Contact = () => {
@@ -37,6 +38,12 @@ const Contact = () => {
                   <Icon as={IoIosMail} mx={2} />
                   <Text>Boussemoussetaoufik@gmail.com</Text>
                 </Link>
+              </Tooltip>
+              <Tooltip label="Phone">
+              <Text className="contact-text-span">
+                    <Icon as={PhoneIcon} mx={2} />
+                    <span>(579)-372-5166</span>
+                  </Text>
               </Tooltip>
 
               <Tooltip label="Open Map">
