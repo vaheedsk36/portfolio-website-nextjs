@@ -16,7 +16,7 @@ export default function Home() {
 
   useEffect(() => {
     const options = {
-      strings: ["Developer", "Coder", "Tech Blogger", "Tech Enthusiast"],
+      strings: ["Developer", "Coder", "Programmer"],
       typeSpeed: 50,
       backSpeed: 35,
       loop: true,
@@ -80,7 +80,7 @@ export default function Home() {
                 fontFamily="Black Ops One"
                 fontSize={["2.5rem", "3.7rem"]}
               >
-                Masood Akhtar
+                Taoufik
               </Heading>
 
               <Heading
@@ -88,7 +88,7 @@ export default function Home() {
                 fontSize={["2.5rem", "3.7rem"]}
                 ml={[null, "1rem"]}
               >
-                Vaheed
+                Boussemousse
               </Heading>
             </Flex>
           </RevealWrapper>
