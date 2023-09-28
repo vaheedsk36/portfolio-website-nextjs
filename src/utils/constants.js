@@ -52,17 +52,25 @@ export const links = [
 
 export const interestsData = [
   {
-    interest: "Software Engineering",
+    interest: "Coding",
     icon: BsCodeSlash,
   },
   {
-    interest: "Tech Blog",
-    icon: FaHashnode,
+    interest: "Mobile App Development",
+    icon: BsRobot,
   },
   {
-    interest: "Internet of Things",
-    icon: FcElectronics,
+    interest: "Web Development",
+    icon: BsGlobe,
   },
+  {
+    interest: "Software Development",
+    icon: AiFillCode,
+  },
+  // {
+  //   interest: "Internet of Things",
+  //   icon: FcElectronics,
+  // },
   {
     interest: "Market Research",
     icon: GiArchiveResearch,
@@ -72,17 +80,10 @@ export const interestsData = [
     icon: BsFileBarGraph,
   },
   {
-    interest: "Software Development",
-    icon: AiFillCode,
+    interest: "Gaming",
+    icon: Gamepad,
   },
-  {
-    interest: "Robotics",
-    icon: BsRobot,
-  },
-  {
-    interest: "Web Scraping",
-    icon: BsGlobe,
-  },
+
 ];
 
 export const skillsData = [

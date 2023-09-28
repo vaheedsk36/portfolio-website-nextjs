@@ -43,8 +43,8 @@ const Page = () => {
                 </Heading>
                 <br />
                 <Text>
-                  I&apos;m <span className="name">Vaheed</span>, a passionate
-                  software developer. I specialize in{" "}
+                  I&apos;m <span className="name">Taoufik</span>, a passionate
+                  developer. I specialize in{" "}
                   <span className="tech">Web Development</span>, crafting
                   seamless user experiences and robust backend solutions. With a
                   knack for problem-solving, I thrive on creating elegant code
