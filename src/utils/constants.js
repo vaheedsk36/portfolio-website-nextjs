@@ -81,7 +81,7 @@ export const interestsData = [
   },
   {
     interest: "Gaming",
-    icon: AnimationPlaybackEvent ,
+    icon: unity,
   },
 
 ];
