@@ -79,10 +79,10 @@ export const interestsData = [
     interest: "Visualization",
     icon: BsFileBarGraph,
   },
-  {
-    interest: "Gaming",
-    icon: Gamepad,
-  },
+  // {
+  //   interest: "Gaming",
+  //   icon: Gamepad,
+  // },
 
 ];
 
