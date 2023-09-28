@@ -29,7 +29,7 @@ import {
   SiNextdotjs,
 } from "react-icons/si";
 import { AiFillCode } from "react-icons/ai";
-import { FaHashnode } from "react-icons/fa6";
+import { LuSearchCode } from "react-icons/lu";
 import {
   BsGlobe,
   BsCodeSlash,
@@ -74,8 +74,8 @@ export const interestsData = [
     icon: GiArchiveResearch,
   },
   {
-    interest: "Visualization",
-    icon: BsFileBarGraph,
+    interest: "Analyst",
+    icon: LuSearchCode,
   },
   {
     interest: "Gaming",
