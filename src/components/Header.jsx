@@ -25,7 +25,7 @@ export default function Header() {
           fontSize="lg"
           _hover={{ textDecoration: "none", color:"blueTheme.navLinkActive",transition:"all .5s ease-in-out" }}
         >
-          VAHEED SHAIK  {"</>"} {" "}
+        TAOUFIK BOUSSEMOUSSE {"</>"} {" "}
         </Link>
 
         <HStack as="nav" spacing="5" display={{ base: "none", md: "flex" }}>

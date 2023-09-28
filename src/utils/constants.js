@@ -303,23 +303,23 @@ export const socialMediaLinks = [
     hoverColor: "gray.600",
   },
   {
-    href: "https://www.instagram.com/taoufik_boussemousse/",
-    icon: FaInstagram,
-    backgroundColor: "social.instagram",
-    hoverColor: "social.instagramHover",
-  },
-  {
     href: "https://www.linkedin.com/in/t-boussemousse/",
     icon: FaLinkedin,
     backgroundColor: "social.linkedin",
     hoverColor: "social.linkedinHover",
   },
-  {
-    href: "https://twitter.com/codersk36",
-    icon: FaTwitter,
-    backgroundColor: "social.twitter",
-    hoverColor: "social.twitterHover",
-  },
+  // {
+  //   href: "https://twitter.com/codersk36",
+  //   icon: FaTwitter,
+  //   backgroundColor: "social.twitter",
+  //   hoverColor: "social.twitterHover",
+  // },
+  // {
+  //   href: "https://www.instagram.com/taoufik_boussemousse/",
+  //   icon: FaInstagram,
+  //   backgroundColor: "social.instagram",
+  //   hoverColor: "social.instagramHover",
+  // },
   // {
   //   href: "https://codersk36.hashnode.dev/",
   //   icon: FaHashnode,
