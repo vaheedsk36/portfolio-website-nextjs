@@ -16,7 +16,7 @@ export default function Header() {
       top={0}
       zIndex="100"
       boxShadow="0 10px 30px -10px blueTheme.navShadow"
-      
+
     >
       <Flex w="100%" px="6" py="5" align="center" justify="space-between">
         <Link
@@ -33,6 +33,8 @@ export default function Header() {
             <Link
               key={index}
               href={link.path}
+            //   href={"https://drive.google.com/file/d/1pT-Nk6AxY9ZOWBizuDb4htA3IiUF_fSe/view"}
+            //   target="_blank"
               fontWeight="extrabold"
               _hover={{ textDecoration: "none", color: "blueTheme.navLinkActive" }}
               fontSize="lg"

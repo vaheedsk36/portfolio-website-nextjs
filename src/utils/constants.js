@@ -2,14 +2,10 @@ import {
   FaHtml5,
   FaCss3,
   FaReact,
-  FaSass,
-  FaPython,
+  FaBitbucket,
   FaNodeJs,
-  FaDocker,
   FaGithub,
-  FaInstagram,
   FaLinkedin,
-  FaTwitter,
   FaGamepad,
 } from "react-icons/fa";
 
@@ -26,20 +22,16 @@ import {
   SiExpress,
   SiPostman,
   SiGnubash,
-  SiNextdotjs,
 } from "react-icons/si";
 import { AiFillCode } from "react-icons/ai";
 import {
   BsGlobe,
   BsCodeSlash,
   BsFiletypeSql,
-  BsFileBarGraph,
   BsGit,
   BsAndroid2,
-  BsMarkdown,
 } from "react-icons/bs";
 import { GiArchiveResearch, GiArtificialIntelligence } from "react-icons/gi";
-import { FcElectronics } from "react-icons/fc";
 
 export const links = [
   { text: "Home", path: "/" },
@@ -157,6 +149,10 @@ export const skillsData = [
     icon: FaGithub,
   },
   {
+    name: "Bitbucket",
+    icon: FaBitbucket,
+  },
+  {
     name: "ChatGPT",
     icon: GiArtificialIntelligence,
   },
@@ -192,29 +188,6 @@ export const workData = [
       </>
     ),
   },
-  // {
-  //   company: "Fact.MR",
-  //   designation: "Associate Consultant Level 01",
-  //   duration: "Dec 2020 - July 2021",
-  //   companyImg: "fmr.svg",
-  //   description: (
-  //     <>
-  //       <ul>
-  //         <li>
-  //           Engaged in creating comprehensive client-specific and syndicated
-  //           research reports, along with SEO-focused articles and collateral
-  //           materials within the domains of chemicals, materials, consumer
-  //           goods, and industrial goods.
-  //         </li>
-  //         <li>
-  //           Expertly estimated market valuations and conducted primary research
-  //           in collaboration with industry experts to validate data, extract
-  //           valuable market insights.
-  //         </li>
-  //       </ul>
-  //     </>
-  //   ),
-  // },
 ];
 
 export const otherWorkData = [
@@ -293,10 +266,13 @@ export const education = [
 export const projectsData = [
   {
     type: "WEB-APP",
-    title: "Portfolio Website",
-    image: "portfolio-website",
-    link: null,
-    source: "https://github.com/sk36/portfolio-website-nextjs",
+    title: "Memory Game",
+    image: "memory-games",
+    link: "https://boussemousset.github.io/memory-game/",
+    source: "https://github.com/BoussemousseT/memory-game",
+    description: "It's a game to find 8 pairs of hidden images behind '?' in the grid. Click on two images to reveal them. If they match, they remain displayed; otherwise, they hide again.",
+    languages: "Javascript, HTML, CSS",
+    projectType: "Group"
   },
   {
     type: "WEB-APP",
@@ -304,6 +280,7 @@ export const projectsData = [
     image: "weather-app",
     link: "https://sk36.github.io/weather-app/",
     source: "https://github.com/sk36/weather-app",
+    description: "https://github.com/BoussemousseT",
   },
   {
     type: "WEB-APP",
@@ -311,6 +288,8 @@ export const projectsData = [
     image: "landing-page",
     link: "https://sk36.github.io/demo-frontend-bootcamp",
     source: "https://github.com/sk36/demo-frontend-bootcamp",
+    description: "https://github.com/BoussemousseT",
+
   },
   {
     type: "WEB-APP",
@@ -318,6 +297,8 @@ export const projectsData = [
     image: "guess-game",
     link: "https://sk36.github.io/guess-my-number",
     source: "https://github.com/sk36/guess-my-number",
+    description: "https://github.com/BoussemousseT",
+
   },
   {
     type: "WEB-APP",
@@ -325,6 +306,8 @@ export const projectsData = [
     image: "react-notes-app",
     link: "https://sk36.github.io/react-notes-app/",
     source: "https://github.com/sk36/react-notes-app",
+    description: "https://github.com/BoussemousseT",
+
   },
   {
     type: "WEB-APP",
@@ -332,6 +315,8 @@ export const projectsData = [
     image: "dice-multiplayer",
     link: "https://sk36.github.io/dice-multiplayer",
     source: "https://github.com/sk36/dice-multiplayer",
+    description: "https://github.com/BoussemousseT",
+
   },
   {
     type: "PROJECT",
@@ -339,6 +324,8 @@ export const projectsData = [
     image: "snake-game",
     link: "https://sk36.github.io/Snake-game",
     source: "",
+    description: "https://github.com/BoussemousseT",
+
   },
   {
     type: "PROJECT",
@@ -346,6 +333,8 @@ export const projectsData = [
     image: "delta-assistant",
     link: "",
     source: "https://github.com/sk36/Delta-Desktop-Virtual-Assistant",
+    description: "https://github.com/BoussemousseT",
+
   },
   {
     type: "WEB-APP",
@@ -353,6 +342,8 @@ export const projectsData = [
     image: "text-utility-app",
     link: "https://sk36.github.io/text-utility-app/",
     source: "https://github.com/sk36/text-utility-app",
+    description: "https://github.com/BoussemousseT",
+
   },
 ];
 
