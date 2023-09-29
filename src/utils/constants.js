@@ -166,34 +166,87 @@ export const skillsData = [
   },
 ];
 
+
 export const workData = [
   {
-    company: "1Digitalstack.ai",
-    designation: "Software Engineer 1",
-    duration: "March 2022 - Present",
-    companyImg: "1ds.jpg",
+    company: "Freelancer",
+    designation: "Computer Development",
+    duration: "2018 - 2022",
+    companyImg: "freelancer.png",
+    description: (
+      <>
+        <ol>
+          <li>
+          Capture customer needs.
+          </li>
+          <li>
+          Transmit customer needs to developers.
+          </li>
+          <li>
+          Manage developers to meet customer needs in the creation of websites and mobile applications.
+          </li>
+          <li>
+          Manage clients and ensure customer satisfaction.
+          </li>
+        </ol>
+      </>
+    ),
+  },
+  // {
+  //   company: "Fact.MR",
+  //   designation: "Associate Consultant Level 01",
+  //   duration: "Dec 2020 - July 2021",
+  //   companyImg: "fmr.svg",
+  //   description: (
+  //     <>
+  //       <ul>
+  //         <li>
+  //           Engaged in creating comprehensive client-specific and syndicated
+  //           research reports, along with SEO-focused articles and collateral
+  //           materials within the domains of chemicals, materials, consumer
+  //           goods, and industrial goods.
+  //         </li>
+  //         <li>
+  //           Expertly estimated market valuations and conducted primary research
+  //           in collaboration with industry experts to validate data, extract
+  //           valuable market insights.
+  //         </li>
+  //       </ul>
+  //     </>
+  //   ),
+  // },
+];
+
+export const otherWorkData = [
+  {
+    company: "Company Bicha et Cie, Morocco",
+    designation: "Intern Stock Management Supervisor.",
+    duration: "February 2019 - May 2019",
+    companyImg: "bicha.png",
     description: (
       <>
         <ul>
           <li>
-            I work on Reviniti, an analytics product designed for e-commerce
-            players in the bid management domain. Solely migrated the old
-            codebase from a templating engine (PugJS) to React with TypeScript.
+          Plan deliveries with suppliers.
           </li>
           <li>
-            Engaged in developing new features, refactoring code, enhancing
-            product performance, bug fixes and contributing towards achieving
-            high scalability for the product.
+          Monitor supplier performance criteria (delivery times, adherence to negotiated terms by the company).
+          </li>
+          <li>
+          Quality and quantity control of goods.
+          </li>
+          <li>
+          Negotiate alternative solutions with suppliers in case of malfunction, sometimes in emergency situations.
           </li>
         </ul>
       </>
     ),
   },
   {
-    company: "Fact.MR",
-    designation: "Associate Consultant Level 01",
-    duration: "Dec 2020 - July 2021",
-    companyImg: "fmr.svg",
+    company: "Zarotti, Morocco",
+    designation: "Intern Accounting Assistant.",
+    duration: "February 2018 - March 2018",
+    companyImg: "zarotti.png",
     description: (
       <>
         <ul>
@@ -209,6 +262,29 @@ export const workData = [
             valuable market insights.
           </li>
         </ul>
+      </>
+    ),
+  },
+];
+
+export const education = [
+  {
+    company: "Universel College, Montreal",
+    designation: "Programming And Technologies Web - Attestation of College Studies",
+    duration: "May 2022 - Present",
+    companyImg: "universel.png",
+    description: (
+      <>
+      </>
+    ),
+  },
+  {
+    company: "Ibn Zohr University, Morocco",
+    designation: "Economics and Management Sciences.",
+    duration: "2015 - 2018",
+    companyImg: "ibnzohr.png",
+    description: (
+      <>
       </>
     ),
   },

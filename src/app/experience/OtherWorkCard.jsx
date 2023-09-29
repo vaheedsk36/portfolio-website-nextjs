@@ -10,7 +10,7 @@ import {
   Box,
 } from "@chakra-ui/react";
 
-const WorkCard = (props) => {
+const OtherWorkCard = (props) => {
   const { company, duration, designation, companyImg, description } =
     props.data;
   return (
@@ -57,4 +57,4 @@ const WorkCard = (props) => {
   );
 };
 
-export default WorkCard;
+export default OtherWorkCard;

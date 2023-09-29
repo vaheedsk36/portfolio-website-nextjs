@@ -19,7 +19,6 @@
     "@chakra-ui/react": "^2.8.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "eslint": "8.47.0",
     "eslint-config-next": "13.4.19",
     "framer-motion": "^10.15.2",
     "mapbox-gl": "^2.15.0",
@@ -35,7 +34,13 @@
     "typed.js": "^2.0.16"
   },
   "devDependencies": {
+    "eslint": "^8.50.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
     "file-loader": "^6.2.0",
+    "force": "^0.0.3",
     "sass": "^1.64.2"
   }
 }
