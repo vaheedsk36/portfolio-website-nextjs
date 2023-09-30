@@ -272,33 +272,37 @@ export const projectsData = [
     source: "https://github.com/BoussemousseT/memory-game",
     description: "It's a game to find 8 pairs of hidden images behind '?' in the grid. Click on two images to reveal them. If they match, they remain displayed; otherwise, they hide again.",
     languages: "Javascript, HTML, CSS",
-    projectType: "Group"
+    team: "Taoufik Boussemousse - Cong Tai Ho",
   },
   {
     type: "WEB-APP",
-    title: "Weather App",
-    image: "weather-app",
-    link: "https://sk36.github.io/weather-app/",
-    source: "https://github.com/sk36/weather-app",
-    description: "https://github.com/BoussemousseT",
+    title: "Video Game",
+    image: "jeu-video-website",
+    link: "https://boussemousset.github.io/Site-jeux-video",
+    source: "https://github.com/BoussemousseT/Site-jeux-video",
+    description: "This website is dedicated to video game enthusiasts. Explore reviews, news, and tips for your favorite games, as well as a vibrant gaming community.",
+    languages: "HTML, CSS",
+    team: "Taoufik Boussemousse - Kokouvi Biova Arnold Adadji",
+  },
+  {
+    type: "MOBILE-APP",
+    title: "Chat AI - Image Text Scanner",
+    image: "mobile-app-chat-ai",
+    link: "https://play.google.com/store/apps/details?id=com.chatbotai.textscannerbotai",
+    source: "https://github.com/BoussemousseT/Chat-AI-Image-Text-Scanner",
+    description: "This project was created by me using an open-source text scanner, to which I integrated the ChatGPT API. This application allows the user to send a message directly to ChatGPT and receive a response. It also offers the capability to take an image containing a paragraph of text, convert it to text format, and then send it to ChatGPT. This feature greatly simplifies manual text input, providing a smoother and more convenient experience for interacting with ChatGPT.",
+    languages: "Java",
+    team: "Taoufik Boussemousse",
   },
   {
     type: "WEB-APP",
-    title: "Landing Page",
-    image: "landing-page",
-    link: "https://sk36.github.io/demo-frontend-bootcamp",
-    source: "https://github.com/sk36/demo-frontend-bootcamp",
-    description: "https://github.com/BoussemousseT",
-
-  },
-  {
-    type: "WEB-APP",
-    title: "Guess Game",
-    image: "guess-game",
-    link: "https://sk36.github.io/guess-my-number",
-    source: "https://github.com/sk36/guess-my-number",
-    description: "https://github.com/BoussemousseT",
-
+    title: "Electronics Store",
+    image: "e-boutique-electronique",
+    link: null,
+    source: "https://github.com/BoussemousseT/Site-web-E-Boutique-mobile-application",
+    description: "It is an online sales platform specializing in electronic and technological products. Our website offers a diverse range of high-quality electronic products, ranging from smartphones and laptops to gadgets and electronic accessories.",
+    languages: "JavaScript, Reactjs, Bootstrap, HTML, CSS",
+    team: "Taoufik Boussemousse  - Evan Cholette - Antoine Ouellet - Cong Tai Ho - Charles-Maximilien Gros - Sara Salek",
   },
   {
     type: "WEB-APP",
@@ -307,7 +311,8 @@ export const projectsData = [
     link: "https://sk36.github.io/react-notes-app/",
     source: "https://github.com/sk36/react-notes-app",
     description: "https://github.com/BoussemousseT",
-
+    languages: "Javascript, HTML, CSS",
+    team: "Taoufik Boussemousse - Cong Tai Ho",
   },
   {
     type: "WEB-APP",
@@ -316,7 +321,8 @@ export const projectsData = [
     link: "https://sk36.github.io/dice-multiplayer",
     source: "https://github.com/sk36/dice-multiplayer",
     description: "https://github.com/BoussemousseT",
-
+    languages: "Javascript, HTML, CSS",
+    team: "Taoufik Boussemousse - Cong Tai Ho",
   },
   {
     type: "PROJECT",
@@ -325,7 +331,8 @@ export const projectsData = [
     link: "https://sk36.github.io/Snake-game",
     source: "",
     description: "https://github.com/BoussemousseT",
-
+    languages: "Javascript, HTML, CSS",
+    team: "Taoufik Boussemousse - Cong Tai Ho",
   },
   {
     type: "PROJECT",
@@ -334,7 +341,8 @@ export const projectsData = [
     link: "",
     source: "https://github.com/sk36/Delta-Desktop-Virtual-Assistant",
     description: "https://github.com/BoussemousseT",
-
+    languages: "Javascript, HTML, CSS",
+    team: "Taoufik Boussemousse - Cong Tai Ho",
   },
   {
     type: "WEB-APP",
@@ -343,7 +351,8 @@ export const projectsData = [
     link: "https://sk36.github.io/text-utility-app/",
     source: "https://github.com/sk36/text-utility-app",
     description: "https://github.com/BoussemousseT",
-
+    languages: "Javascript, HTML, CSS",
+    team: "Taoufik Boussemousse - Cong Tai Ho",
   },
 ];
 

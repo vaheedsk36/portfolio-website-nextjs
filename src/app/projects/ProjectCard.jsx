@@ -10,12 +10,14 @@ import {
 } from "@chakra-ui/react";
 import { FaLink, FaGithub } from "react-icons/fa";
 import { BsInfoCircleFill } from "react-icons/bs";
-import ProjectModal from "./ProjectModal"; // Importez le composant de fenêtre modale
+import { BiLogoPlayStore } from "react-icons/bi";
+
+import ProjectModal from "./ProjectModal";
 
 const ProjectCard = (props) => {
-  const { title, image, link, source} = props.data;
+  const { title, image, link, source,type} = props.data;
   const [showHover, setShowHover] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false); // État de la fenêtre modale
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const linkHover = {
     fill: "blueTheme.navLinkActive",
@@ -53,7 +55,7 @@ const ProjectCard = (props) => {
         >
           <Image
             objectFit="cover"
-            src={`images/${image}.png`} // Assurez-vous que le chemin de l'image est correct
+            src={`images/${image}.png`}
             alt="project-img"
             height="13rem"
           />
@@ -75,7 +77,11 @@ const ProjectCard = (props) => {
 
             {link !== null ? (
               <Link href={link} target="_blank" mr={3}>
-                <Icon as={FaLink} _hover={linkHover} />
+                {type === "WEB-APP" ? (
+                <Icon as={FaLink} _hover={linkHover}/>
+                ) :  (
+                <Icon as={BiLogoPlayStore}  _hover={linkHover}/>
+                )}
               </Link>
             ) : null}
             <Link href={source} target="_blank" mr={1}>
