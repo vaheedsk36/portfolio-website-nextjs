@@ -78,14 +78,14 @@ export default function Home() {
             >
               <Heading
                 fontFamily="Black Ops One"
-                fontSize={["2.5rem", "3.7rem"]}
+                fontSize={["2.5rem", "3.5rem"]}
               >
                 Taoufik
               </Heading>
 
               <Heading
                 fontFamily="Black Ops One"
-                fontSize={["2.5rem", "3.7rem"]}
+                fontSize={["2.5rem", "3.5rem"]}
                 ml={[null, "1rem"]}
               >
                 Boussemousse
