@@ -13,13 +13,15 @@ import {
 } from "@chakra-ui/react";
 import {FaEye} from "react-icons/fa6";
 import { RevealWrapper } from "next-reveal";
+import "../../styles/main.scss";
+
 
 const Resume = () => {
   return (
-    <Center height="50vh">
+    <Center className="resume-center-container" height="100vh">
       <Box width="80vw">
         <RevealWrapper className="" delay={300} >
-          <Heading mr={20} textAlign="center">
+          <Heading className="resume-center-text"mr={20} textAlign="center">
             You have the option to view my resume by clicking on the "View"
             button or to download it in PDF format by clicking on the
             "Download" button.
