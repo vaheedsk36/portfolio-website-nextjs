@@ -1,11 +1,11 @@
 # ⭐ Personal Portfolio Website ⭐
 
-> [Deployed here](https://portfolio-website-nextjs-git-main-taoufik-portfolios-projects.vercel.app/)
+> [Deployed here](https://www.boussemousse.com)
 
 ⭐ Star me on GitHub ⭐
 
 [![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/BoussemousseT/my-portfolio/commits/main)
-[![Website](https://img.shields.io/badge/website-up-yellow)](https://portfolio-website-nextjs-fg8tgfru0-taoufik-portfolios-projects.vercel.app/)
+[![Website](https://img.shields.io/badge/website-up-yellow)](https:///www.boussemousse.com)
 [![Message](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/t-boussemousse/)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat&logo)](http://badges.mit-license.org)
 
