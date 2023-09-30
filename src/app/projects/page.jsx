@@ -42,7 +42,7 @@ const Projects = () => {
             {options.map((value) => {
               const radio = getRadioProps({ value });
               return (
-                <RadioCard key={value} {...radio}>
+                <RadioCard  key={value} {...radio}>
                   {value}
                 </RadioCard>
               );

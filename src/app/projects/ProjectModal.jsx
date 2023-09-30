@@ -31,11 +31,11 @@ const ProjectModal = ({ isOpen, onClose, projectData }) => {
         <ModalCloseButton />
         <ModalBody>
           <Flex align="center">
-            <Image
+            <Image className="project-modale-image" display="none"
               objectFit="cover"
               src={`images/${projectData.image}.png`}
               alt="project-img"
-              height="30rem"
+              minWidth="00px"
               padding={"1rem"}
             />
             <Flex direction="column" >

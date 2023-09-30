@@ -225,7 +225,7 @@ html.sr .load-hidden {
 
 @keyframes slideResumeItems {
     0% {
-        height: 100vh;
+        height: 80;
     }
 
     100% {
@@ -242,11 +242,14 @@ html.sr .load-hidden {
 
     }
 
+    .project-modale-image {
+        display: flex;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
 
-    // ******** ABOUT SECTION ********
     .resume-center-text {
         display: none;
         text-decoration: line-through;

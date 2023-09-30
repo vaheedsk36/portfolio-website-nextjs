@@ -18,7 +18,7 @@ import "../../styles/main.scss";
 
 const Resume = () => {
   return (
-    <Center className="resume-center-container" height="100vh">
+    <Center className="resume-center-container" height="80vh">
       <Box width="80vw">
         <RevealWrapper className="" delay={300} >
           <Heading className="resume-center-text"mr={20} textAlign="center">
