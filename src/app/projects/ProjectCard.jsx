@@ -57,7 +57,7 @@ const ProjectCard = (props) => {
             objectFit="cover"
             src={`images/${image}.png`}
             alt="project-img"
-            height="13rem"
+            // height="13rem"
           />
           <Flex
           height="13rem"
