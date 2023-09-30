@@ -189,7 +189,7 @@ const Skills = () => {
         <Heading className="sub-heading" size="md" my={3}>
          SOFT SKILLS
         </Heading>
-        <ul   style={{listStyle: "none",           paddingBottom:"2rem"
+        <ul   style={{listStyle: "none", paddingBottom:"2rem"
 } }>
           <li>
             <div style={{margin: "1rem",fontSize: "0.95rem",}}>

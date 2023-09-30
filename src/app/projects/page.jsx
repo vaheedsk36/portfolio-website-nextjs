@@ -49,7 +49,7 @@ const Projects = () => {
             })}
           </HStack>
         </Flex>
-        <RevealWrapper delay={300}>
+        <RevealWrapper >
           <SimpleGrid
             spacing={4}
             templateColumns="repeat(auto-fill, minmax(350px, 1fr))"
