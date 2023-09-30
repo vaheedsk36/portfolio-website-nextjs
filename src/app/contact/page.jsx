@@ -36,20 +36,20 @@ const Contact = () => {
                   _hover={{ textDecoration: "none" }}
                 >
                   <Icon as={IoIosMail} mx={2} />
-                  <Text>Boussemoussetaoufik@gmail.com</Text>
+                  <Text fontSize="1.2rem">Boussemoussetaoufik@gmail.com</Text>
                 </Link>
               </Tooltip>
               <Tooltip label="Phone">
               <Text className="contact-text-span">
                     <Icon as={PhoneIcon} mx={2} />
-                    <span>(579)-372-5166</span>
+                    <Text fontSize="1.2rem">(579)-372-5166</Text>
                   </Text>
               </Tooltip>
 
               <Tooltip label="Map">
                   <Text className="contact-text-span" my={3} >
                     <Icon as={ImLocation} mx={2} />
-                    <span>Montreal, Canada</span>
+                    <Text fontSize="1.2rem">Montreal, Canada</Text>
                   </Text>
               </Tooltip>
             </Stack>
