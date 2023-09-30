@@ -16,9 +16,9 @@ const Contact = () => {
 
   return (
     <Center>
-      <SimpleGrid templateColumns={[null,null,"40% 55%"]}>
+      <SimpleGrid width={["90vw","100vw","85vw"]} templateColumns={[null,null,"40% 55%"]}>
         <RevealWrapper className="load-hidden" delay={300}>
-            <Heading fontSize="2.5rem">
+            <Heading fontSize="2.5rem" margin="5px">
               Let&apos;s discuss on something{" "}
               <Text color="social.instagram" display="inline">
                 cool
