@@ -16,7 +16,7 @@ const Contact = () => {
 
   return (
     <Center>
-      <SimpleGrid my={["1rem","1rem"]} width={["90vw","100vw","85vw"]} templateColumns={[null,null,"40% 55%"]}>
+      <SimpleGrid templateColumns={[null,null,"40% 55%"]}>
         <RevealWrapper className="load-hidden" delay={300}>
             <Heading fontSize="2.5rem">
               Let&apos;s discuss on something{" "}
