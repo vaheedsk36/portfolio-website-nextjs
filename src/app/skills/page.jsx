@@ -189,7 +189,8 @@ const Skills = () => {
         <Heading className="sub-heading" size="md" my={3}>
          SOFT SKILLS
         </Heading>
-        <ul   style={{listStyle: "none",}}>
+        <ul   style={{listStyle: "none",           paddingBottom:"2rem"
+} }>
           <li>
             <div style={{margin: "1rem",fontSize: "0.95rem",}}>
                 <Heading fontSize="1.1rem"> - Collaboration, self-directed learning, and intrinsic motivation. </Heading>

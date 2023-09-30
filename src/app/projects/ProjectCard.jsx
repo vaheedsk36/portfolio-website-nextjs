@@ -60,7 +60,7 @@ const ProjectCard = (props) => {
             // height="13rem"
           />
           <Flex
-          height="13rem"
+          height="100%"
             backgroundColor="hover.gray"
             position="absolute"
             zIndex={showHover ? 1 : 0}
