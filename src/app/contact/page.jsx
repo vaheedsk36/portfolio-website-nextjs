@@ -13,7 +13,7 @@ import { PhoneIcon } from "@chakra-ui/icons";
 
 const Contact = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  
+
   return (
     <Center>
       <SimpleGrid my={["5rem","4rem"]} width={["90vw","95vw","85vw"]} templateColumns={[null,null,"40% 55%"]}>
@@ -47,14 +47,14 @@ const Contact = () => {
               </Tooltip>
 
               <Tooltip label="Open Map">
-                  <Text className="contact-text-span" my={3} onClick={onOpen} cursor="pointer">
+                  <Text className="contact-text-span" my={3} >
                     <Icon as={ImLocation} mx={2} />
                     <span>Montreal, Canada</span>
                   </Text>
               </Tooltip>
             </Stack>
             <SocialIcons />
-          
+
         </RevealWrapper>
         <ContactForm />
       </SimpleGrid>

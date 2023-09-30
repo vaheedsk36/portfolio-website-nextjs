@@ -32,6 +32,7 @@ import {
   SiVisualstudio,
   SiEclipseide,
   SiMicrosoftoffice,
+  BiShowAlt,
 } from "react-icons/si";
 import { AiFillCode } from "react-icons/ai";
 import {
@@ -43,6 +44,7 @@ import {
   BsTrello,
 } from "react-icons/bs";
 import { GiArchiveResearch, GiArtificialIntelligence } from "react-icons/gi";
+import { FaDownload,FaEye} from "react-icons/fa6";
 
 export const links = [
   { text: "Home", path: "/" },

@@ -10,6 +10,7 @@ import {
   Box,
   Center,
 } from "@chakra-ui/react";
+
 import { skillsDevelopment,skillsDatabase,versionControlSystems,TaskManagementTools,ides } from "../../utils/constants";
 import { RevealWrapper } from "next-reveal";
 

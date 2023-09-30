@@ -1,5 +1,13 @@
 import React from 'react';
 
+import {
+    Card,
+    CardBody,
+    Heading,
+    Icon,
+  } from "@chakra-ui/react";
+  import { FaDownload} from "react-icons/fa6";
+
 class DownloadButton extends React.Component {
   handleDownload = () => {
 
@@ -32,7 +40,24 @@ window.URL.revokeObjectURL(url); // Clean up the URL object after download.
 
   render() {
     return (
-      <button onClick={this.handleDownload}>Download CV</button>
+      <button onClick={this.handleDownload}>
+    <Card
+      backgroundColor="blueTheme.card"
+      transition="all .2s ease-in-out"
+      _hover={{
+        cursor: "pointer",
+        backgroundColor: "blueTheme.cardHover",
+        transform: "scale(1.05)",
+      }}
+    >
+      <CardBody display="flow" alignItems="center" textAlign="center">
+        <Icon  as={FaDownload} width="55px" height="105px" />
+        <Heading my={1} textAlign="center" fontSize="1.2rem">
+            Download
+        </Heading>
+      </CardBody>
+    </Card>
+      </button>
     );
   }
 }
