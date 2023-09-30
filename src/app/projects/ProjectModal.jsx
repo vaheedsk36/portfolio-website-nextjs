@@ -24,7 +24,7 @@ const ProjectModal = ({ isOpen, onClose, projectData }) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose} size="xxl">
       <ModalOverlay />
-      <ModalContent margin="auto" width="60%">
+      <ModalContent margin="auto"  width="90%">
         <ModalHeader fontFamily="Righteous" color={"yellow"} fontSize="2.8rem" alignSelf="center">
           {projectData.title}
         </ModalHeader>
@@ -35,7 +35,8 @@ const ProjectModal = ({ isOpen, onClose, projectData }) => {
               objectFit="cover"
               src={`images/${projectData.image}.png`}
               alt="project-img"
-              minWidth="00px"
+              minWidth="450px"
+              maxHeight="600px"
               padding={"1rem"}
             />
             <Flex direction="column" >

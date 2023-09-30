@@ -225,7 +225,7 @@ html.sr .load-hidden {
 
 @keyframes slideResumeItems {
     0% {
-        height: 80;
+        height: 80vh;
     }
 
     100% {
@@ -237,9 +237,10 @@ html.sr .load-hidden {
 
 @media only screen and (min-width:1280px) {
     .resume-center-container {
-        animation: slideResumeItems 1s;
+        animation-name: slideResumeItems;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
         height: 50vh;
-
     }
 
     .project-modale-image {
@@ -252,9 +253,11 @@ html.sr .load-hidden {
 
     .resume-center-text {
         display: none;
-        text-decoration: line-through;
     }
 
+    .project-category {
+        font-size: 0.7rem;
+    }
 
 }
 

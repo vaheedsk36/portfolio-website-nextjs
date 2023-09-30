@@ -13,6 +13,7 @@ import {
 import RadioCard from "../../components/RadioCards";
 import { projectsData } from "../../utils/constants";
 import { RevealWrapper } from "next-reveal";
+import "../../styles/main.scss";
 
 const Projects = () => {
   const [selectedData, setSelectedData] = useState(projectsData);
@@ -37,7 +38,7 @@ const Projects = () => {
           PROJECTS
         </Heading>
 
-        <Flex {...group} w="100%" px="6" py="5" align="center" justify="center">
+        <Flex {...group} w="100%" px="6" py="5" align="center" justify="center" className="project-category">
           <HStack>
             {options.map((value) => {
               const radio = getRadioProps({ value });
