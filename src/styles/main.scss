@@ -237,10 +237,14 @@ html.sr .load-hidden {
 
 @media only screen and (min-width:1280px) {
     .resume-center-container {
-        animation-name: slideResumeItems;
-        animation-duration: 1s;
-        animation-iteration-count: 1;
-        height: 50vh;
+        // animation-name: slideResumeItems;
+        // animation-duration: 1s;
+        // animation-iteration-count: 1;
+        // height: 50vh;
+    }
+
+    .text-button-resume {
+        font-size: 1.2rem;
     }
 
     .project-modale-image {

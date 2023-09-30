@@ -46,7 +46,7 @@ const Resume = () => {
                 >
                   <CardBody display="flow" alignItems="center" textAlign="center">
                     <Icon as={FaEye}  width="55px" height="105px" />
-                    <Heading my={1} textAlign="center" fontSize="1.2rem">
+                    <Heading my={1} textAlign="center" fontSize="0.9rem" className="text-button-resume">
                       View
                     </Heading>
                   </CardBody>

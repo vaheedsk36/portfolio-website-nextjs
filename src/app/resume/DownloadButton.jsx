@@ -52,7 +52,7 @@ window.URL.revokeObjectURL(url); // Clean up the URL object after download.
     >
       <CardBody display="flow" alignItems="center" textAlign="center">
         <Icon  as={FaDownload} width="55px" height="105px" />
-        <Heading my={1} textAlign="center" fontSize="1.2rem">
+        <Heading my={1} textAlign="center" fontSize="0.9rem" className="text-button-resume">
             Download
         </Heading>
       </CardBody>
