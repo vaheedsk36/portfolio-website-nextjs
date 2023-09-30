@@ -16,7 +16,7 @@ const Contact = () => {
 
   return (
     <Center>
-      <SimpleGrid width={["90vw","100vw","85vw"]} templateColumns={[null,null,"40% 55%"]}>
+      <SimpleGrid my={["5rem","4rem"]} templateColumns={[null,null,"40% 55%"]}>
         <RevealWrapper className="load-hidden" delay={300}>
             <Heading fontSize="2.5rem" margin="5px">
               Let&apos;s discuss on something{" "}
@@ -46,7 +46,7 @@ const Contact = () => {
                   </Text>
               </Tooltip>
 
-              <Tooltip label="Open Map">
+              <Tooltip label="Map">
                   <Text className="contact-text-span" my={3} >
                     <Icon as={ImLocation} mx={2} />
                     <span>Montreal, Canada</span>
