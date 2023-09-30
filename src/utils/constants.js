@@ -20,8 +20,18 @@ import { BiLogoJquery, BiLogoJava ,BiLogoPhp} from "react-icons/bi";
 import {
   SiAdobephotoshop,
   SiExpress,
+  SiMysql,
+  SiSqlite,
+  SiFirebase,
   SiPostman,
-  SiGnubash,
+  SiFilezilla,
+  SiAsana,
+  SiAndroidstudio,
+  SiApachenetbeanside,
+  SiVisualstudiocode,
+  SiVisualstudio,
+  SiEclipseide,
+  SiMicrosoftoffice,
 } from "react-icons/si";
 import { AiFillCode } from "react-icons/ai";
 import {
@@ -30,6 +40,7 @@ import {
   BsFiletypeSql,
   BsGit,
   BsAndroid2,
+  BsTrello,
 } from "react-icons/bs";
 import { GiArchiveResearch, GiArtificialIntelligence } from "react-icons/gi";
 
@@ -75,93 +86,245 @@ export const interestsData = [
 
 ];
 
-export const skillsData = [
-  {
-    name: "HTML5",
-    icon: FaHtml5,
-  },
-  {
-    name: "CSS3",
-    icon: FaCss3,
-  },
-  {
-    name: "Javascript",
-    icon: TbBrandJavascript,
-  },
-  {
-    name: "Jquery",
-    icon: BiLogoJquery,
-  },
-  {
-    name: "C#",
-    icon: TbBrandCSharp,
-  },
-  {
-    name: "Java",
-    icon: BiLogoJava,
-  },
-  {
-    name: "Bootstrap",
-    icon: TbBrandBootstrap,
-  },
-  {
-    name: "C/C++",
-    icon: TbBrandCpp,
-  },
-  {
-    name: "PHP",
-    icon: BiLogoPhp,
-  },
-  {
-    name: "ReactJS",
-    icon: FaReact,
-  },
-  {
-    name: "SQL",
-    icon: BsFiletypeSql,
-  },
-  {
-    name: "Android",
-    icon: BsAndroid2,
-  },
-  {
-    name: "NodeJs",
-    icon: FaNodeJs,
-  },
-  {
-    name: "Express",
-    icon: SiExpress,
-  },
-  {
-    name: "Photoshop",
-    icon: SiAdobephotoshop,
-  },
-  {
-    name: "Postman",
-    icon: SiPostman,
-  },
-  {
-    name: "Git",
-    icon: BsGit,
-  },
-  {
-    name: "Github",
-    icon: FaGithub,
-  },
-  {
-    name: "Bitbucket",
-    icon: FaBitbucket,
-  },
-  {
-    name: "ChatGPT",
-    icon: GiArtificialIntelligence,
-  },
-  {
-    name: "Bash",
-    icon: SiGnubash,
-  },
-];
+// export const skillsData = [
+//   {
+//     name: "HTML5",
+//     icon: FaHtml5,
+//   },
+//   {
+//     name: "CSS3",
+//     icon: FaCss3,
+//   },
+//   {
+//     name: "Javascript",
+//     icon: TbBrandJavascript,
+//   },
+//   {
+//     name: "Jquery",
+//     icon: BiLogoJquery,
+//   },
+//   {
+//     name: "C#",
+//     icon: TbBrandCSharp,
+//   },
+//   {
+//     name: "Java",
+//     icon: BiLogoJava,
+//   },
+//   {
+//     name: "Bootstrap",
+//     icon: TbBrandBootstrap,
+//   },
+//   {
+//     name: "C/C++",
+//     icon: TbBrandCpp,
+//   },
+//   {
+//     name: "PHP",
+//     icon: BiLogoPhp,
+//   },
+//   {
+//     name: "ReactJS",
+//     icon: FaReact,
+//   },
+//   {
+//     name: "SQL",
+//     icon: BsFiletypeSql,
+//   },
+//   {
+//     name: "Android",
+//     icon: BsAndroid2,
+//   },
+//   {
+//     name: "NodeJs",
+//     icon: FaNodeJs,
+//   },
+//   {
+//     name: "Express",
+//     icon: SiExpress,
+//   },
+//   {
+//     name: "Photoshop",
+//     icon: SiAdobephotoshop,
+//   },
+//   {
+//     name: "Postman",
+//     icon: SiPostman,
+//   },
+//   {
+//     name: "Git",
+//     icon: BsGit,
+//   },
+//   {
+//     name: "Github",
+//     icon: FaGithub,
+//   },
+//   {
+//     name: "Bitbucket",
+//     icon: FaBitbucket,
+//   },
+//   {
+//     name: "ChatGPT",
+//     icon: GiArtificialIntelligence,
+//   },
+//   {
+//     name: "Bash",
+//     icon: SiGnubash,
+//   },
+// ];
+export const skillsDevelopment = [
+    {
+      name: "HTML5",
+      icon: FaHtml5,
+    },
+    {
+      name: "CSS3",
+      icon: FaCss3,
+    },
+    {
+      name: "Javascript",
+      icon: TbBrandJavascript,
+    },
+    {
+      name: "Jquery",
+      icon: BiLogoJquery,
+    },
+    {
+      name: "C#",
+      icon: TbBrandCSharp,
+    },
+    {
+      name: "Java",
+      icon: BiLogoJava,
+    },
+    {
+      name: "Bootstrap",
+      icon: TbBrandBootstrap,
+    },
+    {
+      name: "C/C++",
+      icon: TbBrandCpp,
+    },
+    {
+      name: "PHP",
+      icon: BiLogoPhp,
+    },
+    {
+      name: "ReactJS",
+      icon: FaReact,
+    },
+    {
+      name: "Android",
+      icon: BsAndroid2,
+    },
+    {
+      name: "NodeJs",
+      icon: FaNodeJs,
+    },
+    {
+      name: "Express",
+      icon: SiExpress,
+    },
+  ];
+  export const skillsDatabase = [
+    {
+      name: "SQL",
+      icon: BsFiletypeSql,
+    },
+    {
+      name: "MYSQL",
+      icon: SiMysql,
+    },
+    {
+      name: "Sqlite",
+      icon: SiSqlite,
+    },
+    {
+      name: "Firebase",
+      icon: SiFirebase,
+    },
+  ];
+  export const versionControlSystems = [
+    {
+      name: "GitHuB",
+      icon: FaGithub,
+    },
+    {
+      name: "BitBucket",
+      icon: FaBitbucket,
+    },
+    {
+      name: "Gitbush",
+      icon: BsGit,
+    },
+    {
+      name: "FileZilla",
+      icon: SiFilezilla,
+    },
+  ];
+  export const TaskManagementTools = [
+    {
+      name: "Trello",
+      icon: BsTrello,
+    },
+    {
+      name: "Asana",
+      icon: SiAsana,
+    },
+    {
+        name: "Photoshop",
+        icon: SiAdobephotoshop,
+      },
+      {
+        name: "PostMan",
+        icon: SiPostman,
+      },
+      {
+        name: "ChatGPT",
+        icon: GiArtificialIntelligence,
+      },
+  ];
+  export const ides = [
+    {
+      name: "Android Studio",
+      icon: SiAndroidstudio,
+    },
+    {
+      name: "Eclipse",
+      icon: SiEclipseide,
+    },
+    {
+      name: "Visual Studio",
+      icon: SiVisualstudio,
+    },
+    {
+      name: "Visual Studio Code",
+      icon: SiVisualstudiocode,
+    },
+    {
+        name: "NetBeans",
+        icon: SiApachenetbeanside,
+    },
+  ];
+//   export const extrenalTools = [
+//     {
+//       name: "Photoshop",
+//       icon: SiAdobephotoshop,
+//     },
+//     {
+//       name: "PostMan",
+//       icon: SiPostman,
+//     },
+//     {
+//       name: "ChatGPT",
+//       icon: GiArtificialIntelligence,
+//     },
+    // {
+    //   name: "Microsoft Office Suite",
+    //   icon: SiMicrosoftoffice,
+    // },
 
+//   ];
 
 export const workData = [
   {
