@@ -1,6 +1,6 @@
 # ⭐ Personal Portfolio Website ⭐
 
-> [Deployed here](https://vaheedshaik.tech/){:target="_blank" rel="noopener"}
+> [Deployed here](https://vaheedshaik.tech/)
 
 ⭐ Star me on GitHub and do follow ⭐
 
@@ -11,8 +11,8 @@
 
 ## Conditions of usage
 
-- Follow me on <a href="https://github.com/vaheedsk36" target="_blank">github</a>
-- Follow me on <a href="https://www.linkedin.com/in/sk36/" target="_blank">linkedin</a>
+- Follow me on [github](https://github.com/vaheedsk36)
+- Follow me on [linkedin](https://www.linkedin.com/in/sk36/) (if you want to)
 - Star this project on github
 - Don't claim this work as you origin, wherever you post it
 - Give due credits to me wherever you are showcasing this project
