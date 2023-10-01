@@ -14,9 +14,13 @@ import {
 import {FaEye} from "react-icons/fa6";
 import { RevealWrapper } from "next-reveal";
 import "../../styles/main.scss";
+import './../../i18n';
+import { useTranslation } from 'react-i18next';
 
 
 const Resume = () => {
+    const [t, i18n ] = useTranslation();
+
   return (
     <Center className="resume-center-container" height="80vh">
       <Box width="80vw">
@@ -26,6 +30,10 @@ const Resume = () => {
             button or to download it in PDF format by clicking on the
             "Download" button.
           </Heading>
+          {/* <p margin="2rem">{t('langue')}</p>
+
+          <p margin="2rem">{t('experiences')[1].professionalex}</p> */}
+
 
           <SimpleGrid
             spacing={5}

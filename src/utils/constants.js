@@ -1,3 +1,7 @@
+import './../i18n';
+import { useTranslation } from 'react-i18next';
+// const [t, i18n ] = useTranslation();
+
 import {
   FaHtml5,
   FaCss3,
@@ -330,86 +334,43 @@ export const skillsDevelopment = [
 
 export const workData = [
   {
-    company: "Freelancer",
-    designation: "Computer Development",
+    company: "freelancer",
+    designation: "domaineFreelance",
     duration: "2018 - 2022",
     companyImg: "freelancer.png",
-    description: (
-      <>
-        <ol>
-          <li>
-          Capture customer needs.
-          </li>
-          <li>
-          Transmit customer needs to developers.
-          </li>
-          <li>
-          Manage developers to meet customer needs in the creation of websites and mobile applications.
-          </li>
-          <li>
-          Manage clients and ensure customer satisfaction.
-          </li>
-        </ol>
-      </>
-    ),
+    freelanceTache1: "freelanceTache1",
+    freelanceTache2: "freelanceTache2",
+    freelanceTache3: "freelanceTache3",
+    freelanceTache4: "freelanceTache4",
   },
 ];
 
 export const otherWorkData = [
   {
-    company: "Company Bicha et Cie, Morocco",
-    designation: "Intern Stock Management Supervisor.",
-    duration: "February 2019 - May 2019",
+    company: "bicha",
+    designation: "bichaDomaine",
+    duration: "bichaDate",
     companyImg: "bicha.png",
-    description: (
-      <>
-        <ul>
-          <li>
-          Plan deliveries with suppliers.
-          </li>
-          <li>
-          Monitor supplier performance criteria (delivery times, adherence to negotiated terms by the company).
-          </li>
-          <li>
-          Quality and quantity control of goods.
-          </li>
-          <li>
-          Negotiate alternative solutions with suppliers in case of malfunction, sometimes in emergency situations.
-          </li>
-        </ul>
-      </>
-    ),
+    bichaTache1: "bichaTache1",
+    bichaTache2: "bichaTache2",
+    bichaTache3: "bichaTache3",
+    bichaTache4: "bichaTache4",
   },
   {
-    company: "Zarotti, Morocco",
-    designation: "Intern Accounting Assistant.",
-    duration: "February 2018 - March 2018",
+    company: "zarotti",
+    designation: "zarottiDomaine",
+    duration: "zarottiDate",
     companyImg: "zarotti.png",
-    description: (
-      <>
-        <ul>
-          <li>
-            Engaged in creating comprehensive client-specific and syndicated
-            research reports, along with SEO-focused articles and collateral
-            materials within the domains of chemicals, materials, consumer
-            goods, and industrial goods.
-          </li>
-          <li>
-            Expertly estimated market valuations and conducted primary research
-            in collaboration with industry experts to validate data, extract
-            valuable market insights.
-          </li>
-        </ul>
-      </>
-    ),
+    zarottiTache1: "zarottiTache1",
+    zarottiTache2: "zarottiTache2",
   },
 ];
 
 export const education = [
   {
-    company: "Universel College, Montreal",
-    designation: "Programming And Technologies Web - Attestation of College Studies",
-    duration: "May 2022 - Present",
+    company: "collegeUniv",
+    designation: "collegeUnivDomaine",
+    duration: "collegeUnivDate",
     companyImg: "universel.png",
     description: (
       <>
@@ -417,9 +378,9 @@ export const education = [
     ),
   },
   {
-    company: "Ibn Zohr University, Morocco",
-    designation: "Economics and Management Sciences.",
-    duration: "2015 - 2018",
+    company: "ibnZohr",
+    designation: "ibnZohrDomaine",
+    duration: "ibnZohrDate",
     companyImg: "ibnzohr.png",
     description: (
       <>

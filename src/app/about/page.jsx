@@ -1,5 +1,8 @@
 "use client";
 import React from "react";
+import './../../i18n';
+import { useTranslation } from 'react-i18next';
+
 import {
   Heading,
   SimpleGrid,
@@ -13,6 +16,8 @@ import { interestsData } from "../../utils/constants";
 import { RevealWrapper } from "next-reveal";
 
 const Page = () => {
+    const [t, i18n ] = useTranslation();
+
   return (
     <>
       <Center m={5}>

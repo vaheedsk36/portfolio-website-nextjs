@@ -1,13 +1,15 @@
 import { Flex, HStack, chakra } from "@chakra-ui/react";
 import { Link } from "@chakra-ui/next-js";
 import React from "react";
+import './../i18n';
 import MobileHeader from "./MobileHeader";
 import { links } from "../utils/constants";
 import { usePathname } from "next/navigation";
+import { useTranslation } from 'react-i18next';
 
 export default function Header() {
   const pathname = usePathname();
-
+  const [t, i18n ] = useTranslation();
   return (
     <chakra.header
       id="header"
@@ -43,6 +45,12 @@ export default function Header() {
               {link.text}
             </Link>
           ))}
+           <button onClick={()=>{
+            i18n.changeLanguage('fr')
+           }}>FR</button>
+            <button onClick={()=>{
+            i18n.changeLanguage('en')
+           }}>EN</button>
         </HStack>
 
         <HStack>

@@ -7,6 +7,7 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import particleConfig from "../particlesjs.json";
 import { RevealWrapper } from "next-reveal";
+import './../i18n';
 
 export default function Home() {
   const typedTextRef = useRef(null);

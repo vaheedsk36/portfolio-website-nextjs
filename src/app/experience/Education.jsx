@@ -9,10 +9,14 @@ import {
   Flex,
   Box,
 } from "@chakra-ui/react";
+import './../../i18n';
+import { useTranslation } from 'react-i18next';
 
 const Education = (props) => {
-  const { company, duration, designation, companyImg, description } =
+  const { company, duration, designation, companyImg } =
     props.data;
+    const [t, i18n ] = useTranslation();
+
   return (
     <>
       <Card my={3} transition="all .3s ease-in-out"
@@ -34,12 +38,12 @@ const Education = (props) => {
               display={["none","unset","unset"]}
             />
             <Box>
-              <Heading fontSize="1.5rem">{company}</Heading>
+              <Heading fontSize="1.5rem">{t(company)}</Heading>
               <Heading size="sm" my={2}>
-                {duration}
+              {t(duration)}
               </Heading>
               <Text size="xs" my={2} fontStyle="italic">
-                {designation}
+              {t(designation)}
               </Text>
               <div
                 style={{
@@ -47,7 +51,6 @@ const Education = (props) => {
                   fontSize: "0.95rem",
                 }}
               >
-                {description}
               </div>
             </Box>
           </Flex>
