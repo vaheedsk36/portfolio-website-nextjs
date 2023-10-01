@@ -34,7 +34,7 @@ const Resume = () => {
             paddingBottom="1rem"
             paddingTop="1rem"
           >
-            <a  href="https://drive.google.com/file/d/1KzxFClHqPlXXVMJ5KpSrDHqgjYylgdDc/view" target="_blank">
+            <a  href="https://drive.google.com/file/d/1fQMrhjoNRs2pnQf7PRrqMJtYrpHZLDjL/view" target="_blank">
             <Card
                   backgroundColor="blueTheme.card"
                   transition="all .2s ease-in-out"
