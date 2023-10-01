@@ -24,7 +24,7 @@ const Page = () => {
         <Box width="80vw" height="100%">
           <RevealWrapper className="load-hidden" id="about" delay={300}>
             <Heading className="sub-heading" size="md" my={3}>
-              ABOUT
+              {t('about')}
             </Heading>
             <SimpleGrid
               columns={[1, null, 2]}
@@ -44,27 +44,18 @@ const Page = () => {
 
               <Box textAlign="justify">
                 <Heading size="xl" mb={3}>
-                  👋 Hey there
+                {t('hey')}
                 </Heading>
                 <br />
                 <Text>
-                  I&apos;m <span className="name">Taoufik</span>, a passionate
-                  developer. I specialize in{" "}
-                  <span className="tech">Web Development</span>, crafting
-                  seamless user experiences and robust backend solutions. With a
-                  knack for problem-solving, I thrive on creating elegant code
-                  that makes an impact. I&apos;m always exploring new tools and
-                  techniques to stay at the forefront of the ever-evolving tech
-                  landscape.
+                {t('aboutDescription1')}
                 </Text>
                 <br />
                 <Text>
-                  📫 Open to collaborations and exciting projects, I&apos;m
-                  eager to connect with fellow developers and tech enthusiasts.
-                  Let&apos;s build something amazing together!
+                {t('aboutDescription2')}
                 </Text>
                 <Text>
-                  Happy coding! 🖥️
+                {t('aboutDescription3')}
                   <br />
                 </Text>
               </Box>
@@ -72,7 +63,7 @@ const Page = () => {
           </RevealWrapper>
           <RevealWrapper className="load-hidden" id="interests" delay={600}>
             <Heading className="sub-heading" size="md" my={3}>
-              INTERESTS
+            {t('interests')}
             </Heading>
             <SimpleGrid
               spacing={4}

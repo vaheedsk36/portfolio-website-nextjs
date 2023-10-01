@@ -8,6 +8,7 @@ import { loadFull } from "tsparticles";
 import particleConfig from "../particlesjs.json";
 import { RevealWrapper } from "next-reveal";
 import './../i18n';
+import { useTranslation } from 'react-i18next';
 
 export default function Home() {
   const typedTextRef = useRef(null);
@@ -17,7 +18,7 @@ export default function Home() {
 
   useEffect(() => {
     const options = {
-      strings: ["Developer", "Coder", "Programmer"],
+      strings: [ t('iam1'), t('iam2'), t('iam3')],
       typeSpeed: 50,
       backSpeed: 35,
       loop: true,
@@ -28,6 +29,9 @@ export default function Home() {
       typed.destroy();
     };
   }, []);
+
+  const [t, i18n ] = useTranslation();
+
 
   return (
     <>
@@ -68,7 +72,7 @@ export default function Home() {
               color="blueTheme.navLinkActive"
               fontFamily="Righteous"
             >
-              Hi, my name is
+              {t('welcome')}
             </Heading>
           </RevealWrapper>
           <RevealWrapper className="load-hidden" delay={500}>
@@ -95,7 +99,7 @@ export default function Home() {
           </RevealWrapper>
           <RevealWrapper className="load-hidden" delay={600}>
             <Heading my={3} size="lg" fontFamily="Righteous">
-              I &apos;m <span className="typed-text" ref={typedTextRef}></span>
+            {t('iam')} <span className="typed-text" ref={typedTextRef}></span>
             </Heading>
           </RevealWrapper>
           <RevealWrapper className="load-hidden" delay={700}>

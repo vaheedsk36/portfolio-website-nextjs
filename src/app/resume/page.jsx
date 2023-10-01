@@ -26,9 +26,7 @@ const Resume = () => {
       <Box width="80vw">
         <RevealWrapper className="" delay={300} >
           <Heading className="resume-center-text"mr={20} textAlign="center">
-            You have the option to view my resume by clicking on the "View"
-            button or to download it in PDF format by clicking on the
-            "Download" button.
+          {t('resumeDescription')}
           </Heading>
           {/* <p margin="2rem">{t('langue')}</p>
 
@@ -55,7 +53,7 @@ const Resume = () => {
                   <CardBody display="flow" alignItems="center" textAlign="center">
                     <Icon as={FaEye}  width="55px" height="105px" />
                     <Heading my={1} textAlign="center" fontSize="0.9rem" className="text-button-resume">
-                      View
+                      {t('resumeView')}
                     </Heading>
                   </CardBody>
                 </Card>

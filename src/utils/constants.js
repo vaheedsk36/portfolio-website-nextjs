@@ -51,13 +51,13 @@ import { GiArchiveResearch, GiArtificialIntelligence } from "react-icons/gi";
 import { FaDownload,FaEye} from "react-icons/fa6";
 
 export const links = [
-  { text: "Home", path: "/" },
-  { text: "About", path: "/about" },
-  { text: "Skills", path: "/skills" },
-  { text: "Projects", path: "/projects" },
-  { text: "Experience", path: "/experience" },
-  { text: "Resume", path: "/resume" },
-  { text: "Contact", path: "/contact" },
+  { text: "home", path: "/" },
+  { text: "about", path: "/about" },
+  { text: "skills", path: "/skills" },
+  { text: "projects", path: "/projects" },
+  { text: "experience", path: "/experience" },
+  { text: "resume", path: "/resume" },
+  { text: "contact", path: "/contact" },
 ];
 
 export const interestsData = [

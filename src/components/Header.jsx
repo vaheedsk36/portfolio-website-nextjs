@@ -42,7 +42,7 @@ export default function Header() {
               fontSize="lg"
               className={pathname === link.path ? "active-link" : ""}
             >
-              {link.text}
+              {t(link.text)}
             </Link>
           ))}
            <button onClick={()=>{

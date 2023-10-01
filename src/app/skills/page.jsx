@@ -13,21 +13,24 @@ import {
 
 import { skillsDevelopment,skillsDatabase,versionControlSystems,TaskManagementTools,ides } from "../../utils/constants";
 import { RevealWrapper } from "next-reveal";
+import './../../i18n';
+import { useTranslation } from 'react-i18next';
 
 
 
 const Skills = () => {
+    const [t, i18n ] = useTranslation();
 
   return (
     <Center height="70vh" >
       <Box width="80vw" height="100%">
         <Heading className="sub-heading" size="md" my={3}>
-        TECHNICAL SKILLS
+        {t('techSkills')}
         </Heading>
 
         <RevealWrapper className="" delay={300}>
         <Heading style={{textDecoration:"underline", marginLeft: "1.5rem"}} color="blueTheme.navLinkActive" size="m" my={3}>
-          DEVELOPEMENT
+        {t('developementSkills')}
         </Heading>
         <SimpleGrid
           spacing={5}
@@ -59,7 +62,7 @@ const Skills = () => {
           })}
         </SimpleGrid>
         <Heading style={{textDecoration:"underline", marginLeft: "1.5rem"}} color="blueTheme.navLinkActive" size="m" my={3}>
-          DEVELOPEMENT TOOLS - DATABASES
+        {t('databaseSkills')}
         </Heading>
         <SimpleGrid
           spacing={5}
@@ -91,7 +94,7 @@ const Skills = () => {
           })}
         </SimpleGrid>
         <Heading style={{textDecoration:"underline", marginLeft: "1.5rem"}} color="blueTheme.navLinkActive" size="m" my={3}>
-          VERSION CONTROL SYSTEMS
+        {t('controlSystems')}
         </Heading>
         <SimpleGrid
           spacing={5}
@@ -123,7 +126,7 @@ const Skills = () => {
           })}
         </SimpleGrid>
         <Heading style={{textDecoration:"underline", marginLeft: "1.5rem"}} color="blueTheme.navLinkActive" size="m" my={3}>
-          IDE
+        {t('ide')}
         </Heading>
         <SimpleGrid
           spacing={5}
@@ -155,7 +158,7 @@ const Skills = () => {
         </SimpleGrid>
 
         <Heading style={{textDecoration:"underline", marginLeft: "1.5rem"}} color="blueTheme.navLinkActive" size="m" my={3}>
-          TASK MANAGEMENT TOOLS - EXTRENAL TOOLS
+        {t('taskTools')}
         </Heading>
         <SimpleGrid
           spacing={5}
@@ -188,28 +191,28 @@ const Skills = () => {
 
 
         <Heading className="sub-heading" size="md" my={3}>
-         SOFT SKILLS
+        {t('softSkills')}
         </Heading>
         <ul   style={{listStyle: "none", paddingBottom:"2rem"
 } }>
           <li>
             <div style={{margin: "1rem",fontSize: "0.95rem",}}>
-                <Heading fontSize="1.1rem"> - Collaboration, self-directed learning, and intrinsic motivation. </Heading>
+                <Heading fontSize="1.1rem"> {t('sskill1')} </Heading>
             </div>
           </li>
           <li>
             <div style={{margin: "1rem",fontSize: "0.95rem",}}>
-                <Heading fontSize="1.1rem"> - Problem-solving and analytical skills. </Heading>
+                <Heading fontSize="1.1rem"> {t('sskill2')} </Heading>
             </div>
           </li>
           <li>
             <div style={{margin: "1rem",fontSize: "0.95rem",}}>
-                <Heading fontSize="1.1rem"> - Effective communication and flexibility. </Heading>
+                <Heading fontSize="1.1rem"> {t('sskill3')} </Heading>
             </div>
           </li>
           <li>
             <div style={{margin: "1rem",fontSize: "0.95rem",}}>
-                <Heading fontSize="1.1rem"> - Patience and hard working. </Heading>
+                <Heading fontSize="1.1rem"> {t('sskill4')} </Heading>
             </div>
           </li>
         </ul>
