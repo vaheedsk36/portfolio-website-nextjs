@@ -68,5 +68,16 @@
     "resumeView": "VIEW",
     "resumeDownload": "DOWNLOAD",
     "-----------": "=============================================================================================================================",
-    "contact": "CONTACT"
+    "contact": "CONTACT",
+    "contactTitle1": "Let's discuss on something",
+    "contactTitle2": "together.",
+    "emailMsg": "Send Mail",
+    "phone": "Phone",
+    "localization": "Localization",
+    "entreName": "Enter Name",
+    "entreEmail": "Enter Email",
+    "entrePhone": "Enter Phone No.",
+    "entreMessage": "Enter Message",
+    "SendMessage": "Send Message",
+    "adresse": "Montreal, Canada"
 }
