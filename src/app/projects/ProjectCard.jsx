@@ -13,6 +13,8 @@ import { BsInfoCircleFill } from "react-icons/bs";
 import { BiLogoPlayStore } from "react-icons/bi";
 
 import ProjectModal from "./ProjectModal";
+import './../../i18n';
+import { useTranslation } from 'react-i18next';
 
 const ProjectCard = (props) => {
   const { title, image, link, source,type} = props.data;
@@ -31,6 +33,7 @@ const ProjectCard = (props) => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+  const [t, i18n ] = useTranslation();
 
   return (
     <>
@@ -43,7 +46,7 @@ const ProjectCard = (props) => {
             fontFamily: "Righteous",
           }}
         >
-          {title}
+          {t(title)}
         </Text>
         <Card
           onMouseEnter={() => setShowHover(true)}

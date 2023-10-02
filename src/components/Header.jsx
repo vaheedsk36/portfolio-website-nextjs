@@ -6,6 +6,11 @@ import MobileHeader from "./MobileHeader";
 import { links } from "../utils/constants";
 import { usePathname } from "next/navigation";
 import { useTranslation } from 'react-i18next';
+import {
+  Icon,
+  Heading
+} from "@chakra-ui/react";
+import { TbMessageLanguage } from "react-icons/tb";
 
 export default function Header() {
   const pathname = usePathname();
@@ -43,16 +48,21 @@ export default function Header() {
               className={pathname === link.path ? "active-link" : ""}
             >
               {t(link.text)}
+
             </Link>
           ))}
-           <button onClick={()=>{
-            i18n.changeLanguage('fr')
-           }}>FR</button>
-            <button onClick={()=>{
-            i18n.changeLanguage('en')
-           }}>EN</button>
         </HStack>
-
+        {i18n.language == 'en' && <button  onClick={()=>{
+            i18n.changeLanguage('fr')
+           }}>
+            {/* <Icon as={TbMessageLanguage} width="25px" height="25px" /> */}
+            <Heading color="social.instagram" fontWeight="extrabold" fontSize="1.3rem">FR</Heading>
+            </button>}
+           {i18n.language == 'fr' &&  <button onClick={()=>{
+            i18n.changeLanguage('en')
+           }}>
+            {/* <Icon as={TbMessageLanguage} width="25px" height="25px" /> */}
+            <Heading color="social.instagram" fontWeight="extrabold" fontSize="1.3rem">EN</Heading></button>}
         <HStack>
           <MobileHeader {...{ pathname }} />
         </HStack>

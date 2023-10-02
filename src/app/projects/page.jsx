@@ -14,8 +14,11 @@ import RadioCard from "../../components/RadioCards";
 import { projectsData } from "../../utils/constants";
 import { RevealWrapper } from "next-reveal";
 import "../../styles/main.scss";
+import './../../i18n';
+import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
+      const [t, i18n ] = useTranslation();
   const [selectedData, setSelectedData] = useState(projectsData);
   const valSelectFn = (value) =>
     setSelectedData(() => {
@@ -31,11 +34,13 @@ const Projects = () => {
   });
   const group = getRootProps();
 
+
+
   return (
     <Center>
       <Box width={["90vw", "90vw", "80vw"]} height="100%" marginBottom="4rem">
         <Heading className="sub-heading" size="md" my={3}>
-          PROJECTS
+        {t("projects")}
         </Heading>
 
         <Flex {...group} w="100%" px="6" py="5" align="center" justify="center" className="project-category">
