@@ -72,7 +72,7 @@ const Page = () => {
               {interestsData.map((data, index) => {
                 return (
                   <InterestsCard
-                    interest={data.interest}
+                    interest={t(data.interest)}
                     icon={data.icon}
                     key={index}
                   />

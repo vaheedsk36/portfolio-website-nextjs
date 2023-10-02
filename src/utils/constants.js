@@ -62,31 +62,31 @@ export const links = [
 
 export const interestsData = [
   {
-    interest: "Coding",
+    interest: "interest1",
     icon: BsCodeSlash,
   },
   {
-    interest: "Web Development",
+    interest: "interest2",
     icon: BsGlobe,
   },
   {
-    interest: "Mobile App Development",
+    interest: "interest3",
     icon: BsAndroid2,
   },
   {
-    interest: "Software Development",
+    interest: "interest4",
     icon: AiFillCode,
   },
   {
-    interest: "Market Research",
+    interest: "interest5",
     icon: GiArchiveResearch,
   },
   {
-    interest: "Analyst",
+    interest: "interest6",
     icon: TbDatabaseSearch,
   },
   {
-    interest: "Gaming",
+    interest: "interest7",
     icon: FaGamepad,
   },
 
