@@ -404,7 +404,7 @@ export const projectsData = [
     type: "WEB-APP",
     title: "videoGame",
     image: "jeu-video-website",
-    link: "https://boussemousset.github.io/Site-jeux-video",
+    link: "https://boussemousset.github.io/Site-jeux-video/produit/index.html",
     source: "https://github.com/BoussemousseT/Site-jeux-video",
     description: "videoGameDescription",
     languages: "videoGameLanguages",
