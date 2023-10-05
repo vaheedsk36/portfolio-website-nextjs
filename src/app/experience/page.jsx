@@ -4,11 +4,10 @@ import WorkCard from "./WorkCard";
 import OtherWorkCard from "./OtherWorkCard";
 
 import { Heading, SimpleGrid, Center, Box } from "@chakra-ui/react";
-import { education, otherWorkData, workData } from "../../utils/constants";
+import { otherWorkData, workData } from "../../utils/constants";
 import { RevealWrapper } from "next-reveal";
 import './../../i18n';
 import { useTranslation } from 'react-i18next';
-import Education from "./Education";
 
 const Work = () => {
     const [t, i18n ] = useTranslation();
@@ -37,16 +36,7 @@ const Work = () => {
               })}
             </SimpleGrid>
           </RevealWrapper>
-          <Heading className="sub-heading" size="md" my={3}>
-          {t('education')}
-          </Heading>
-          <RevealWrapper className="load-hidden" delay={300}>
-            <SimpleGrid>
-              {education.map((data, index) => {
-                return <Education {...{ data }} key={index} />;
-              })}
-            </SimpleGrid>
-          </RevealWrapper>
+
         </Box>
       </Center>
     </>

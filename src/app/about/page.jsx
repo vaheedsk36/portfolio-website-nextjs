@@ -1,7 +1,11 @@
 "use client";
 import React from "react";
+import Education from "./Education";
+import { education } from "../../utils/constants";
+
 import './../../i18n';
 import { useTranslation } from 'react-i18next';
+
 
 import {
   Heading,
@@ -39,7 +43,7 @@ const Page = () => {
                 alt="profile-image"
                 width={["20rem", "30rem", "20rem"]}
                 height={["20rem", "30rem", "20rem"]}
-                marginBottom={["1rem", "1rem", null]}
+                // marginBottom={["1rem", "1rem", null]}
               />
 
               <Box textAlign="justify">
@@ -61,6 +65,17 @@ const Page = () => {
               </Box>
             </SimpleGrid>
           </RevealWrapper>
+
+          <RevealWrapper className="load-hidden" delay={600}>
+          <Heading className="sub-heading" size="md" my={3} >
+          {t('education')}
+          </Heading>
+            <SimpleGrid>
+              {education.map((data, index) => {
+                return <Education {...{ data }} key={index} />;
+              })}
+            </SimpleGrid>
+          </RevealWrapper>
           <RevealWrapper className="load-hidden" id="interests" delay={600}>
             <Heading className="sub-heading" size="md" my={3}>
             {t('interests')}
@@ -80,6 +95,7 @@ const Page = () => {
               })}
             </SimpleGrid>
           </RevealWrapper>
+
         </Box>
       </Center>
     </>
