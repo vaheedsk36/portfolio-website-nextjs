@@ -48,6 +48,7 @@ export const links = [
   { text: "Experience", path: "/experience" },
   { text: "Blogs", path: "/blogs" },
   { text: "Contact", path: "/contact" },
+  { text: "Resume", path: "/resume" },
 ];
 
 export const interestsData = [

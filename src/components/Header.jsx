@@ -42,7 +42,6 @@ export default function Header() {
             </Link>
           ))}
         </HStack>
-
         <HStack>
           <MobileHeader {...{ pathname }} />
         </HStack>
