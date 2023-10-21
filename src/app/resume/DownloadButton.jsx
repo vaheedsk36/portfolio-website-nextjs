@@ -13,7 +13,7 @@ function DownloadButton() {
   const { t, i18n } = useTranslation();
 
   const handleDownload = () => {
-    const cvPath =  i18n.language === 'fr' ?'/resume-fr.pdf': '/resume-en.pdf';
+    const cvPath =  i18n.language === 'fr' ?'/cv_vf_taoufik_boussemousse.pdf': '/cv_ve_taoufik_boussemousse.pdf';
 
     fetch(cvPath)
       .then((response) => {
@@ -27,7 +27,7 @@ function DownloadButton() {
         const a = document.createElement('a');
         a.style.display = 'none';
         a.href = url;
-        a.download = i18n.language === 'fr' ?'resume-fr.pdf': 'resume-en.pdf';
+        a.download = i18n.language === 'fr' ?'cv_vf_taoufik_boussemousse.pdf': 'cv_ve_taoufik_boussemousse.pdf';
         document.body.appendChild(a);
         a.click();
         window.URL.revokeObjectURL(url);

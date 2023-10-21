@@ -20,7 +20,7 @@ import { useTranslation } from 'react-i18next';
 const Resume = () => {
   const [t, i18n ] = useTranslation();
 
-  const viewResumeLink = i18n.language === 'fr' ? "https://drive.google.com/file/d/1fQMrhjoNRs2pnQf7PRrqMJtYrpHZLDjL/view" : "https://drive.google.com/file/d/1sCiBMYCE2eX1kF1ViYbLq4LnqqcXJyng/view";
+  const viewResumeLink = i18n.language === 'fr' ? "https://drive.google.com/file/d/11XFxxx19PdxrDqMesdOkNnPqdZlvln0B/view" : "https://drive.google.com/file/d/19z0tb-FHrKQjsux4qZRKr00n6Nw431la/view";
 
   return (
     <Center className="resume-center-container" height="80vh">
