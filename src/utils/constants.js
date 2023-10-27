@@ -259,10 +259,10 @@ export const skillsDevelopment = [
       name: "BitBucket",
       icon: FaBitbucket,
     },
-    {
-      name: "Gitbush",
-      icon: BsGit,
-    },
+    // {
+    //   name: "Gitbush",
+    //   icon: BsGit,
+    // },
     {
       name: "FileZilla",
       icon: SiFilezilla,
@@ -346,15 +346,25 @@ export const workData = [
 ];
 
 export const otherWorkData = [
+    {
+        company: "cssmb",
+        designation: "bichaDomaine",
+        duration: "bichaDate",
+        companyImg: "bicha.png",
+        bichaTache1: "bichaTache1",
+        bichaTache2: "bichaTache2",
+        bichaTache3: "bichaTache3",
+        bichaTache4: "bichaTache4",
+      },
   {
     company: "bicha",
-    designation: "bichaDomaine",
-    duration: "bichaDate",
-    companyImg: "bicha.png",
-    bichaTache1: "bichaTache1",
-    bichaTache2: "bichaTache2",
-    bichaTache3: "bichaTache3",
-    bichaTache4: "bichaTache4",
+    designation: "cssmbDomaine",
+    duration: "cssmbDate",
+    companyImg: "cssmb.png",
+    cssmbTache1: "cssmbTache1",
+    cssmbTache2: "cssmbTache2",
+    cssmbTache3: "cssmbTache3",
+    cssmbTache4: "cssmbTache4",
   },
   {
     company: "zarotti",
