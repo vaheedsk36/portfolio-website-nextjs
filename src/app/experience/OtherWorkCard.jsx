@@ -13,7 +13,7 @@ import './../../i18n';
 import { useTranslation } from 'react-i18next';
 
 const OtherWorkCard = (props) => {
-  const { company, duration, designation, companyImg, zarottiTache1, zarottiTache2, bichaTache1, bichaTache2, bichaTache3, bichaTache4 } =
+  const { company, duration, designation, companyImg, zarottiTache1, zarottiTache2, bichaTache1, bichaTache2, bichaTache3, bichaTache4, cssmbTache1, cssmbTache2, cssmbTache3, cssmbTache4 } =
     props.data;
   const [t, i18n] = useTranslation();
 
@@ -55,18 +55,25 @@ const OtherWorkCard = (props) => {
                 }}
               >
                 {company === "zarotti" ? (
-                  <ul>
-                    <li>{t(zarottiTache1)}</li>
-                    <li>{t(zarottiTache2)}</li>
-                  </ul>
-                ) : (
-                  <ul>
-                    <li>{t(bichaTache1)}</li>
-                    <li>{t(bichaTache2)}</li>
-                    <li>{t(bichaTache3)}</li>
-                    <li>{t(bichaTache4)}</li>
-                  </ul>
-                )}
+            <ul>
+                <li>{t(zarottiTache1)}</li>
+                <li>{t(zarottiTache2)}</li>
+            </ul>
+            ) : company === "cssmb" ? (
+            <ul>
+                <li>{t(cssmbTache1)}</li>
+                <li>{t(cssmbTache2)}</li>
+                <li>{t(cssmbTache3)}</li>
+                <li>{t(cssmbTache4)}</li>
+            </ul>
+            ) : (
+            <ul>
+                <li>{t(bichaTache1)}</li>
+                <li>{t(bichaTache2)}</li>
+                <li>{t(bichaTache3)}</li>
+                <li>{t(bichaTache4)}</li>
+            </ul>
+            )}
               </div>
             </Box>
           </Flex>

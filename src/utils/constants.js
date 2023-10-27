@@ -348,6 +348,16 @@ export const workData = [
 export const otherWorkData = [
     {
         company: "cssmb",
+        designation: "cssmbDomaine",
+        duration: "cssmbDate",
+        companyImg: "cssmb.png",
+        cssmbTache1: "cssmbTache1",
+        cssmbTache2: "cssmbTache2",
+        cssmbTache3: "cssmbTache3",
+        cssmbTache4: "cssmbTache4",
+      },
+    {
+        company: "bicha",
         designation: "bichaDomaine",
         duration: "bichaDate",
         companyImg: "bicha.png",
@@ -356,16 +366,7 @@ export const otherWorkData = [
         bichaTache3: "bichaTache3",
         bichaTache4: "bichaTache4",
       },
-  {
-    company: "bicha",
-    designation: "cssmbDomaine",
-    duration: "cssmbDate",
-    companyImg: "cssmb.png",
-    cssmbTache1: "cssmbTache1",
-    cssmbTache2: "cssmbTache2",
-    cssmbTache3: "cssmbTache3",
-    cssmbTache4: "cssmbTache4",
-  },
+
   {
     company: "zarotti",
     designation: "zarottiDomaine",
