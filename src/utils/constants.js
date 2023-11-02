@@ -374,6 +374,9 @@ export const otherWorkData = [
     companyImg: "zarotti.png",
     zarottiTache1: "zarottiTache1",
     zarottiTache2: "zarottiTache2",
+    zarottiTache3: "zarottiTache3",
+    zarottiTache4: "zarottiTache4",
+
   },
 ];
 

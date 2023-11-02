@@ -13,7 +13,7 @@ import './../../i18n';
 import { useTranslation } from 'react-i18next';
 
 const OtherWorkCard = (props) => {
-  const { company, duration, designation, companyImg, zarottiTache1, zarottiTache2, bichaTache1, bichaTache2, bichaTache3, bichaTache4, cssmbTache1, cssmbTache2, cssmbTache3, cssmbTache4 } =
+  const { company, duration, designation, companyImg, zarottiTache1, zarottiTache2,zarottiTache3,zarottiTache4, bichaTache1, bichaTache2, bichaTache3, bichaTache4, cssmbTache1, cssmbTache2, cssmbTache3, cssmbTache4 } =
     props.data;
   const [t, i18n] = useTranslation();
 
@@ -58,6 +58,9 @@ const OtherWorkCard = (props) => {
             <ul>
                 <li>{t(zarottiTache1)}</li>
                 <li>{t(zarottiTache2)}</li>
+                <li>{t(zarottiTache3)}</li>
+                <li>{t(zarottiTache4)}</li>
+
             </ul>
             ) : company === "cssmb" ? (
             <ul>
