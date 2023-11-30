@@ -9,6 +9,10 @@
 [![Message](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sk36)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat&logo)](http://badges.mit-license.org)
 
+## Note
+
+- Latest hashnode graphql version 16.8 syntax is added in this project for getting articles details
+
 ## Conditions of usage
 
 - Follow me on [github](https://github.com/vaheedsk36)
