@@ -337,19 +337,20 @@ export const socialMediaLinks = [
 ];
 
 export const query = `
-{
+query Publication($after: String) {
   publication(host: "codersk36.hashnode.dev") {
-    posts(first: 20) {
+    posts(first: 20, after: $after) {
+      totalDocuments
       pageInfo {
         hasNextPage
         endCursor
       }
       edges {
         node {
-          id
-          slug
           title
           brief
+          slug
+          publishedAt
           coverImage {
             url
           }
@@ -358,4 +359,5 @@ export const query = `
     }
   }
 }
+
 `;
