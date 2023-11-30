@@ -40,7 +40,7 @@ const Blogs = () => {
 
   useEffect(() => {
     getArticlesData().then((data) => {
-      setArticlesData(data);
+      setArticlesData(data.map(data=>data.node));
       setIsLoading(false);
     });
   }, []);

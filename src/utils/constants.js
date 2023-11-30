@@ -337,14 +337,23 @@ export const socialMediaLinks = [
 ];
 
 export const query = `
-query GetUserArticles($page: Int = 0) {
-  user(username: "vaheed") {
-    publication {
-      posts(page: $page) {
-        title
-        brief
-        slug
-        coverImage
+{
+  publication(host: "codersk36.hashnode.dev") {
+    posts(first: 20) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+      edges {
+        node {
+          id
+          slug
+          title
+          brief
+          coverImage {
+            url
+          }
+        }
       }
     }
   }

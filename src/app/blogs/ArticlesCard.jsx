@@ -27,7 +27,7 @@ const ArticlesCard = (props) => {
         <CardBody>
           <Image
             objectFit="contain"
-            src={coverImage}
+            src={coverImage.url}
             alt="Chakra UI"
             width="18rem"
           />
