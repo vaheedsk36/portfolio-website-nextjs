@@ -35,8 +35,9 @@ import {
   SiVisualstudiocode,
   SiVisualstudio,
   SiEclipseide,
+  SiJirasoftware,
   SiMicrosoftoffice,
-  BiShowAlt,
+  SiPostgresql,
 } from "react-icons/si";
 import { AiFillCode } from "react-icons/ai";
 import {
@@ -246,6 +247,10 @@ export const skillsDevelopment = [
       icon: SiSqlite,
     },
     {
+        name: "PostgreSQL",
+        icon: SiPostgresql,
+      },
+    {
       name: "Firebase",
       icon: SiFirebase,
     },
@@ -278,17 +283,23 @@ export const skillsDevelopment = [
       icon: SiAsana,
     },
     {
+      name: "Jira",
+      icon: SiJirasoftware,
+      },
+    {
         name: "Photoshop",
         icon: SiAdobephotoshop,
       },
       {
+        name: "Office Suite",
+        icon: SiMicrosoftoffice,
+      },
+
+      {
         name: "PostMan",
         icon: SiPostman,
       },
-      {
-        name: "ChatGPT",
-        icon: GiArtificialIntelligence,
-      },
+
   ];
   export const ides = [
     {

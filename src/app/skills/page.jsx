@@ -66,7 +66,7 @@ const Skills = () => {
         </Heading>
         <SimpleGrid
           spacing={5}
-          templateColumns="repeat(auto-fill, minmax(135px, 1fr))"
+          templateColumns="repeat(auto-fill, minmax(145px, 1fr))"
           paddingBottom="1rem"
           paddingTop="1rem"
 
@@ -162,7 +162,7 @@ const Skills = () => {
         </Heading>
         <SimpleGrid
           spacing={5}
-          templateColumns="repeat(auto-fill, minmax(135px, 1fr))"
+          templateColumns="repeat(auto-fill, minmax(140px, 1fr))"
           paddingBottom="2rem"
           paddingTop="1rem"
         >
