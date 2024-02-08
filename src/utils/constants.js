@@ -345,9 +345,19 @@ export const skillsDevelopment = [
 
 export const workData = [
   {
+    company: "mmgi",
+    designation: "mmgiDomaine",
+    duration: "mmgiDate",
+    companyImg: "mmig.png",
+    mmgiTache1: "mmgiTache1",
+    mmgiTache2: "mmgiTache2",
+    mmgiTache3: "mmgiTache3",
+    mmgiTache4: "mmgiTache4",
+  },
+  {
     company: "freelancer",
     designation: "domaineFreelance",
-    duration: "2018 - 2022",
+    duration: "freelancerDate",
     companyImg: "freelancer.png",
     freelanceTache1: "freelanceTache1",
     freelanceTache2: "freelanceTache2",

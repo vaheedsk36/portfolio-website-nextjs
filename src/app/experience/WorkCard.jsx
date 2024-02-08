@@ -13,7 +13,7 @@ import './../../i18n';
 import { useTranslation } from 'react-i18next';
 
 const WorkCard = (props) => {
-  const { company, duration, designation, companyImg, freelanceTache1,freelanceTache2,freelanceTache3,freelanceTache4 } =
+  const { company, duration, designation, companyImg, freelanceTache1,freelanceTache2,freelanceTache3,freelanceTache4,mmgiTache1,mmgiTache2,mmgiTache3,mmgiTache4 } =
     props.data;
     const [t, i18n ] = useTranslation();
 
@@ -40,7 +40,7 @@ const WorkCard = (props) => {
             <Box>
               <Heading fontSize="1.5rem">{t(company)}</Heading>
               <Heading size="sm" my={2}>
-                {duration}
+                {t(duration)}
               </Heading>
               <Text size="xs" my={2} fontStyle="italic">
                 {t(designation)}
@@ -51,8 +51,9 @@ const WorkCard = (props) => {
                   fontSize: "0.95rem",
                 }}
               >
-                <ol>
-                    <li>
+                {company === "freelancer" ? (
+                <ul>
+                <li>
                     {t(freelanceTache1)}
                     </li>
                     <li>
@@ -64,10 +65,29 @@ const WorkCard = (props) => {
                     <li>
                     {t(freelanceTache4)}
                     </li>
-                </ol>
+                </ul>
+                ):
+                (
+                 <ul>
+                    <li>
+                        {t(mmgiTache1)}
+                        </li>
+                        <li>
+                        {t(mmgiTache2)}
+                        </li>
+                        <li>
+                        {t(mmgiTache3)}
+                        </li>
+                        <li>
+                        {t(mmgiTache4)}
+                        </li>
+                    </ul>
+                    )
+                }
               </div>
             </Box>
           </Flex>
+
         </CardBody>
       </Card>
     </>
