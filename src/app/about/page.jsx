@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
 import Education from "./Education";
-import { education } from "../../utils/constants";
+import Certificat from "./Certificat";
+
+import { education,certificat } from "../../utils/constants";
 
 import './../../i18n';
 import { useTranslation } from 'react-i18next';
@@ -73,6 +75,16 @@ const Page = () => {
             <SimpleGrid>
               {education.map((data, index) => {
                 return <Education {...{ data }} key={index} />;
+              })}
+            </SimpleGrid>
+          </RevealWrapper>
+          <RevealWrapper className="load-hidden" delay={600}>
+          <Heading className="sub-heading" size="md" my={3} >
+          {t('certificat')}
+          </Heading>
+            <SimpleGrid>
+              {certificat.map((data, index) => {
+                return <Certificat {...{ data }} key={index} />;
               })}
             </SimpleGrid>
           </RevealWrapper>

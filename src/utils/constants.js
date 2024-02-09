@@ -424,6 +424,22 @@ export const education = [
   },
 ];
 
+export const certificat = [
+    {
+      company: "angelaUdemy",
+      designation: "angelaUdemyDomaine",
+      duration: "angelaUdemyDate",
+      lenght: "angelaUdemyLenght",
+      companyImg: "udemy.png",
+      link: "https://www.udemy.com/certificate/UC-c702130b-55dc-403c-8d85-38256e87d441/",
+      description: (
+        <>
+        </>
+      ),
+    },
+
+  ];
+
 export const projectsData = [
   {
     type: "WEB-APP",
