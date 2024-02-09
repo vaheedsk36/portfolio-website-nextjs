@@ -58,7 +58,7 @@ const Certificat = (props) => {
               {t(lenght)}
               </Text>
 
-              <Link href={link} target="_blank" ><span _hover={linkHover}>Udemy Certificate  </span>
+              <Link href={link} target="_blank" ><span _hover={linkHover}>UDEMY {t('certificat')} </span>
                 <Icon as={FaLink} _hover={linkHover}/>
                 </Link>
               <div
