@@ -184,7 +184,7 @@ export const skillsData = [
 export const workData = [
   {
     company: "1Digitalstack.ai",
-    designation: "Software Engineer 1",
+    designation: "Software Engineer 2",
     duration: "March 2022 - Present",
     companyImg: "1ds.jpg",
     description: (
@@ -213,15 +213,14 @@ export const workData = [
       <>
         <ul>
           <li>
-            Engaged in creating comprehensive client-specific and syndicated
-            research reports, along with SEO-focused articles and collateral
-            materials within the domains of chemicals, materials, consumer
-            goods, and industrial goods.
+          My main role was to assist business and market research analysts in acquiring and analyzing data.
+          This entailed writing Python scripts to gather data from diverse sources, populating it in Excel,
+          and cleaning the data. Subsequently, I conducted analytics to derive market insights.
           </li>
           <li>
-            Expertly estimated market valuations and conducted primary research
-            in collaboration with industry experts to validate data, extract
-            valuable market insights.
+          Expertly estimated market valuations and conducted primary research
+          in collaboration with industry experts to validate data, extract
+          valuable market insights, using Excel and Python.
           </li>
         </ul>
       </>
