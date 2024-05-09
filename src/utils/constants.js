@@ -9,8 +9,10 @@ import {
   FaGithub,
   FaInstagram,
   FaLinkedin,
-  FaTwitter,
+  FaMediumM
 } from "react-icons/fa";
+
+import { FaXTwitter } from "react-icons/fa6";
 
 import {
   TbBrandTypescript,
@@ -323,9 +325,9 @@ export const socialMediaLinks = [
   },
   {
     href: "https://twitter.com/codersk36",
-    icon: FaTwitter,
-    backgroundColor: "social.twitter",
-    hoverColor: "social.twitterHover",
+    icon: FaXTwitter,
+    backgroundColor: "gray.700",
+    hoverColor: "gray.600",
   },
   {
     href: "https://codersk36.hashnode.dev/",
@@ -333,6 +335,12 @@ export const socialMediaLinks = [
     backgroundColor: "social.hashnode",
     hoverColor: "social.hashnodeHover",
   },
+  {
+    href: "https://medium.com/@vaheedsk36",
+    icon: FaMediumM,
+    backgroundColor: "gray.700",
+    hoverColor: "gray.600",
+  }
 ];
 
 export const query = `
