@@ -2,9 +2,9 @@ import Favicon from "/public/images/favicon.png";
 import ClientRootLayout from "../components/ClientRootLayout";
 
 export const metadata = {
-  title: "Taoufik Boussemousse",
+  title: "Badr Elbaz",
   description:
-  "Welcome to Taoufik's Portfolio. Explore a diverse range of projects and see how I can bring your ideas to life. Let's connect and discuss your next venture!",
+  "Welcome to Badr's Portfolio. Explore a diverse range of projects and see how I can bring your ideas to life. Let's connect and discuss your next venture!",
   keywords: [
     "portfolio",
     "app",
