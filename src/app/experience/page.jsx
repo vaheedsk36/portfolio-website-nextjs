@@ -1,17 +1,23 @@
 "use client";
 import React from "react";
 import WorkCard from "./WorkCard";
+import OtherWorkCard from "./OtherWorkCard";
+
 import { Heading, SimpleGrid, Center, Box } from "@chakra-ui/react";
-import { workData } from "../../utils/constants";
+import { otherWorkData, workData } from "../../utils/constants";
 import { RevealWrapper } from "next-reveal";
+import './../../i18n';
+import { useTranslation } from 'react-i18next';
 
 const Work = () => {
+    const [t, i18n ] = useTranslation();
+
   return (
     <>
       <Center>
         <Box width={["80vw", "80vw", "79vw"]} height="100%">
           <Heading className="sub-heading" size="md" my={3}>
-            EXPERIENCE
+            {t('professionalex')}
           </Heading>
           <RevealWrapper className="load-hidden" delay={300}>
             <SimpleGrid>
@@ -20,6 +26,17 @@ const Work = () => {
               })}
             </SimpleGrid>
           </RevealWrapper>
+          <Heading className="sub-heading" size="md" my={3}>
+          {t('otherex')}
+          </Heading>
+          <RevealWrapper className="load-hidden" delay={300}>
+            <SimpleGrid>
+              {otherWorkData.map((data, index) => {
+                return <OtherWorkCard {...{ data }} key={index} />;
+              })}
+            </SimpleGrid>
+          </RevealWrapper>
+
         </Box>
       </Center>
     </>

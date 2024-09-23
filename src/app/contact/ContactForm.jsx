@@ -22,9 +22,12 @@ import { useForm } from "react-hook-form";
 import { useToast } from "@chakra-ui/react";
 import { RevealWrapper } from 'next-reveal'
 
+import './../../i18n';
+import { useTranslation } from 'react-i18next';
+
 const ContactForm = () => {
   const toast = useToast();
-  const options = ["Web Development", "Hiring", "Freelance", "Other"];
+  // const options = ["Web Development", "Hiring", "Freelance", "Other"];
   const [interestedIn, setInterestedIn] = useState("Web Development");
   const { getRootProps, getRadioProps } = useRadioGroup({
     name: "interested",
@@ -43,7 +46,7 @@ const ContactForm = () => {
   const onSubmit = async (formData) => {
     setIsLoading(true);
     formData["interested-in"] = interestedIn;
-    const formSubmitURL = `https://fabform.io/f/${process.env.NEXT_PUBLIC_FAB_FORM_KEY}`;
+    const formSubmitURL = `https://fabform.io/f/sIABXUh`;
     try {
       const response = await fetch(formSubmitURL, {
         method: "POST",
@@ -85,12 +88,14 @@ const ContactForm = () => {
     }
   };
 
+  const [t, i18n ] = useTranslation();
+
   return (
     <>
     <RevealWrapper className="load-hidden" delay={600}>
-      <Card className="contact-form-card" borderRadius="2rem" backgroundColor="white" padding="10px 15px">
+      <Card className="contact-form-card" borderRadius="2rem" backgroundColor="white" padding="10px 15px" margin="5px">
         <CardBody>
-          <Heading size="md" color="black" my={3}>
+          {/* <Heading size="md" color="black" my={3}>
             I&apos;m interested in...
           </Heading>
           <Flex {...group} wrap="wrap" px={1}>
@@ -102,10 +107,10 @@ const ContactForm = () => {
                 </RadioCard>
               );
             })}
-          </Flex>
+          </Flex> */}
           <Stack as="form" onSubmit={handleSubmit(onSubmit)}>
             <FormControl isRequired isInvalid={errors.name} my={4}>
-              <FormLabel htmlFor="name">Enter Name</FormLabel>
+              <FormLabel htmlFor="name">{t('entreName')}</FormLabel>
               <Input
                 id="name"
                 className="contact-input"
@@ -114,11 +119,11 @@ const ContactForm = () => {
                 {...register("name", { required: true })}
               />
               {errors.name && (
-                <FormErrorMessage>Enter your name</FormErrorMessage>
+                <FormErrorMessage>{t('entreName')}</FormErrorMessage>
               )}
             </FormControl>
             <FormControl isRequired isInvalid={errors.email}>
-              <FormLabel htmlFor="email">Enter Email</FormLabel>
+              <FormLabel htmlFor="email">{t('entreEmail')}</FormLabel>
               <Input
                 id="email"
                 className="contact-input"
@@ -127,11 +132,11 @@ const ContactForm = () => {
                 {...register("email", { required: true })}
               />
               {errors.email && (
-                <FormErrorMessage>Enter your email</FormErrorMessage>
+                <FormErrorMessage>{t('entreEmail')}</FormErrorMessage>
               )}
             </FormControl>
             <FormControl my={4}>
-              <FormLabel htmlFor="number">Enter Phone No.</FormLabel>
+              <FormLabel htmlFor="number">{t('entrePhone')}</FormLabel>
               <NumberInput id="number" {...register("number")}>
                 <NumberInputField
                   className="contact-input"
@@ -140,7 +145,7 @@ const ContactForm = () => {
               </NumberInput>
             </FormControl>
             <FormControl isRequired isInvalid={errors.message}>
-              <FormLabel htmlFor="message">Enter Message</FormLabel>
+              <FormLabel htmlFor="message">{t('entreMessage')}</FormLabel>
               <Textarea
                 id="message"
                 className="contact-input"
@@ -148,7 +153,7 @@ const ContactForm = () => {
                 {...register("message", { required: true })}
               />
               {errors.message && (
-                <FormErrorMessage>Enter your message</FormErrorMessage>
+                <FormErrorMessage>{t('entreMessage')}</FormErrorMessage>
               )}
             </FormControl>
             <FormControl>
@@ -161,7 +166,7 @@ const ContactForm = () => {
                 type="submit"
               >
                 <Icon mr={1} as={BsFillSendFill} />
-                Send Message
+                {t('SendMessage')}
               </Button>
             </FormControl>
           </Stack>

@@ -9,10 +9,14 @@ import {
   Flex,
   Box,
 } from "@chakra-ui/react";
+import './../../i18n';
+import { useTranslation } from 'react-i18next';
 
 const WorkCard = (props) => {
-  const { company, duration, designation, companyImg, description } =
+  const { company, duration, designation, companyImg, freelanceTache1,freelanceTache2,freelanceTache3,freelanceTache4,mmgiTache1,mmgiTache2,mmgiTache3,mmgiTache4 } =
     props.data;
+    const [t, i18n ] = useTranslation();
+
   return (
     <>
       <Card my={3} transition="all .3s ease-in-out"
@@ -21,7 +25,7 @@ const WorkCard = (props) => {
           boxShadow="0 10px 30px -15px blueTheme.navShadow"
         >
         <CardBody>
-          <Flex flexDirection={["column","column","row"]} justifyContent="center" alignItems="center">
+          <Flex flexDirection={["column","column","row"]} alignItems="center">
             <Image
               objectFit="cover"
               src={`/images/${companyImg}`}
@@ -34,12 +38,12 @@ const WorkCard = (props) => {
               display={["none","unset","unset"]}
             />
             <Box>
-              <Heading fontSize="1.5rem">{company}</Heading>
+              <Heading fontSize="1.5rem">{t(company)}</Heading>
               <Heading size="sm" my={2}>
-                {duration}
+                {t(duration)}
               </Heading>
               <Text size="xs" my={2} fontStyle="italic">
-                {designation}
+                {t(designation)}
               </Text>
               <div
                 style={{
@@ -47,10 +51,43 @@ const WorkCard = (props) => {
                   fontSize: "0.95rem",
                 }}
               >
-                {description}
+                {company === "freelancer" ? (
+                <ul>
+                <li>
+                    {t(freelanceTache1)}
+                    </li>
+                    <li>
+                    {t(freelanceTache2)}
+                    </li>
+                    <li>
+                    {t(freelanceTache3)}
+                    </li>
+                    <li>
+                    {t(freelanceTache4)}
+                    </li>
+                </ul>
+                ):
+                (
+                 <ul>
+                    <li>
+                        {t(mmgiTache1)}
+                        </li>
+                        <li>
+                        {t(mmgiTache2)}
+                        </li>
+                        <li>
+                        {t(mmgiTache3)}
+                        </li>
+                        <li>
+                        {t(mmgiTache4)}
+                        </li>
+                    </ul>
+                    )
+                }
               </div>
             </Box>
           </Flex>
+
         </CardBody>
       </Card>
     </>

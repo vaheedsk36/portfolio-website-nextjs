@@ -1,9 +1,10 @@
 import { query } from "./constants";
 
 export const getArticlesData = async () => {
+  // We have to make multiple api request to hasnode using currentPage to get all the articles
   const allArticles = [];
+  let currentPage = 0;
   let hasNextPage = true;
-  let endCursor="";
 
   while (hasNextPage) {
     const response = await fetch(process.env.NEXT_PUBLIC_HASHNODE_API, {
@@ -13,17 +14,22 @@ export const getArticlesData = async () => {
       },
       body: JSON.stringify({
         query,
-        variables: { after: endCursor },
+        variables: { page: currentPage },
       }),
     });
-  
 
-  const data = await response.json();
-  const articles = data.data.publication.posts.edges;
-  allArticles.push(...articles);
-  hasNextPage = data.data.publication.posts.pageInfo.hasNextPage;
-  endCursor = data.data.publication.posts.pageInfo.endCursor;
+    const data = await response.json();
+    const articles = data.data.user.publication.posts;
+
+    if (articles.length === 0) {
+      // No more articles, exit the loop
+      hasNextPage = false;
+    } else {
+      allArticles.push(...articles);
+      currentPage++;
+    }
   }
+
   return allArticles;
 };
 

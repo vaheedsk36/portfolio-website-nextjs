@@ -7,7 +7,7 @@ import { Link } from "@chakra-ui/next-js";
 const SocialIcons = () => {
   return (
     <Flex
-      margin="1.5rem 0"
+      margin="1.5rem 5px"
       display="flex"
       alignItems="center"
       justifyContent={["center","left","left"]}

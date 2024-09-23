@@ -14,7 +14,6 @@ const MapBox = ({ isOpen, onClose }) => {
   const map = useRef(null);
 
   useEffect(() => {
-    // Map box was trying to find container and on initial load it was not getting it from the DOM, so it was not rendering.
     setTimeout(() => {
       if (isOpen) {
         mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
@@ -24,7 +23,6 @@ const MapBox = ({ isOpen, onClose }) => {
           center: [78.474, 17.385],
           zoom: 10,
         });
-
       }
     });
 
@@ -47,7 +45,11 @@ const MapBox = ({ isOpen, onClose }) => {
       <ModalContent>
         <ModalCloseButton color="red" />
         <ModalBody padding="0">
-          <Box ref={mapContainer} className="map-container" height="400px" />
+          <Box
+            ref={mapContainer}
+            className="map-container"
+            height="400px"
+          />
         </ModalBody>
       </ModalContent>
     </Modal>

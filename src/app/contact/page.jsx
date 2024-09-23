@@ -8,46 +8,57 @@ import { Link } from "@chakra-ui/next-js";
 import SocialIcons from "../../components/SocialIcons";
 import MapBox from "./MapBox";
 import { RevealWrapper } from 'next-reveal'
+import { PhoneIcon } from "@chakra-ui/icons";
+
+import './../../i18n';
+import { useTranslation } from 'react-i18next';
 
 
 const Contact = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  
+  const [t, i18n ] = useTranslation();
+
   return (
     <Center>
-      <SimpleGrid my={["5rem","4rem"]} width={["90vw","95vw","85vw"]} templateColumns={[null,null,"40% 55%"]}>
+      <SimpleGrid my={["5rem","4rem"]} templateColumns={[null,null,"40% 55%"]}>
         <RevealWrapper className="load-hidden" delay={300}>
-            <Heading fontSize="2.8rem">
-              Let&apos;s discuss on something{" "}
+            <Heading fontSize="2.5rem" margin="5px">
+              {t('contactTitle1')}{" "}
               <Text color="social.instagram" display="inline">
                 cool
               </Text>{" "}
-              together
+              {t('contactTitle2')}
             </Heading>
 
             <Stack marginTop="4rem">
-              <Tooltip label="Send Mail">
+              <Tooltip label={t('emailMsg')}>
                 <Link
-                  href="mailto:vaheedsk36@gmail.com"
+                  href="mailto:Boussemoussetaoufik@gmail.com"
                   target="_blank"
                   className="contact-text-span"
                   my={3}
                   _hover={{ textDecoration: "none" }}
                 >
                   <Icon as={IoIosMail} mx={2} />
-                  <Text>vaheedsk36@gmail.com</Text>
+                  <Text fontSize="1.2rem">Boussemoussetaoufik@gmail.com</Text>
                 </Link>
               </Tooltip>
+              <Tooltip label={t('phone')}>
+              <Text className="contact-text-span">
+                    <Icon as={PhoneIcon} mx={2} />
+                    <Text fontSize="1.2rem">(579)-372-5166</Text>
+                  </Text>
+              </Tooltip>
 
-              <Tooltip label="Open Map">
-                  <Text className="contact-text-span" my={3} onClick={onOpen} cursor="pointer">
+              <Tooltip label={t('localization')}>
+                  <Text className="contact-text-span" my={3} >
                     <Icon as={ImLocation} mx={2} />
-                    <span>Hyderabad, India</span>
+                    <Text fontSize="1.2rem"> {t('adresse')}</Text>
                   </Text>
               </Tooltip>
             </Stack>
             <SocialIcons />
-          
+
         </RevealWrapper>
         <ContactForm />
       </SimpleGrid>
