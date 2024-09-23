@@ -85,7 +85,7 @@ export default function Home() {
                 fontFamily="Black Ops One"
                 fontSize={["2.5rem", "3.5rem"]}
               >
-                Taoufik
+                Badr
               </Heading>
 
               <Heading
@@ -93,7 +93,7 @@ export default function Home() {
                 fontSize={["2.5rem", "3.5rem"]}
                 ml={[null, "1rem"]}
               >
-                Boussemousse
+                Elbaz
               </Heading>
             </Flex>
           </RevealWrapper>

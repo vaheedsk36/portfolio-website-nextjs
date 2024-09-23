@@ -1,6 +1,6 @@
 # ⭐ Personal Portfolio Website ⭐
 
-> [Deployed here](https://www.boussemousse.com)
+> [Deployed here](https://portfolio-website-nextjs-mu.vercel.app/)
 
 ⭐ Star me on GitHub ⭐
 
