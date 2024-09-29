@@ -65,6 +65,11 @@ html.sr .load-hidden {
     position: relative;
 }
 
+.language-btn {
+    color: $active-green-color;
+
+}
+
 .active-link::after {
     content: '';
     position: absolute;

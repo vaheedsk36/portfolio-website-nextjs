@@ -56,13 +56,13 @@ export default function Header() {
             i18n.changeLanguage('fr')
            }}>
             {/* <Icon as={TbMessageLanguage} width="25px" height="25px" /> */}
-            <Heading color="active-green-color" fontWeight="extrabold" fontSize="1.3rem">FR</Heading>
+            <Heading className="language-btn" fontWeight="extrabold" fontSize="1.3rem">FR</Heading>
             </button>}
            {i18n.language == 'fr' &&  <button onClick={()=>{
             i18n.changeLanguage('en')
            }}>
             {/* <Icon as={TbMessageLanguage} width="25px" height="25px" /> */}
-            <Heading color="active-green-color" fontWeight="extrabold" fontSize="1.3rem">EN</Heading></button>}
+            <Heading className="language-btn"  fontWeight="extrabold" fontSize="1.3rem">EN</Heading></button>}
         <HStack>
           <MobileHeader {...{ pathname }} />
         </HStack>
