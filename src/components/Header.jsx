@@ -35,37 +35,7 @@ export default function Header() {
         TAOUFIK BOUSSEMOUSSE {"</>"} {" "}
         </Link>
 
-        <HStack as="nav" spacing="5" display={{ base: "none", md: "flex" }}>
-          {links.map((link, index) => (
-            <Link
-              key={index}
-              href={link.path}
-            //   href={"https://drive.google.com/file/d/1pT-Nk6AxY9ZOWBizuDb4htA3IiUF_fSe/view"}
-            //   target="_blank"
-              fontWeight="extrabold"
-              _hover={{ textDecoration: "none", color: "blueTheme.navLinkActive" }}
-              fontSize="lg"
-              className={pathname === link.path ? "active-link" : ""}
-            >
-              {t(link.text)}
 
-            </Link>
-          ))}
-        </HStack>
-        {i18n.language == 'en' && <button  onClick={()=>{
-            i18n.changeLanguage('fr')
-           }}>
-            {/* <Icon as={TbMessageLanguage} width="25px" height="25px" /> */}
-            <Heading className="language-btn" fontWeight="extrabold" fontSize="1.3rem">FR</Heading>
-            </button>}
-           {i18n.language == 'fr' &&  <button onClick={()=>{
-            i18n.changeLanguage('en')
-           }}>
-            {/* <Icon as={TbMessageLanguage} width="25px" height="25px" /> */}
-            <Heading className="language-btn"  fontWeight="extrabold" fontSize="1.3rem">EN</Heading></button>}
-        <HStack>
-          <MobileHeader {...{ pathname }} />
-        </HStack>
       </Flex>
     </chakra.header>
   );
