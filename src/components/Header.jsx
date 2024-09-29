@@ -56,7 +56,7 @@ export default function Header() {
             i18n.changeLanguage('fr')
            }}>
             {/* <Icon as={TbMessageLanguage} width="25px" height="25px" /> */}
-            <Heading color="social.instagram" fontWeight="extrabold" fontSize="1.3rem">FR</Heading>
+            <Heading color="social.instagram" fontWeight="extrabold" fontSize="1.3rem" className="header-lang" >FR</Heading>
             </button>}
            {i18n.language == 'fr' &&  <button onClick={()=>{
             i18n.changeLanguage('en')

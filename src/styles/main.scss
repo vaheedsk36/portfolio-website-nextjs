@@ -65,6 +65,11 @@ html.sr .load-hidden {
     position: relative;
 }
 
+.header-lang {
+    color: $active-green-color;
+
+}
+
 .active-link::after {
     content: '';
     position: absolute;
