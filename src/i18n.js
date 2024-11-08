@@ -8,6 +8,9 @@ const resources = {
   en: {
     translation: translationEN,
   },
+  de: {
+    translation: translationDE,
+  },
   fr: {
     translation: translationFR,
   }
