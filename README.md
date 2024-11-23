@@ -1,25 +1,13 @@
 # ⭐ Personal Portfolio Website ⭐
 
-> [Deployed here](https://vaheedshaik.tech/)
+> [Deployed here](https://portfolio-website-nextjs-mu.vercel.app/)
 
-⭐ Star me on GitHub and do follow ⭐
+⭐ Star me on GitHub ⭐
 
-[![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/vaheedsk36/portfolio-website-nextjs/commits/main)
-[![Website](https://img.shields.io/badge/website-up-yellow)](https://vaheedshaik.tech/)
-[![Message](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sk36)
+[![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/BoussemousseT/my-portfolio/commits/main)
+[![Website](https://img.shields.io/badge/website-up-yellow)](https:///www.boussemousse.com)
+[![Message](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/t-boussemousse/)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat&logo)](http://badges.mit-license.org)
-
-## Note
-
-- Latest hashnode graphql version 16.8 syntax is added in this project for getting articles details
-
-## Conditions of usage
-
-- Follow me on [github](https://github.com/vaheedsk36)
-- Follow me on [linkedin](https://www.linkedin.com/in/sk36/) (if you want to)
-- Star this project on github
-- Don't claim this work as you origin, wherever you post it
-- Give due credits to me wherever you are showcasing this project
 
 ## Tech Stack and Services Used 🛠️
 
@@ -35,7 +23,7 @@ Explore the technologies and services that power this portfolio:
 
 Follow these steps to set up and deploy your own portfolio:
 
-1. Fork the repository
+1. Clone the repository
 2. Run `npm install`
 3. Make modifications in `app` folder files
 4. Store your image assets in `public > images`
@@ -51,7 +39,6 @@ Explore different sections of my profile:
 - **🛠️ Skills**
 - **💼 Projects**
 - **🔍 Experience**
-- **📝 Blogs**
 - **📬 Contact**
 
 ## Contributing 💡
