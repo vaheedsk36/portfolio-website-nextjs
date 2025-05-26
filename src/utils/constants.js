@@ -63,12 +63,13 @@ import {
   SiPlaywright,
   SiHtmx,
   SiC,
+  SiLangchain,
   SiFirebase,
   SiSupabase,
-  SiParcel,
   SiWebpack,
   SiMarkdown
 } from "react-icons/si";
+import { BsBox } from "react-icons/bs";
 
 export const links = [
   { text: "Home", path: "/" },
@@ -256,8 +257,8 @@ export const skillsData = [
       },
       {
         name: "Parcel",
-        icon: SiParcel,
-        color: "#FF5A5F"
+        icon: BsBox,
+        color: "#2D8CFF"
       },
       {
         name: "Webpack",
