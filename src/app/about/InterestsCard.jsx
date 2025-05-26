@@ -1,29 +1,53 @@
 "use client"
 import React from "react";
-import { Card, Heading, Icon } from "@chakra-ui/react";
+import { Card, Heading, Icon, Box, useColorModeValue } from "@chakra-ui/react";
 
 const InterestsCard = ({ interest, icon }) => {
+  const cardBg = useColorModeValue("white", "gray.800");
+  const borderColor = useColorModeValue("gray.200", "gray.700");
+  const iconColor = useColorModeValue("blue.500", "blue.300");
   
   return (
     <Card
-      display="grid"
-      gridTemplateColumns="30% 70%"
+      display="flex"
+      flexDirection="row"
       alignItems="center"
-      width={["80vw","80vw","17.5rem"]}
+      width="100%"
       height="5rem"
-      borderRadius="0"
-      backgroundColor="blueTheme.card"
-      fontSize="2.5rem"
-      padding="16px"
+      borderRadius="md"
+      backgroundColor={cardBg}
+      padding="1.25rem"
       cursor="pointer"
-      transition="background-color .3s ease-in-out"
-      boxShadow="0 10px 30px -15px blueTheme.navShadow"
+      transition="all 0.2s ease"
+      border="1px solid"
+      borderColor={borderColor}
       _hover={{
-        backgroundColor: "blueTheme.cardHover",
+        borderColor: iconColor,
+        transform: "translateY(-2px)",
+        "& .icon-wrapper": {
+          color: iconColor
+        }
       }}
     >
-      <Icon as={icon} />
-      <Heading size="md">{interest}</Heading>
+      <Box
+        className="icon-wrapper"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        width="2.5rem"
+        height="2.5rem"
+        marginRight="1.25rem"
+        transition="color 0.2s ease"
+      >
+        <Icon as={icon} boxSize="1.75rem" />
+      </Box>
+      <Heading 
+        size="md" 
+        fontWeight="medium"
+        lineHeight="1"
+      >
+        {interest}
+      </Heading>
     </Card>
   );
 };

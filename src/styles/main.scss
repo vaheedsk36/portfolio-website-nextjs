@@ -43,14 +43,22 @@ html.sr .load-hidden {
 .sub-heading {
     font-size: 1rem;
     color: $sub-header-color;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
 
     &::after {
         content: "";
-        width: 120px;
+        width: 100px;
         height: 2px;
-        display: inline-block;
         background: $sub-header-color;
-        margin: 4px 10px;
+        border-radius: 2px;
+        transition: width 0.3s ease-in-out;
+    }
+
+    &:hover::after {
+        width: 150px;
     }
 }
 
