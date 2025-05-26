@@ -9,7 +9,8 @@ import {
   FaGithub,
   FaInstagram,
   FaLinkedin,
-  FaMediumM
+  FaMediumM,
+  FaJava
 } from "react-icons/fa";
 
 import { FaXTwitter } from "react-icons/fa6";
@@ -19,9 +20,9 @@ import {
   TbBrandJavascript,
   TbBrandCpp,
   TbBrandRedux,
-  TbBrandBootstrap,
+  TbBrandBootstrap
 } from "react-icons/tb";
-import { BiLogoJquery, BiLogoPostgresql } from "react-icons/bi";
+import { BiLogoJquery } from "react-icons/bi";
 import {
   SiPug,
   SiExpress,
@@ -36,12 +37,38 @@ import {
   BsCodeSlash,
   BsRobot,
   BsFileBarGraph,
-  BsGit,
-  BsMarkdown,
+  BsGit
 } from "react-icons/bs";
 import { GiArchiveResearch, GiArtificialIntelligence } from "react-icons/gi";
 import { FcElectronics } from "react-icons/fc";
-import { Text } from "@chakra-ui/react";
+import { SiTailwindcss } from "react-icons/si";
+import { 
+  SiVite, 
+  SiRabbitmq, 
+  SiKeycloak, 
+  SiNginx, 
+  SiApache, 
+  SiLinux,
+  SiGitlab,
+  SiGithubactions,
+  SiMailchimp,
+  SiSpringboot,
+  SiMongodb,
+  SiRedis,
+  SiPostgresql,
+  SiMysql,
+  SiFastapi,
+  SiJest,
+  SiSelenium,
+  SiPlaywright,
+  SiHtmx,
+  SiC,
+  SiFirebase,
+  SiSupabase,
+  SiParcel,
+  SiWebpack,
+  SiMarkdown
+} from "react-icons/si";
 
 export const links = [
   { text: "Home", path: "/" },
@@ -90,97 +117,240 @@ export const interestsData = [
 
 export const skillsData = [
   {
-    name: "HTML5",
-    icon: FaHtml5,
+    category: "Programming Languages",
+    skills: [
+      {
+        name: "JavaScript",
+        icon: TbBrandJavascript,
+      },
+      {
+        name: "TypeScript",
+        icon: TbBrandTypescript,
+      },
+      {
+        name: "Python",
+        icon: FaPython,
+      },
+      {
+        name: "C++",
+        icon: TbBrandCpp,
+      },
+      {
+        name: "C",
+        icon: SiC,
+      },
+      {
+        name: "Java",
+        icon: FaJava,
+      },
+      {
+        name: "Bash",
+        icon: SiGnubash,
+      },
+    ]
   },
   {
-    name: "CSS3",
-    icon: FaCss3,
+    category: "JavaScript Frameworks",
+    skills: [
+      {
+        name: "React.js",
+        icon: FaReact,
+      },
+      {
+        name: "Next.js",
+        icon: SiNextdotjs,
+      },
+      {
+        name: "Redux",
+        icon: TbBrandRedux,
+      },
+      {
+        name: "Node.js",
+        icon: FaNodeJs,
+      },
+      {
+        name: "Express.js",
+        icon: SiExpress,
+      },
+      {
+        name: "Spring Boot",
+        icon: SiSpringboot,
+      },
+      {
+        name: "FastAPI",
+        icon: SiFastapi,
+      },
+    ]
   },
   {
-    name: "Javascript",
-    icon: TbBrandJavascript,
+    category: "Version Control Systems",
+    skills: [
+      {
+        name: "Git",
+        icon: BsGit,
+      },
+      {
+        name: "GitLab",
+        icon: SiGitlab,
+      },
+      {
+        name: "GitHub Actions",
+        icon: SiGithubactions,
+      },
+    ]
   },
   {
-    name: "Jquery",
-    icon: BiLogoJquery,
+    category: "Web Technologies",
+    skills: [
+      {
+        name: "HTML5",
+        icon: FaHtml5,
+      },
+      {
+        name: "CSS3",
+        icon: FaCss3,
+      },
+      {
+        name: "SASS",
+        icon: FaSass,
+      },
+      {
+        name: "Bootstrap",
+        icon: TbBrandBootstrap,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: SiTailwindcss,
+      },
+      {
+        name: "jQuery",
+        icon: BiLogoJquery,
+      },
+      {
+        name: "Vite",
+        icon: SiVite,
+      },
+      {
+        name: "Parcel",
+        icon: SiParcel,
+      },
+      {
+        name: "Webpack",
+        icon: SiWebpack,
+      },
+      {
+        name: "PugJS",
+        icon: SiPug,
+      },
+      {
+        name: "MJML",
+        icon: SiMailchimp,
+      },
+      {
+        name: "HTMX",
+        icon: SiHtmx,
+      },
+      {
+        name: "RESTful APIs",
+        icon: SiExpress,
+      },
+      {
+        name: "Postman",
+        icon: SiPostman,
+      },
+      {
+        name: "Markdown",
+        icon: SiMarkdown,
+      },
+    ]
   },
   {
-    name: "Typescript",
-    icon: TbBrandTypescript,
+    category: "Databases",
+    skills: [
+      {
+        name: "PostgreSQL",
+        icon: SiPostgresql,
+      },
+      {
+        name: "MongoDB",
+        icon: SiMongodb,
+      },
+      {
+        name: "Redis",
+        icon: SiRedis,
+      },
+      {
+        name: "MySQL",
+        icon: SiMysql,
+      },
+      {
+        name: "Firebase",
+        icon: SiFirebase,
+      },
+      {
+        name: "Supabase",
+        icon: SiSupabase,
+      },
+    ]
   },
   {
-    name: "SASS",
-    icon: FaSass,
+    category: "Testing Tools",
+    skills: [
+      {
+        name: "Jest",
+        icon: SiJest,
+      },
+      {
+        name: "Selenium",
+        icon: SiSelenium,
+      },
+      {
+        name: "Playwright",
+        icon: SiPlaywright,
+      },
+    ]
   },
   {
-    name: "Bootstrap",
-    icon: TbBrandBootstrap,
-  },
-  {
-    name: "C/C++",
-    icon: TbBrandCpp,
-  },
-  {
-    name: "Python",
-    icon: FaPython,
-  },
-  {
-    name: "ReactJS",
-    icon: FaReact,
-  },
-  {
-    name: "NextJS",
-    icon: SiNextdotjs,
-  },
-  {
-    name: "Redux",
-    icon: TbBrandRedux,
-  },
-  {
-    name: "NodeJs",
-    icon: FaNodeJs,
-  },
-  {
-    name: "PugJs",
-    icon: SiPug,
-  },
-  {
-    name: "Express",
-    icon: SiExpress,
-  },
-  {
-    name: "Docker",
-    icon: FaDocker,
-  },
-  {
-    name: "Postgres",
-    icon: BiLogoPostgresql,
-  },
-  {
-    name: "Postman",
-    icon: SiPostman,
-  },
-  {
-    name: "Git",
-    icon: BsGit,
-  },
-  {
-    name: "Github",
-    icon: FaGithub,
-  },
-  {
-    name: "ChatGPT",
-    icon: GiArtificialIntelligence,
-  },
-  {
-    name: "Bash",
-    icon: SiGnubash,
-  },
-  {
-    name: "Markdown",
-    icon: BsMarkdown,
-  },
+    category: "AI & Development Tools",
+    skills: [
+      {
+        name: "RAG",
+        icon: GiArtificialIntelligence,
+      },
+      {
+        name: "LangChain",
+        icon: BsRobot,
+      },
+      {
+        name: "Prompt Engineering",
+        icon: GiArtificialIntelligence,
+      },
+      {
+        name: "Docker",
+        icon: FaDocker,
+      },
+      {
+        name: "RabbitMQ",
+        icon: SiRabbitmq,
+      },
+      {
+        name: "Keycloak",
+        icon: SiKeycloak,
+      },
+      {
+        name: "Nginx",
+        icon: SiNginx,
+      },
+      {
+        name: "Apache",
+        icon: SiApache,
+      },
+      {
+        name: "Linux",
+        icon: SiLinux,
+      },
+    ]
+  }
 ];
 
 export const workData = [
@@ -410,4 +580,5 @@ query Publication($after: String) {
 }
 
 `;
+
 
