@@ -14,7 +14,14 @@ import {
   useDisclosure,
   ModalHeader,
   Link,
+  Input,
+  Select,
+  Flex,
+  InputGroup,
+  InputLeftElement,
+  useColorModeValue,
 } from "@chakra-ui/react";
+import { Search2Icon } from "@chakra-ui/icons";
 import NewsLetterComponent from "./NewsLetterComponent";
 import { getArticlesData } from "../../utils/utils";
 import { FidgetSpinner } from "react-loader-spinner";
@@ -25,6 +32,15 @@ const Blogs = () => {
   const [articlesData, setArticlesData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [activeCard, setActiveCard] = useState();
+  const [search, setSearch] = useState("");
+  const [sortOrder, setSortOrder] = useState("newest");
+
+  // Color mode values for controls (move hooks to top level)
+  const controlsBg = useColorModeValue("white", "gray.800");
+  const controlsBorder = useColorModeValue("gray.200", "gray.700");
+  const controlsShadow = useColorModeValue("md", "dark-lg");
+  const inputBg = useColorModeValue("gray.50", "gray.700");
+
   const activeCardBrief = useMemo(() => {
     // article brief from hashnode, is not completely full itgives ... at end so we have fixed the issue by omitting the string
     const fixedBrief = activeCard?.brief
@@ -44,6 +60,23 @@ const Blogs = () => {
       setIsLoading(false);
     });
   }, []);
+
+  // Filter and sort articles
+  const filteredAndSortedArticles = useMemo(() => {
+    let filtered = articlesData.filter(article => {
+      const searchLower = search.toLowerCase();
+      return (
+        article.title.toLowerCase().includes(searchLower) ||
+        article.brief?.toLowerCase().includes(searchLower)
+      );
+    });
+    
+    return filtered.sort((a, b) => {
+      const dateA = new Date(a.publishedAt);
+      const dateB = new Date(b.publishedAt);
+      return sortOrder === "newest" ? dateB - dateA : dateA - dateB;
+    });
+  }, [articlesData, search, sortOrder]);
 
   return (
     <>
@@ -72,6 +105,64 @@ const Blogs = () => {
             </Heading>
 
             <NewsLetterComponent />
+            {/* Attractive Controls Row */}
+            <Box
+              mt={6}
+              mb={4}
+              width="100%"
+              px={[2, 4, 8]}
+              py={[3, 4]}
+              borderRadius="xl"
+              bg={controlsBg}
+              borderWidth="1px"
+              borderColor={controlsBorder}
+              boxShadow={controlsShadow}
+              display="flex"
+              flexDirection={{ base: "column", md: "row" }}
+              alignItems={{ base: "stretch", md: "center" }}
+              justifyContent="space-between"
+              gap={{ base: "24px", md: "60%" }}
+            >
+              <InputGroup maxW={{ base: "100%", md: "60%" }}>
+                <InputLeftElement pointerEvents="none">
+                  <Search2Icon color="gray.400" />
+                </InputLeftElement>
+                <Input
+                  placeholder="Search articles..."
+                  value={search}
+                  onChange={e => setSearch(e.target.value)}
+                  borderRadius="lg"
+                  bg={inputBg}
+                  _focus={{ borderColor: "blue.400", boxShadow: "0 0 0 1px #4299e1" }}
+                  _hover={{ borderColor: "blue.300" }}
+                  fontSize="md"
+                  h="45px"
+                />
+              </InputGroup>
+              <Select
+                value={sortOrder}
+                onChange={e => setSortOrder(e.target.value)}
+                borderRadius="lg"
+                bg={inputBg}
+                _focus={{ borderColor: "blue.400", boxShadow: "0 0 0 1px #4299e1" }}
+                _hover={{ borderColor: "blue.300" }}
+                fontSize="md"
+                maxW={{ base: "100%", md: "40%" }}
+                h="45px"
+                position="relative"
+                zIndex={1}
+                sx={{
+                  '& option': {
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-word',
+                    padding: '8px'
+                  }
+                }}
+              >
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+              </Select>
+            </Box>
             <RevealWrapper className="load-hidden" delay={300}>
               <SimpleGrid
                 spacing={4}
@@ -81,7 +172,7 @@ const Blogs = () => {
                   "repeat(auto-fill, minmax(300px, 1fr))",
                 ]}
               >
-                {articlesData?.map((data, index) => (
+                {filteredAndSortedArticles?.map((data, index) => (
                   <ArticlesCard
                     key={index}
                     {...{ data, setActiveCard, onOpen }}
