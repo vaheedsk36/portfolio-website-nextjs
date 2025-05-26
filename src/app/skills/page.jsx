@@ -16,8 +16,9 @@ import { skillsData } from "../../utils/constants";
 import { RevealWrapper } from "next-reveal";
 
 const Skills = () => {
-  const cardBg = useColorModeValue("blueTheme.card", "blueTheme.card");
-  const cardHoverBg = useColorModeValue("blueTheme.cardHover", "blueTheme.cardHover");
+  const cardBg = useColorModeValue("white", "gray.800");
+  const cardHoverBg = useColorModeValue("gray.50", "gray.700");
+  const textColor = useColorModeValue("gray.700", "white");
 
   return (
     <Center minHeight="100vh" width="100vw" py={8}>
@@ -31,42 +32,70 @@ const Skills = () => {
               <Box key={categoryIndex}>
                 <Heading 
                   size="sm" 
-                  mb={4} 
-                  color="blueTheme.primary"
+                  mb={8} 
+                  color={textColor}
                   display="flex"
                   alignItems="center"
                   gap={2}
+                  position="relative"
+                  _after={{
+                    content: '""',
+                    position: "absolute",
+                    bottom: "-8px",
+                    left: 0,
+                    width: "40px",
+                    height: "3px",
+                    backgroundColor: category.skills[0]?.color || "blueTheme.primary",
+                    borderRadius: "full",
+                    transition: "width 0.3s ease-in-out"
+                  }}
+                  _hover={{
+                    _after: {
+                      width: "60px"
+                    }
+                  }}
                 >
-                  <Box 
-                    width="4px" 
-                    height="20px" 
-                    backgroundColor="blueTheme.primary"
-                    borderRadius="full"
-                  />
                   {category.category}
                 </Heading>
                 <SimpleGrid
-                  spacing={[3, 4, 5]}
+                  spacing={[4, 5, 6]}
                   templateColumns={[
                     "repeat(2, 1fr)",
                     "repeat(3, 1fr)",
                     "repeat(4, 1fr)",
                     "repeat(5, 1fr)"
                   ]}
+                  pt={4}
                 >
                   {category.skills.map((skill, skillIndex) => (
                     <Card
                       key={skillIndex}
                       backgroundColor={cardBg}
-                      transition="all .3s ease-in-out"
+                      transition="all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
                       _hover={{
                         cursor: "pointer",
                         backgroundColor: cardHoverBg,
-                        transform: "translateY(-5px)",
-                        boxShadow: "0 10px 20px rgba(0,0,0,0.1)"
+                        transform: "translateY(-8px)",
+                        boxShadow: `0 12px 24px -8px ${skill.color}40`,
+                        _before: {
+                          transform: "scaleX(1)"
+                        }
                       }}
-                      borderRadius="lg"
+                      borderRadius="xl"
                       overflow="hidden"
+                      position="relative"
+                      _before={{
+                        content: '""',
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "4px",
+                        backgroundColor: skill.color,
+                        transform: "scaleX(0)",
+                        transformOrigin: "left",
+                        transition: "transform 0.3s ease-in-out"
+                      }}
                     >
                       <CardBody 
                         display="flex" 
@@ -74,25 +103,40 @@ const Skills = () => {
                         alignItems="center" 
                         textAlign="center"
                         padding={[3, 4, 6]}
+                        position="relative"
+                        zIndex={1}
                       >
                         <Box
-                          backgroundColor="blueTheme.primary"
+                          backgroundColor={skill.color}
                           padding={[2, 3, 4]}
                           borderRadius="full"
                           marginBottom={[2, 3, 4]}
-                          boxShadow="0 4px 12px rgba(0,0,0,0.1)"
+                          boxShadow={`0 4px 12px ${skill.color}40`}
+                          transition="all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
+                          _hover={{
+                            transform: "scale(1.1)",
+                            boxShadow: `0 8px 16px ${skill.color}60`
+                          }}
                         >
                           <Icon 
                             as={skill.icon} 
                             width={["30px", "35px", "40px"]} 
                             height={["30px", "35px", "40px"]} 
                             color="white"
+                            transition="transform 0.3s ease-in-out"
+                            _groupHover={{
+                              transform: "scale(1.1)"
+                            }}
                           />
                         </Box>
                         <Text 
                           fontSize={["0.9rem", "1rem", "1.1rem"]} 
                           fontWeight="medium"
-                          color="blueTheme.text"
+                          color={textColor}
+                          transition="color 0.3s ease-in-out"
+                          _groupHover={{
+                            color: skill.color
+                          }}
                         >
                           {skill.name}
                         </Text>
