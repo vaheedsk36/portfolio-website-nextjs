@@ -18,8 +18,6 @@
 - Follow me on [github](https://github.com/vaheedsk36)
 - Follow me on [linkedin](https://www.linkedin.com/in/sk36/) (if you want to)
 - Star this project on github
-- Don't claim this work as you origin, wherever you post it
-- Give due credits to me wherever you are showcasing this project
 
 ## Tech Stack and Services Used 🛠️
 
