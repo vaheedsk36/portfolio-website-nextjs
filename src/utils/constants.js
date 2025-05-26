@@ -41,6 +41,7 @@ import {
 } from "react-icons/bs";
 import { GiArchiveResearch, GiArtificialIntelligence } from "react-icons/gi";
 import { FcElectronics } from "react-icons/fc";
+import { Text } from "@chakra-ui/react";
 
 export const links = [
   { text: "Home", path: "/" },
@@ -185,47 +186,89 @@ export const skillsData = [
 export const workData = [
   {
     company: "1Digitalstack.ai",
-    designation: "Software Engineer 2",
-    duration: "March 2022 - Present",
     companyImg: "1ds.jpg",
-    description: (
-      <>
-        <ul>
-          <li>
-            I work on Reviniti, an analytics product designed for e-commerce
-            players in the bid management domain. Solely migrated the old
-            codebase from a templating engine (PugJS) to React with TypeScript.
-          </li>
-          <li>
-            Engaged in developing new features, refactoring code, enhancing
-            product performance, bug fixes and contributing towards achieving
-            high scalability for the product.
-          </li>
-        </ul>
-      </>
-    ),
+    roles: [
+      {
+        designation: "Software Engineer 3",
+        duration: "April 2025 - Present",
+        description: (
+          <>
+            <ul>
+              <li>
+                Spearheaded the design and development of a chatbot using Retrieval-Augmented Generation (RAG) for actionable insights in e-commerce.
+              </li>
+              <li>
+                Built frontend, backend, and integrated with RAG-based APIs to enable analytics and automate actions.
+              </li>
+            </ul>
+          </>
+        ),
+      },
+      {
+        designation: "Software Engineer 2",
+        duration: "April 2024 - March 2025",
+        description: (
+          <>
+            <ul>
+              <li>
+                Developed a self-serve email platform for ecommerce companies with a custom drag-and-drop editor.
+              </li>
+              <li>
+                Implemented scheduling functionality for dashboard updates and performance reports.
+              </li>
+              <li>
+                Collaborated with cross-functional teams to ensure seamless integration and user-friendly experience.
+              </li>
+            </ul>
+          </>
+        ),
+      },
+      {
+        designation: "Software Engineer 1",
+        duration: "March 2022 - March 2024",
+        description: (
+          <>
+            <ul>
+              <li>
+                Worked on Reviniti, a bid manager and analytics product for players operating in e-commerce platforms.
+              </li>
+              <li>
+                Solely migrated the old codebase from PugJS to React-TypeScript, implementing efficient state management, authentication, reusable components and layouts.
+              </li>
+              <li>
+                Key responsibilities included:
+                <ul style={{ marginLeft: "2rem", marginTop: "0.5rem" }}>
+                  <li>Developing new features and REST APIs</li>
+                  <li>Code refactoring and performance optimization</li>
+                  <li>Bug fixing and product testing</li>
+                  <li>Writing data acquisition scripts</li>
+                  <li>Contributing to product scalability</li>
+                </ul>
+              </li>
+            </ul>
+          </>
+        ),
+      }
+    ]
   },
   {
     company: "Fact.MR",
-    designation: "Associate Consultant Level 01",
-    duration: "Dec 2020 - July 2021",
     companyImg: "fmr.svg",
-    description: (
-      <>
-        <ul>
-          <li>
-          My main role was to assist business and market research analysts in acquiring and analyzing data.
-          This entailed writing Python scripts to gather data from diverse sources, populating it in Excel,
-          and cleaning the data. Subsequently, I conducted analytics to derive market insights.
-          </li>
-          <li>
-          Expertly estimated market valuations and conducted primary research
-          in collaboration with industry experts to validate data, extract
-          valuable market insights, using Excel and Python.
-          </li>
-        </ul>
-      </>
-    ),
+    roles: [
+      {
+        designation: "Associate Consultant Level-1",
+        duration: "December 2020 - July 2021",
+        description: (
+          <>
+            <ul>
+              <li>
+                Developed and implemented automated data collection systems using Python, resulting in 70% faster market analysis processes. Created dynamic PowerBI dashboards that provided real-time market insights, leading to a 40% increase in client engagement and a 25% improvement in report delivery times.
+              </li>
+            </ul>
+          </>
+        ),
+      }
+    ]
   },
 ];
 
@@ -367,3 +410,4 @@ query Publication($after: String) {
 }
 
 `;
+

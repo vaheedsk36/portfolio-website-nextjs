@@ -8,47 +8,123 @@ import {
   Text,
   Flex,
   Box,
+  VStack,
+  Divider,
 } from "@chakra-ui/react";
 
 const WorkCard = (props) => {
-  const { company, duration, designation, companyImg, description } =
-    props.data;
+  const { company, companyImg, roles } = props.data;
+  const hasMultipleRoles = roles.length > 1;
+
   return (
     <>
-      <Card my={3} transition="all .3s ease-in-out"
-       backgroundColor="blueTheme.card"
-        _hover={{transform:"scale(0.99)"}} width= "80vw"
-          boxShadow="0 10px 30px -15px blueTheme.navShadow"
-        >
+      <Card 
+        my={3} 
+        transition="all .3s ease-in-out"
+        backgroundColor="blueTheme.card"
+        _hover={{transform:"scale(0.99)"}} 
+        width="80vw"
+        boxShadow="0 10px 30px -15px blueTheme.navShadow"
+      >
         <CardBody>
-          <Flex flexDirection={["column","column","row"]} justifyContent="center" alignItems="center">
-            <Image
-              objectFit="cover"
-              src={`/images/${companyImg}`}
-              alt="Company Logo"
-              marginRight="1rem"
-              height={["15rem","15rem","13rem"]}
-              width={["15rem","15rem","13rem"]}
-              margin={["2rem auto","1rem","auto 1rem"]}
-              backgroundColor="white"
-              display={["none","unset","unset"]}
-            />
-            <Box>
-              <Heading fontSize="1.5rem">{company}</Heading>
-              <Heading size="sm" my={2}>
-                {duration}
-              </Heading>
-              <Text size="xs" my={2} fontStyle="italic">
-                {designation}
-              </Text>
-              <div
-                style={{
-                  marginLeft: "1.5rem",
-                  fontSize: "0.95rem",
-                }}
+          <Flex 
+            flexDirection={["column", "column", "row"]} 
+            gap={8}
+            alignItems="flex-start"
+          >
+            <Box 
+              width={["100%", "100%", "200px"]} 
+              display="flex" 
+              flexDirection="column" 
+              alignItems="center"
+              position="relative"
+            >
+              <Image
+                objectFit="contain"
+                src={`/images/${companyImg}`}
+                alt="Company Logo"
+                height={["120px", "120px", "150px"]}
+                width={["120px", "120px", "150px"]}
+                backgroundColor="white"
+                borderRadius="md"
+                padding={2}
+                boxShadow="0 4px 12px rgba(0,0,0,0.1)"
+                marginBottom={4}
+              />
+              <Heading 
+                fontSize="1.5rem" 
+                textAlign="center"
+                color="blueTheme.primary"
+                fontWeight="bold"
               >
-                {description}
-              </div>
+                {company}
+              </Heading>
+            </Box>
+
+            <Box 
+              width={["100%", "100%", "calc(100% - 200px)"]}
+              borderLeft={["none", "none", "2px solid"]}
+              borderColor={["transparent", "transparent", "blueTheme.primary"]}
+              paddingLeft={[0, 0, 8]}
+            >
+              <VStack spacing={8} align="stretch">
+                {roles.map((role, index) => (
+                  <Box key={index} position="relative">
+                    {hasMultipleRoles && index > 0 && (
+                      <Divider 
+                        orientation="vertical" 
+                        position="absolute" 
+                        left="1.5rem" 
+                        top="-2rem" 
+                        height="2rem" 
+                        borderColor="blueTheme.primary"
+                      />
+                    )}
+                    <Flex>
+                      {hasMultipleRoles && (
+                        <Box 
+                          width="3rem" 
+                          height="3rem" 
+                          borderRadius="full" 
+                          backgroundColor="blueTheme.primary"
+                          display="flex"
+                          alignItems="center"
+                          justifyContent="center"
+                          marginRight="1.5rem"
+                          flexShrink={0}
+                          boxShadow="0 4px 12px rgba(0,0,0,0.15)"
+                        >
+                          <Text color="white" fontSize="sm" fontWeight="bold">
+                            {index + 1}
+                          </Text>
+                        </Box>
+                      )}
+                      <Box>
+                        <Heading size="sm" my={2} color="blueTheme.text">
+                          {role.duration}
+                        </Heading>
+                        <Text 
+                          size="xs" 
+                          my={2} 
+                          fontStyle="italic"
+                          color="blueTheme.primary"
+                          fontWeight="medium"
+                        >
+                          {role.designation}
+                        </Text>
+                        <div
+                          style={{
+                            marginLeft: hasMultipleRoles ? "1.5rem" : "0",
+                            fontSize: "0.95rem",
+                          }}
+                        >
+                          {role.description}
+                        </div>
+                      </Box>
+                    </Flex>
+                  </Box>
+                ))}
+              </VStack>
             </Box>
           </Flex>
         </CardBody>
