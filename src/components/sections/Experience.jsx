@@ -44,21 +44,24 @@ function RoleCard({ role, index, total }) {
     offset: ["start end", "start start"],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1 - (total - 1 - index) * 0.04]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.6 + index * 0.05]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1 - (total - 1 - index) * 0.025]);
 
   return (
     <div
       ref={ref}
-      className="sticky"
-      style={{ top: `${100 + index * 24}px`, paddingBottom: "1.5rem" }}
+      className="relative md:sticky mb-6 md:mb-0"
+      style={{
+        top: `${100 + index * 28}px`,
+        paddingBottom: "1.5rem",
+        zIndex: index + 1,
+      }}
     >
       <motion.div
-        style={{ scale, opacity }}
-        className="rounded-2xl border border-border bg-surface/80 backdrop-blur-md p-6 md:p-10 origin-top relative overflow-hidden"
+        style={{ scale }}
+        className="rounded-2xl border border-border-strong bg-surface p-6 md:p-10 origin-top relative overflow-hidden shadow-2xl shadow-black/60"
       >
         {/* Number watermark */}
-        <span className="absolute -top-6 -right-2 font-mono text-[140px] md:text-[200px] font-bold text-fg/[0.025] leading-none pointer-events-none select-none">
+        <span className="absolute -top-6 -right-2 font-mono text-[140px] md:text-[200px] font-bold text-fg/[0.04] leading-none pointer-events-none select-none">
           0{index + 1}
         </span>
 
@@ -72,7 +75,7 @@ function RoleCard({ role, index, total }) {
               {role.title}
             </h3>
           </div>
-          <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-muted bg-bg/60 border border-border rounded-full px-3 py-1.5 whitespace-nowrap">
+          <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-muted bg-bg border border-border rounded-full px-3 py-1.5 whitespace-nowrap">
             {role.period}
           </span>
         </div>
