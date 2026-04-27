@@ -1,119 +1,103 @@
-# ⭐ Personal Portfolio Website ⭐
+# Personal Portfolio — v2
 
-> [Deployed here](https://vaheedshaik.tech/)
+> Live at [vaheedshaik.tech](https://vaheedshaik.tech/)
 
-⭐ Star me on GitHub and do follow ⭐
+Personal site of **Masood Akhtar Vaheed** (Vaheed Shaik) — software engineer at 1Digitalstack.ai. Single-page home with deep links into Archive and Uses, motion-driven sections, and a Medium-backed Writing block.
 
-[![Maintenance](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/vaheedsk36/portfolio-website-nextjs/commits/main)
-[![Website](https://img.shields.io/badge/website-up-yellow)](https://vaheedshaik.tech/)
-[![Message](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sk36)
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat&logo)](http://badges.mit-license.org)
+[![Maintenance](https://img.shields.io/badge/maintained-yes-9EE493)](https://github.com/vaheedsk36/portfolio-website-nextjs/commits/main)
+[![Website](https://img.shields.io/badge/website-up-7C5CFF)](https://vaheedshaik.tech/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sk36)
+[![License](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT)
 
-## Note
+## Stack
 
-- Latest hashnode graphql version 16.8 syntax is added in this project for getting articles details
+![Next.js](https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=000)
+![TypeScript-friendly](https://img.shields.io/badge/JS-Modern-3178C6?logo=javascript&logoColor=white)
+![Tailwind v4](https://img.shields.io/badge/Tailwind-v4-06B6D4?logo=tailwindcss&logoColor=white)
+![Motion](https://img.shields.io/badge/Motion-12-7C5CFF)
+![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white)
+![Vercel Analytics](https://img.shields.io/badge/Vercel%20Analytics-on-22D3EE)
 
-## Conditions of usage
+- **Framework:** Next.js 16 (App Router, Turbopack, View Transitions)
+- **UI:** Tailwind CSS v4 (CSS-first `@theme`), Geist Sans + Geist Mono
+- **Motion:** `motion` v12 (Framer Motion successor), Lenis smooth scroll, cmdk command palette, Vaul mobile drawer
+- **Content:** Medium RSS for the writing section (cached, server-rendered), local JS for everything else
+- **Analytics:** Vercel Web Analytics + Speed Insights (no cookies, GDPR-friendly), optional GA via env var
 
-- Follow me on [github](https://github.com/vaheedsk36)
-- Follow me on [linkedin](https://www.linkedin.com/in/sk36/) (if you want to)
-- Star this project on github
+## Features
 
-## Tech Stack and Services Used 🛠️
+- Hero with cursor-tracking spotlight, dot pattern, per-character text reveal, and a global cursor-following gradient mesh
+- Sticky-stack experience cards with scroll-driven scale/opacity
+- Asymmetric bento for selected work with 3D tilt, traveling border beam, and gradient hover wash
+- Two opposite-direction tech marquees with edge-fade
+- ⌘K command palette (routes, copy email, résumé, socials, source)
+- Animated mobile drawer (right slide-in with staggered reveals)
+- Click-to-copy email with confetti burst on Contact
+- Fully responsive, `prefers-reduced-motion` honored
 
-Explore the technologies and services that power this portfolio:
+## Sections
 
-![NextJS](https://img.shields.io/badge/next%20js-000000?style=flat&logo=nextdotjs&logoColor=white)
-![ChakraUI](https://img.shields.io/badge/Chakra--UI-319795?style=flat&logo=chakra-ui&logoColor=white)
-![SASS](https://img.shields.io/badge/Sass-CC6699?style=flat&logo=sass&logoColor=white)
-![Google Analytics](https://img.shields.io/badge/Google%20Analytics-E37400?style=flat&logo=google%20analytics&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
+- **Hero** · status pill, name, tagline, currently row, scroll indicator
+- **About** · portrait card, bio, stack groupings, stats grid
+- **Skills** · tech marquees
+- **Selected Work** · 5-card bento (NDA-tagged for prod work)
+- **Experience** · sticky-stack of roles
+- **Writing** · latest Medium posts
+- **Contact** · click-to-copy email + magnetic socials
 
-## SEO Enhancements 🚀
+Sub-pages: [`/archive`](https://vaheedshaik.tech/archive) (full project list) · [`/uses`](https://vaheedshaik.tech/uses) (gear & tools).
 
-This portfolio is optimized for search engines using several modern SEO techniques:
+## SEO
 
-- **Comprehensive Metadata:** Uses advanced metadata including OpenGraph, Twitter Card, and extended keywords for better sharing and discoverability.
-- **Dynamic Sitemap:** Automatically generates a sitemap at `/sitemap.xml` to help search engines index all main pages (home, about, projects, blogs, contact, skills, certifications, experience).
-- **Robots and Verification Tags:** Includes robots directives for indexing and site verification tags for Google, Yandex, and Yahoo.
-- **Accessibility & Discoverability:** Metadata and sitemap improve accessibility and ensure all important pages are easily found by search engines.
+- OpenGraph + Twitter card metadata in `app/layout.jsx`
+- Dynamic sitemap at `/sitemap.xml` covering `/`, `/archive`, `/uses`
+- Robots directives + verification tags for Google Search Console, Yandex Webmaster, Bing/Yahoo
 
-For further SEO improvements, you can add structured data (JSON-LD) or extend the sitemap to include dynamic content like blog posts or projects.
+## Local development
 
-## Search Engine Verification Tools 🔍
+```bash
+git clone https://github.com/vaheedsk36/portfolio-website-nextjs.git
+cd portfolio-website-nextjs
+npm install
+cp .env.sample .env.local   # optional — only needed for Google Analytics
+npm run dev                 # http://localhost:3000
+```
 
-This project is verified with major search engines using their free webmaster tools:
+Edit content from a single source: [`src/data/site.js`](./src/data/site.js).
 
-### Google Search Console
-- **Purpose:** Monitor and maintain site's presence in Google Search
-- **Features:**
-  - Search performance analytics
-  - Indexing status
-  - Mobile usability
-  - Security issues
-  - URL inspection
-- **Verification Code:** Implemented in metadata
+## Scripts
 
-### Yandex Webmaster
-- **Purpose:** Manage site's presence in Yandex search results
-- **Features:**
-  - Search analytics
-  - Indexing status
-  - Crawl statistics
-  - Site diagnostics
-- **Verification Code:** Implemented in metadata
+| Command         | Purpose                          |
+| --------------- | -------------------------------- |
+| `npm run dev`   | Start dev server (Turbopack)     |
+| `npm run build` | Production build                 |
+| `npm run start` | Run the production build locally |
+| `npm run lint`  | Lint with `eslint-config-next`   |
 
-### Bing Webmaster Tools
-- **Purpose:** Manage site's presence in both Bing and Yahoo search results
-- **Features:**
-  - Search performance
-  - SEO reports
-  - URL submission
-  - Site diagnostics
-- **Verification Code:** Implemented in metadata
+## Deploy
 
-All these tools are completely free to use and provide valuable insights for improving your site's search engine presence.
+Optimised for Vercel (zero-config). Push to `main` → connect the repo on Vercel → done. Vercel Analytics + Speed Insights activate automatically once you flip the toggles in the project dashboard.
 
-## Setup & Deployment Instructions 🚀
+## Versioning
 
-Follow these steps to set up and deploy your own portfolio:
+- **`v1.0.0`** — original Chakra UI / SASS / Hashnode build (preserved as a git tag)
+- **`v2.x`** — current site (this rebuild)
 
-1. Fork the repository
-2. Run `npm install`
-3. Make modifications in `app` folder files
-4. Store your image assets in `public > images`
-5. Store you secret keys by in a `.env` file for ref see `.env.sample`
-6. For deployment, follow these [instructions](https://nextjs.org/learn/basics/deploying-nextjs-app/deploy)
+To browse the v1 source: `git checkout v1.0.0`.
 
-## Sections 📚
+## Contributing
 
-Explore different sections of my profile:
+This is a personal site, but if you spot something broken or have a suggestion:
 
-- **🏠 Home**
-- **🙋‍♂️ About**
-- **🛠️ Skills**
-- **💼 Projects**
-- **🔍 Experience**
-- **📝 Blogs**
-- **📬 Contact**
+1. Fork the repo
+2. Branch off `main`
+3. Open a PR with a short description of the change
 
-## Contributing 💡
+## License
 
-To contribute, follow these steps:
+[MIT](https://opensource.org/licenses/MIT)
 
-### Step 1
+---
 
-Fork or clone this repo to your local machine.
-
-### Step 2
-
-Build your code. Implement your changes, add features, or fix issues.
-
-### Step 3
-
-When you're ready, create a new pull request to merge your changes:
-
-- 🔃 Push your changes to your forked repo.
-- 👀 Await review and address any feedback.
-
-Thank you for contributing to this repo! Together, we can make it even better. 😄🚀
+If this is useful, a ⭐ on the repo is appreciated. Connect on [LinkedIn](https://www.linkedin.com/in/sk36/) or read more on [Medium](https://medium.com/@vaheedsk36).
