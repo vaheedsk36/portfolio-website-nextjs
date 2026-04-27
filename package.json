@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@tabler/icons-react": "^3.41.1",
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
     "canvas-confetti": "^1.9.4",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
