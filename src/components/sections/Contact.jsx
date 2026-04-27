@@ -63,8 +63,8 @@ export default function Contact() {
 
         <FadeInUp delay={0.2}>
           <p className="mt-6 text-muted text-lg leading-relaxed max-w-xl mx-auto">
-            I&apos;m open to senior / staff roles, technically meaty contracts, and short
-            collaborations on systems that need to actually work.
+            Always happy to talk shop &mdash; gnarly systems problems, side projects,
+            or just a good engineering conversation.
           </p>
         </FadeInUp>
 
