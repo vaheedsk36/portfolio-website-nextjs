@@ -11,6 +11,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "dependencies": {
     "@tabler/icons-react": "^3.41.1",
     "@vercel/analytics": "^2.0.1",
